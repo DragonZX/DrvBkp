@@ -99,9 +99,7 @@ Module CommonVariables
                 fw.AddObject(.frmMain, LanguageManager.StdBindingFlags, New Type() {GetType(Control), GetType(ToolStripItem)}, memberFilter, propertyFilter, False)
                 'fw.AddObject(.frmRemove, LanguageManager.StdBindingFlags, New Type() {GetType(Control), GetType(ToolStripItem)}, memberFilter, propertyFilter, False)
                 fw.AddObject(.frmRestore, LanguageManager.StdBindingFlags, New Type() {GetType(Control), GetType(ToolStripItem)}, memberFilter, propertyFilter, False)
-                fw.AddObject(.frmDonate, LanguageManager.StdBindingFlags, New Type() {GetType(Control), GetType(ToolStripItem)}, memberFilter, propertyFilter, False)
                 fw.AddObject(.frmOffline, LanguageManager.StdBindingFlags, New Type() {GetType(Control), GetType(ToolStripItem)}, memberFilter, propertyFilter, False)
-                fw.AddObject(.frmHelpDevelop, LanguageManager.StdBindingFlags, New Type() {GetType(Control), GetType(ToolStripItem)}, memberFilter, propertyFilter, False)
             End With
 
             If updateMode Then
@@ -382,8 +380,6 @@ Module CommonVariables
                 .LoadLanguageOnForm(frmMain, LanguageManager.StdBindingFlags, New Type() {GetType(Control), GetType(ToolStripItem)}, "", "^Text$", False)
                 .LoadLanguageOnForm(frmOffline, LanguageManager.StdBindingFlags, New Type() {GetType(Control), GetType(ToolStripItem)}, "", "^Text$", False)
                 .LoadLanguageOnForm(frmRestore, LanguageManager.StdBindingFlags, New Type() {GetType(Control), GetType(ToolStripItem)}, "", "^Text$", False)
-                .LoadLanguageOnForm(frmDonate, LanguageManager.StdBindingFlags, New Type() {GetType(Control), GetType(ToolStripItem)}, "", "^Text$", False)
-                .LoadLanguageOnForm(frmHelpDevelop, LanguageManager.StdBindingFlags, New Type() {GetType(Control), GetType(ToolStripItem)}, "", "^Text$", False)
 
                 Dim objCont As ObjectContainer = .ReadContainer("CommonVariables")
                 Dim tempArr As New Dictionary(Of String, String)

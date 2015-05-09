@@ -22,15 +22,15 @@ Partial Class frmOffline
     'Non modificarla nell'editor del codice.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.txtsysPath = New System.Windows.Forms.TextBox
-        Me.cmdBrowse = New System.Windows.Forms.Button
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.lblPcName = New System.Windows.Forms.Label
-        Me.chkUseOfflineName = New System.Windows.Forms.CheckBox
-        Me.cmdLoad = New System.Windows.Forms.Button
-        Me.cmdOk = New System.Windows.Forms.Button
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
+        Me.txtsysPath = New System.Windows.Forms.TextBox()
+        Me.cmdBrowse = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblPcName = New System.Windows.Forms.Label()
+        Me.chkUseOfflineName = New System.Windows.Forms.CheckBox()
+        Me.cmdLoad = New System.Windows.Forms.Button()
+        Me.cmdOk = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtsysPath
@@ -105,7 +105,7 @@ Partial Class frmOffline
         Me.Label2.Size = New System.Drawing.Size(553, 35)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Connettere al computer il disco rigido o un'altro supporto di memorizzazione dove" & _
-            " è contenuta l'installazione del sistema di cui si vuole effettuare il backup."
+    " è contenuta l'installazione del sistema di cui si vuole effettuare il backup."
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
@@ -115,7 +115,7 @@ Partial Class frmOffline
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(544, 20)
         Me.Label3.TabIndex = 8
-        Me.Label3.Text = "NB: Le versioni di Windows supportate sono NT/2000/Xp/Vista/7."
+        Me.Label3.Text = "NB: Le versioni di Windows supportate sono Xp/Vista/7/8/8.1."
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmOffline

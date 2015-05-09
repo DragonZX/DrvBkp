@@ -398,10 +398,6 @@ Public Class frmMain
             Me.OfflineBackupObj.Dispose()
             Me.OfflineBackupObj = Nothing
         End If
-
-        If My.Settings.CheckDonate = False And Not commandMode Then
-            frmDonate.ShowDialog()
-        End If
     End Sub
 
     Public Sub CustomScaleControl(ByVal ctrl As Control, ByVal scale As Double)

@@ -16,7 +16,7 @@
     <GenerateManifests>false</GenerateManifests>
     <SignManifests>false</SignManifests>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <ApplicationIcon>box open.ico</ApplicationIcon>
+    <ApplicationIcon>DrvBkp.ico</ApplicationIcon>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
@@ -24,6 +24,8 @@
     <OldToolsVersion>3.5</OldToolsVersion>
     <TargetZone>LocalIntranet</TargetZone>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <PublishUrl>C:\DrvBack\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -38,7 +40,6 @@
     <ApplicationVersion>2.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -108,18 +109,6 @@
     <Compile Include="frmCmdBuilder.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDonate.Designer.vb">
-      <DependentUpon>frmDonate.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmDonate.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmHelpDevelop.Designer.vb">
-      <DependentUpon>frmHelpDevelop.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmHelpDevelop.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -170,14 +159,6 @@
       <SubType>Designer</SubType>
       <DependentUpon>frmCmdBuilder.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDonate.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>frmDonate.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmHelpDevelop.resx">
-      <DependentUpon>frmHelpDevelop.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmMain.vb</DependentUpon>
@@ -210,6 +191,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль .NET Framework 3.5 с пакетом обновления 1 %28SP1%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
       <Visible>False</Visible>
       <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
@@ -223,6 +209,11 @@
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
@@ -262,6 +253,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="box open.ico" />
+    <Content Include="DrvBkp.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
