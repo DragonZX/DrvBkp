@@ -15,21 +15,21 @@ Namespace DeviceBackupRestore
     Public Delegate Sub BRConfirmOperationHandler(ByVal sender As Object, ByVal e As CancelEventArgs)
 
     Public Enum BackupRestoreErrorCodes
-        BRE_Generic ' Errore generico
-        BRE_InvalidDevice 'Device non processabile
-        BRE_UnformattablePath ' Formato di percorso non risolvibile
-        BRE_NoDevices ' Nessun device o computer
-        BRE_FileOverwiting 'Sovrascrittura file disabilitata
-        BRE_LackOfSpace ' Mancanza di spazio sul computer
-        BRE_CantReadWriteBkInfo ' Impossibile scrivere le informazioni di backup
-        BRE_FileIOError 'Errore creazione\copia file\directory
-        BRE_OpCanceled 'Operazione annullata dall'utente
-        BRE_OemInfExist 'Il drivers è già installato sul computer
-        BRE_OemInfAlreadyUsed 'Il drivers è correntemente in uso e non può essere disinstallato.
-        BRE_MissingInfFile 'Il file di installazione è mancante
-        BRE_CantUpdateInfo 'Impossibile aggiornare le informazioni sul percorso
-        BRE_ForceUpdate 'Chiede all'utente se l'installazione del driver debba essere forzata
-        BRE_CantForceUpdating 'l'aggiornamento del driver non può essere forzato
+        BRE_Generic 'Generic error
+        BRE_InvalidDevice 'Device not actionable
+        BRE_UnformattablePath 'path format can not be resolved
+        BRE_NoDevices ' No device or computer
+        BRE_FileOverwiting 'Overwrite disabled files
+        BRE_LackOfSpace 'Lack of space on your computer
+        BRE_CantReadWriteBkInfo 'Unable to write to the backup information
+        BRE_FileIOError 'creation failure \ copy \ directory files
+        BRE_OpCanceled 'Operation canceled by user
+        BRE_OemInfExist 'The è drivers already installed on your computer
+        BRE_OemInfAlreadyUsed 'The drivers è currently in use and can not be uninstalled.
+        BRE_MissingInfFile 'The installation file è missing
+        BRE_CantUpdateInfo 'Can not update the path information
+        BRE_ForceUpdate 'asks the user if the driver installation should be forced
+        BRE_CantForceUpdating 'updating the driver may not be forced
     End Enum
 
     Public Class CfgMgr
@@ -40,7 +40,7 @@ Namespace DeviceBackupRestore
         Public Const SP_COPY_NOOVERWRITE As Int32 = &H8
         Public Const SP_COPY_REPLACEONLY As Int32 = &H2
 
-        'Funzioni PnP devices manager
+        'Functions PnP devices manager
 
         Public Declare Function CM_Connect_Machine Lib "cfgmgr32.dll" Alias "CM_Connect_MachineA" (ByVal machine As IntPtr, ByRef hwnd As IntPtr) As IntPtr
         Public Declare Sub CM_Disconnect_Machine Lib "cfgmgr32.dll" (ByVal hwnd As IntPtr)
@@ -51,7 +51,7 @@ Namespace DeviceBackupRestore
         Public Declare Function CM_Get_Device_ID_List Lib "cfgmgr32.dll" Alias "CM_Get_Device_ID_ListA" (ByVal pszFilter As UInt32, ByVal Buffer As UInt32, ByVal BufferLen As UInt32, ByVal uFlags As UInt32) As UInt32
         Public Declare Function CM_Get_DevNode_Status Lib "cfgmgr32.dll" Alias "CM_Get_DevNode_Status" (ByRef status As UInt32, ByRef problemNumber As UInt32, ByVal DevInst As UInt32, ByVal flags As UInt32) As UInt32
 
-        'Costanti PnP Device Manager
+        'Constants PnP Device Manager
 
         Public Const CR_SUCCESS = 0
         Public Const CM_LOCATE_DEVNODE_NORMAL = &H0
@@ -101,7 +101,7 @@ Namespace DeviceBackupRestore
     End Interface
 
     Public Class BRStdFileManager
-        'Gestore dei file standard
+        'Standard file manager
         Implements BRFileManager
 
         Dim m_dir As String
@@ -129,7 +129,7 @@ Namespace DeviceBackupRestore
 
         Public Function AvailableSpace() As Long Implements BRFileManager.AvailableSpace
             Try
-                Dim drvIn As New DriveInfo(m_dir) 'Crea il drive
+                Dim drvIn As New DriveInfo(m_dir) 'Create the drive
 
                 Return drvIn.AvailableFreeSpace
             Catch ex As Exception
@@ -151,7 +151,7 @@ Namespace DeviceBackupRestore
             Get
                 Try
                     Return (Me.SystemVersion.CompareTo(New Version(My.Computer.Info.OSVersion)) <> 0)
-                    'Versione differente di sistema operativo
+                    'Different version of the operating system
                 Catch ex As Exception
                     Return True
                 End Try
@@ -197,7 +197,7 @@ Namespace DeviceBackupRestore
 
 
         Public Sub New(ByVal desc As String)
-            'Ricava le informazioni necessarie
+            'Obtains the necessary information
             Try
                 Me.inf_Desc = desc
                 Me.inf_SysDesc = My.Computer.Info.OSFullName
@@ -210,7 +210,7 @@ Namespace DeviceBackupRestore
         End Sub
 
         Private Sub New()
-            'Costruttore per la serializzazione
+            'Constructor for serialization
         End Sub
 
 

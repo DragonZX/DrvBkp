@@ -319,7 +319,7 @@ Public Class Utils
     End Sub
 
     Shared Sub New()
-        'Inizializza il tipo Utils
+        'Initializes the type Utils
         Try
 
             m_localSysDir = Environment.ExpandEnvironmentVariables("%windir%")
@@ -349,7 +349,7 @@ Public Class Utils
     Public Shared Sub InitUtils(ByVal sysDir As String)
         Try
             m_sysDir = sysDir
-            'Riempe le directory predefinite
+            'Fills the default directory
             m_ResolveID.Clear()
             FillDIRIDs()
             m_findingPaths.Clear()
@@ -365,8 +365,8 @@ Public Class Utils
                 Dim findingPts As String
                 Dim dirName As String
 
-                'Se arriva a questo punto si tratta di un'inizializzazione a sistema offline
-                'Rimpiazza i percorsi al sistema locale con quelli offline
+                'If you get to this point it is an offline system initialization
+                'Replace the paths to the local system with those offline
                 For Each key As KeyValuePair(Of Integer, String) In m_ResolveID
                     dirName = key.Value.Replace(LocalSysDir, sysDir)
                     If key.Key = -1 Then
@@ -377,12 +377,12 @@ Public Class Utils
                     If dirName.StartsWith(Directory.GetDirectoryRoot(LocalSysDir)) Then Continue For
 
                     If Directory.Exists(dirName) Then
-                        'Dal momento che è offline, la directory potrebbe non esistere
+                        'Since è offline, the directory might not exist
                         newResolveID.Add(key.Key, key.Value.Replace(LocalSysDir, sysDir))
                     End If
                 Next
 
-                'Assegna le nuove directory
+                'Assign the new directory
 
                 m_ResolveID = newResolveID
 
@@ -390,17 +390,17 @@ Public Class Utils
 
                 For Each fstr As String In findingPts.Split(","c)
                     If Directory.Exists(fstr) Then
-                        m_findingPaths.Add(fstr) 'Aggiunge solamente se la directory esiste
+                        m_findingPaths.Add(fstr) 'It adds only if the directory exists
                     End If
                 Next
 
 
             Else
-                'Modo standard, mappato al sistema locale
-                'Espande le finding-paths
+                'Standard mode, mapped to the local system
+                'Expands finding-paths
                 For Each fStr As String In Environment.ExpandEnvironmentVariables(My.Settings.FindingPaths).Split(","c)
                     If Directory.Exists(fStr) Then
-                        m_findingPaths.Add(fStr) 'Aggiunge solamente se la directory esiste
+                        m_findingPaths.Add(fStr)   'Adds only if the directory exists
                     End If
                 Next
             End If
@@ -455,14 +455,14 @@ Public Class Utils
     End Function
 
     Public Shared Function GetSubDirectories(ByVal dirPath As String, Optional ByVal inCache As Boolean = True) As List(Of String)
-        'Invoca codice un-managed per recuperare le sottodirectory
-        'Ritorna la lista presente in cache
+        'Invoke unmanaged code to retrieve the subdirectories
+        'Return the selection below cache
         If m_DirCache IsNot Nothing AndAlso m_DirCache.ContainsKey(dirPath) = True Then Return m_DirCache.Item(dirPath)
 
-        'Crea una nuova lista di directory e la aggiunge alla cache
+        'Create a new list of directories and adds it to the cache
         Dim searchHandle As IntPtr = New IntPtr(-1)
         Dim searchCont As New WIN32_FIND_DATA
-        Dim dirList As New List(Of String) 'Lista di directory
+        Dim dirList As New List(Of String) 'List of directories
 
         Try
             If Directory.Exists(dirPath) = False Then Return dirList
@@ -472,23 +472,23 @@ Public Class Utils
             searchHandle = FindFirstFile(dirPath & "*", searchCont)
 
             If searchHandle <> -1 Then
-                'Processa le sotto cartelle
+                'Process subfolders
                 Do While FindNextFile(searchHandle, searchCont) <> 0
                     If (searchCont.dwFileAttributes Or FILE_ATTR.FILE_ATTRIBUTE_DIRECTORY) = searchCont.dwFileAttributes AndAlso searchCont.cFileName <> "." AndAlso searchCont.cFileName <> ".." Then
-                        'la aggiunge all'array
+                        'To add to the array
                         Dim subDir As String = dirPath & searchCont.cFileName & "\"
                         dirList.Add(subDir)
-                        'processa la sotto directory
-                        GetSubDirectories(subDir, dirList) 'Processa ricorsivamente le sottodirectory
+                        'Processes the subdirectory
+                        GetSubDirectories(subDir, dirList) 'Process subdirectories recursively
                     End If
                 Loop
-                'Aggiunge l'albero trovato alla cache
+                'Adds the tree to cache found
                 If inCache Then
                     If m_DirCache Is Nothing Then m_DirCache = New Dictionary(Of String, List(Of String))
                     m_DirCache.Add(dirPath, dirList)
                 End If
             Else
-                'Nessuna sottodirectory
+                'No subdirectories
                 Return dirList
             End If
 
@@ -510,14 +510,14 @@ Public Class Utils
             searchH = FindFirstFile(dirPath & "*", searchc)
 
             If searchH <> -1 Then
-                'Processa le sotto cartelle
+                'Process subfolders
                 Do While FindNextFile(searchH, searchc) <> 0
                     If (searchc.dwFileAttributes Or FILE_ATTR.FILE_ATTRIBUTE_DIRECTORY) = searchc.dwFileAttributes AndAlso searchc.cFileName <> "." AndAlso searchc.cFileName <> ".." Then
-                        'la aggiunge all'array
+                        'To add to the array
                         Dim subDir As String = dirPath & searchc.cFileName & "\"
                         dirList.Add(subDir)
-                        'processa la sotto directory
-                        GetSubDirectories(subDir, dirList) 'Processa ricorsivamente le sottodirectory
+                        'Processes the subdirectory
+                        GetSubDirectories(subDir, dirList) 'Process subdirectories recursively
                     End If
                 Loop
             End If
@@ -544,11 +544,11 @@ Public Class Utils
         Get
             If m_SysV <> EnWinVersion.UNK Then Return m_SysV
 
-            'Riconosce la versione di Windows
+            'Recognizes the version of Windows
             Dim os As OperatingSystem = Environment.OSVersion
             Select Case os.Version.Major
                 Case Is = 5
-                    'Serie Windows XP
+                    'Windows XP Series
                     Select Case os.Version.Minor
                         Case Is = 1
                             m_SysV = EnWinVersion.WXP
@@ -568,17 +568,17 @@ Public Class Utils
     End Property
 
     Public Shared Function LoadStringResource(ByVal exeFileName As String, ByVal strID As IntPtr, ByVal defaultValue As String) As String
-        'Carica una risorsa stringa da DLL
+        'Upload a string resource DLL
         Dim dllHandle As IntPtr = New IntPtr(-1)
         Dim strRes As New StringBuilder(My.Settings.MaxStrBufferSize)
 
         Try
             If [String].IsNullOrEmpty(exeFileName) Then Throw New ArgumentNullException
 
-            dllHandle = LoadLibrary(exeFileName) 'Carica la libreria
+            dllHandle = LoadLibrary(exeFileName) 'Upload library
 
             If LoadString(dllHandle, strID, strRes, strRes.Capacity) = 0 Then
-                'Funzione fallita
+                'Failed Function
                 Return defaultValue
             Else
                 Return strRes.ToString

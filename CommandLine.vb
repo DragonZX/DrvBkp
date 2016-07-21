@@ -3,12 +3,12 @@ Namespace CommandLineManager
 
     Public Class CommandLineBuilder
         Dim regxFilter As String = "(?<NAME>\w+)\s*\=\s*\x22(?<VALUE>.+?)\x22"
-        'Generali
+        'General
         Public Filter As DeviceFilter
         Public Mode As Integer = -1
         Public Logging As Boolean = True
         Public LogFileName As String
-        'Informazioni BACKUP
+        'Information BACKUP
         Public BackupPath As String = ""
         Public BackupPathFormat As String = ""
         Public BackupDevFormat As String = ""
@@ -19,7 +19,7 @@ Namespace CommandLineManager
         Public UseOfflineComputerName As Boolean = False
         Public OverwriteFile As Boolean = False
         Public GenerateAutorun As Boolean = False
-        'Informazioni RESTORE
+        'Information RESTORE
         Public RestoreFileName As String = ""
         'Public RestorePath As String = ""
         Public UpdateOEMInf As Boolean = False
@@ -32,14 +32,14 @@ Namespace CommandLineManager
         End Sub
 
         Public Function Read(ByVal cmdArgs As String) As Boolean
-            'Carica le impostazioni da cmdArgs
-            'Riconosce i comandi inviati sulla riga di comando
+            'Loads settings from cmd Args' 
+            'recognizes the commands sent to the command line
             Dim parsed As Integer = 0
             Dim value As String
 
             Try
                 For Each arg As Match In Regex.Matches(cmdArgs, Me.regxFilter)
-                    value = arg.Groups("VALUE").Value 'Valore della proprietà corrente
+                    value = arg.Groups("VALUE").Value   'Value of current property
                     If value Is Nothing Then value = ""
 
                     Select Case arg.Groups("NAME").Value
@@ -68,9 +68,9 @@ Namespace CommandLineManager
                             Me.BackupDevFormat = value
                         Case Is = "BKDATEFMT"
                             Me.BackupDateFormat = value
-                        Case Is = "OPT" 'OPZIONALE
-                            'Estrae dalla stringa le opzioni da abilitare
-                            'Produttore
+                        Case Is = "OPT" 'OPTIONAL
+                            'Extracts from the options to enable string
+                            'Producer
                             If value.Contains("A") Then
                                 Me.Filter.ProviderType = DeviceFilter.DeviceFilterProviders.Prov_All
                             End If
@@ -86,7 +86,7 @@ Namespace CommandLineManager
                             If value.Contains("D") Then
                                 Me.Filter.ProviderType = -1
                             End If
-                            'Firma digitale
+                            'Ñompany digital
                             If value.Contains("S") Then
                                 Me.Filter.MustSigned = True
                             Else
@@ -156,27 +156,27 @@ Namespace CommandLineManager
         End Function
 
         Public Function Build() As String
-            'Costruisce dalle impostazioni correnti una riga di comando valida
+            'It builds on current settings for a valid command line
             Try
                 Dim sBuild As New StringBuilder
 
-                'Inserisce la modalità di funzionamento
+                'Inserts the operating modes
                 Select Case Me.Mode
                     Case Is = 0
                         sBuild.Append(" MODE=""BACKUP""")
-                        'Percorso
+                        'Path
                         sBuild.Append(" BKPATH=""" & Me.BackupPath & """")
-                        'Descrizione
+                        'Description
                         sBuild.Append(" BKDESC=""" & Me.BackupDescription & """")
                         'File
                         sBuild.Append(" BKFILE=""" & Me.BackupFileName & """")
-                        'Formato percorso
+                        'Path format
                         sBuild.Append(" BKPATHFTM=""" & Me.BackupPathFormat & """")
-                        'Formato device
+                        'Device format
                         sBuild.Append(" BKDEVFMT=""" & Me.BackupDevFormat & """")
-                        'Formato data
+                        'Date format
                         sBuild.Append(" BKDATEFMT=""" & Me.BackupDateFormat & """")
-                        'Modalità offline
+                        'Offline modality
                         If Not [String].IsNullOrEmpty(Me.SystemDirectory) Then
                             sBuild.Append(" SYSPATH=""" & Me.SystemDirectory & """")
                         End If
@@ -188,7 +188,7 @@ Namespace CommandLineManager
                         'sBuild.Append(" RSPATH=""" & Me.RestorePath & """ ")
                 End Select
 
-                'Inserisce le opzioni
+                'Inserts options
                 sBuild.Append(" OPT=""")
                 Select Case Me.Filter.ProviderType
                     Case Is = DeviceFilter.DeviceFilterProviders.Prov_All
@@ -210,7 +210,7 @@ Namespace CommandLineManager
                 If Me.EnabledPnPRescan Then sBuild.Append("N")
                 If Me.DisableInteraction Then sBuild.Append("V")
                 If Me.UseOfflineComputerName Then sBuild.Append("O")
-                'Termina la stringa opzioni
+                'End the string options
                 sBuild.Append(""" ")
 
                 'FILE log
@@ -228,15 +228,15 @@ Namespace CommandLineManager
     End Class
 
     Public Class CommandLine
-        'Gestisce la riga di comando
+        'It handles command line
         Dim conHandle As Integer
         Dim args As String
 
-        'Oggetti principale
+        'Main items
         Dim WithEvents devBackup As DeviceBackup
         Dim WithEvents devRestore As DeviceRestore
 
-        'Impostazioni
+        'Settings
         Dim regxFilter As String = "(?<NAME>\w+)\s*\=\s*\x22(?<VALUE>.+?)\x22"
         Dim cReader As CommandLineBuilder
         Dim currList As DeviceCollection
@@ -251,17 +251,17 @@ Namespace CommandLineManager
 
 
         Private Function Validate() As Boolean
-            'Corregge la riga di comando o eventualmente scatena un errore
+            'Correct the command line, or possibly triggers an error
             With Me.cReader
                 Select Case .Mode
                     Case Is = 0
-                        'Modo Backup
+                        'Backup mode
                         If [String].IsNullOrEmpty(.BackupPath) Then
                             Console.WriteLine(GetLangStr("CONSOLE_DIRECTORY"))
                             Return False
                         End If
 
-                        'Crea la directory principale se non esiste
+                        'Create the home directory if it does Not exist
                         If Not Directory.Exists(.BackupPath) Then
                             Try
                                 Directory.CreateDirectory(.BackupPath)
@@ -270,31 +270,31 @@ Namespace CommandLineManager
                                 Return False
                             End Try
                         End If
-                        'Corregge gli eventuali parametri opzionali
+                        'Correct any optional parameters
                         If [String].IsNullOrEmpty(.BackupPathFormat) Then .BackupPathFormat = My.Settings.StdBackupPathFormat
                         If [String].IsNullOrEmpty(.BackupDevFormat) Then .BackupDevFormat = My.Settings.StdDevicePathFormat
                         If [String].IsNullOrEmpty(.BackupFileName) Then .BackupFileName = My.Settings.StdBackupInfoFile
                         If [String].IsNullOrEmpty(.BackupDateFormat) Then .BackupDateFormat = My.Settings.DateTimePattern
-                        'Imposta un file log di default se richiesto
+                        'Set a default log file if required
                         If .Logging = True And [String].IsNullOrEmpty(.LogFileName) Then
                             .LogFileName = Path.Combine(.BackupPath, My.Settings.StdLogFileName)
                         End If
 
                     Case Is = 1
-                        'Modo Restore
-                        'Mancato inserimento del file BKI
+                        'Restore Mode
+                        'Failure to include the BKF files
                         If [String].IsNullOrEmpty(.RestoreFileName) Then
                             Console.WriteLine(GetLangStr("CONSOLE:FILE"))
                             Return False
                         End If
 
-                        'Imposta un file log di default se richiesto
+                        'Set a default log file if required
                         If .Logging = True And [String].IsNullOrEmpty(.LogFileName) Then
                             .LogFileName = Path.Combine(My.Application.Info.DirectoryPath, My.Settings.StdLogFileName)
                         End If
 
                     Case Else
-                        'Errore nell'inserimento della modalità
+                        'Error inserting the modalities
                         Console.WriteLine(GetLangStr("CONSOLE:BADCOMMAND"))
                         Return False
                 End Select
@@ -313,10 +313,10 @@ Namespace CommandLineManager
                     Return False
                 End If
 
-                'Crea la console
+                'Create your console
                 Utils.AllocConsole()
 
-                'Visualizza il messaggio di benvenuto
+                'Show your greeting
                 Console.WriteLine("DriverBackup! " & My.Application.Info.Version.ToString & " by Giuseppe Greco 2009-2011")
                 Console.WriteLine("Free driver management software. GPL License")
 
@@ -330,13 +330,13 @@ Namespace CommandLineManager
                 With cReader
                     Select Case .Mode
                         Case Is = 0
-                            'Imposta la configurazione per il backup
+                            'Set the configuration for backup
                             Console.WriteLine(GetLangStr("CONSOLE:INFOCOLLECT"))
 
                             logFile = New TextFormatters.TXTFormatter
 
                             If Not [String].IsNullOrEmpty(.SystemDirectory) Then
-                                'Configura il modo offline
+                                'Configure the offline mode
                                 offLineObj = DeviceBackupOffline.Create(.SystemDirectory)
                                 If offLineObj Is Nothing Then
                                     logFile.AddMsgError(GetLangStr("FRMOFFLINE_GENERIC"), False)
@@ -362,9 +362,9 @@ Namespace CommandLineManager
 
                             tempList = DeviceCollection.Create(Nothing)
 
-                            If tempList Is Nothing Then Throw New ArgumentNullException 'Errore imprevisto
+                            If tempList Is Nothing Then Throw New ArgumentNullException 'Unexpected error
 
-                            If tempList.Count <= 0 Then 'Impossibile accedere al registro
+                            If tempList.Count <= 0 Then  'Could not access log
                                 Console.WriteLine(GetLangStr("ERROR:RegistryAccess"))
                                 Return True
                             End If
@@ -373,14 +373,14 @@ Namespace CommandLineManager
                             tempList.SetDevicesProperties(.Filter, "Selected", GetType(Boolean), True, False)
                             currList = DeviceCollection.Create(tempList, "Selected", True)
 
-                            If currList Is Nothing Then Throw New ArgumentNullException 'Errore imprevisto
+                            If currList Is Nothing Then Throw New ArgumentNullException 'Unexpected error
 
-                            If currList.Count <= 0 Then 'Nessun device selezionato
+                            If currList.Count <= 0 Then 'No Device selected
                                 Console.WriteLine(GetLangStr(GetLangStr("FRMMAIN:NODEVICES")))
                                 Return True
                             End If
                             totalDevices = currList.Count
-                            'Reinizializza il file log
+                            'Reset the log file
 
                             devBackup = New DeviceBackup(currList, .BackupPath, My.Settings.DateTimePattern)
                             devBackup.FileManager = New BRStdFileManager(.BackupPath)
@@ -391,15 +391,15 @@ Namespace CommandLineManager
                             devBackup.CanOverwrite = .OverwriteFile
                             devBackup.Description = .BackupDescription
                             Console.WriteLine("Ok.")
-                            'Procede con il backup effettivo
+                            'Proceed with the actual backup
                             devBackup.Backup()
-                            'Genera se richiesto l'autorun
+                            'Generate if required autorun
                             If .GenerateAutorun Then
                                 Utils.GenerateAutorun(.BackupPath, [String].Format(My.Settings.StdRestoreCmdLine, devBackup.BackupInfoFile, My.Settings.StdRestorePath), Path.GetDirectoryName(Application.ExecutablePath), CommonVariables.GetLanguageFiles)
                             End If
 
                         Case Is = 1
-                            'Prepara la configurazione del ripristino
+                            'Prepare the Restore Configuration
                             Console.WriteLine(GetLangStr("CONSOLE:INFOCOLLECT"))
                             devRestore = DeviceRestore.Create(.RestoreFileName)
 
@@ -411,12 +411,12 @@ Namespace CommandLineManager
                             logFile = New TextFormatters.TXTFormatter
 
                             If .Filter.ProviderType <> -1 Then
-                                'Applica un filtro solo se l'utente sceglie una specifica categoria
+                                'Apply a filter only if the user chooses a specific category
                                 totalDevices = devRestore.DeviceList.SetDevicesProperties(.Filter, "Selected", GetType(Boolean), True, False)
                             End If
                             devRestore.UpdateDeviceInfo = .UpdateOEMInf
                             Console.WriteLine("Ok.")
-                            'Effettua il ripristino dei devices selezionati
+                            'Restores the selected devices
                             devRestore.RestoreDevices()
                     End Select
                 End With
@@ -431,7 +431,7 @@ Namespace CommandLineManager
                 Console.WriteLine(GetLangStr("ERROR:BERR"))
                 Return True
             Finally
-                'Rilascia le risorse utilizzate
+                'Releases the resources used
                 If offLineObj IsNot Nothing Then offLineObj.Dispose()
                 If logFile IsNot Nothing And Not [String].IsNullOrEmpty(cReader.LogFileName) Then
                     logFile.Write(cReader.LogFileName)
@@ -443,7 +443,7 @@ Namespace CommandLineManager
 
         Private Sub devBackup_BackupBeginDevice(ByVal sender As Object, ByVal e As DeviceBackupRestore.DeviceEventArgs) Handles devBackup.BackupBeginDevice
             logFile.AddDevice(e.Source)
-            'Notifica sulla console
+            'Notification on the console
             Console.WriteLine(e.Source.Description)
         End Sub
 
@@ -451,13 +451,13 @@ Namespace CommandLineManager
             Dim errNotify As Boolean = False
 
             If e.Code = BackupRestoreErrorCodes.BRE_FileOverwiting Then
-                'Aggiunge il nome del file che ha causato l'errore
+                'Adds the name of the file that caused the error
                 logFile.AddMsgError(ControlChars.Tab & GetLangStr(e.Code) & ": " & e.Data("Filename"), True)
                 errNotify = True
             End If
 
             If e.Code = BackupRestoreErrorCodes.BRE_FileIOError Then
-                'Aggiunge maggiori informazioni
+                'Adds more information
                 logFile.AddMsgError(ControlChars.Tab & e.Data("Msg"), True)
                 errNotify = True
             End If
@@ -467,7 +467,7 @@ Namespace CommandLineManager
 
         Private Sub devBackup_BackupEndDevice(ByVal sender As Object, ByVal e As DeviceBackupRestore.DeviceEventArgs) Handles devBackup.BackupEndDevice
             logFile.EndDevice(e.HasErrors)
-            'Notifica sulla console
+            'Notification on the console
             If e.HasErrors Then
                 Console.WriteLine(GetLangStr("LOG_DeviceError"))
             Else
@@ -477,7 +477,7 @@ Namespace CommandLineManager
 
         Private Sub devBackup_BackupEnded(ByVal sender As Object, ByVal e As DeviceBackupRestore.OperationEventArgs) Handles devBackup.BackupEnded
             logFile.EndOperation([String].Format(GetLangStr("FRMBACK:ENDBACKUP"), e.TotalDevices, totalDevices))
-            'Notifica sulla console
+            'Notification on the console
             Console.WriteLine([String].Format(GetLangStr("FRMBACK:ENDBACKUP"), e.TotalDevices, totalDevices))
         End Sub
 
@@ -491,7 +491,7 @@ Namespace CommandLineManager
 
         Private Sub devBackup_BackupStarted(ByVal sender As Object, ByVal e As DeviceBackupRestore.OperationEventArgs) Handles devBackup.BackupStarted
             logFile.BeginOperation([String].Format(GetLangStr("FRMBACK:BEGINBACKUP"), e.TotalDevices))
-            'Notifica sulla console
+            'Notification on the console
             Console.WriteLine([String].Format(GetLangStr("FRMBACK:BEGINBACKUP"), e.TotalDevices))
         End Sub
 
@@ -522,7 +522,7 @@ Namespace CommandLineManager
 
         Private Sub devRestore_RestoreDeviceError(ByVal sender As Object, ByVal e As DeviceBackupRestore.ExceptionEventArgs) Handles devRestore.RestoreDeviceError
             If e.Code = BackupRestoreErrorCodes.BRE_ForceUpdate And Not cReader.DisableInteraction Then
-                'Gestisce la forzatura
+                'Manages forcing
                 Dim msg As String = ControlChars.Tab & [String].Format(GetLangStr(e.Code.ToString), DirectCast(e.Data("Device"), Device).Description) & " (y/n)"
                 Console.Write(msg)
                 If Console.ReadKey.Key = ConsoleKey.Y Then
@@ -535,7 +535,7 @@ Namespace CommandLineManager
             End If
 
             If e.Code = BackupRestoreErrorCodes.BRE_Generic Then
-                'Aggiunge maggiori informazioni
+                'Adds more information
                 logFile.AddMsgError(ControlChars.Tab & e.Data("Msg"), True)
                 Return
             End If
@@ -550,12 +550,12 @@ Namespace CommandLineManager
             Console.WriteLine([String].Format(GetLangStr("FRMRESTORE:ENDRESTORE"), e.TotalDevices, totalDevices))
 
             If Me.cReader.EnabledPnPRescan Then
-                'Aggiorna la configurazione PnP
+                'Refresh the PNP configuration
                 If DeviceRestore.PnPConfigUpdate = True Then
-                    'Configurazione aggiornata
+                    'Configuration updated
                     Console.WriteLine(GetLangStr("FRMRESTORE:PNPRESCAN"))
                 Else
-                    'Impossibile aggiornare la configurazione
+                    'Unable to update configuration
                     Console.WriteLine(GetLangStr("FRMRESTORE:PNPRESCANFAILED"))
                 End If
             End If
@@ -567,7 +567,7 @@ Namespace CommandLineManager
             End If
 
             logFile.EndDevice(e.HasErrors)
-            'Notifica sulla console
+            'Notification on the console
             If e.HasErrors Then
                 Console.WriteLine(ControlChars.Tab & GetLangStr("LOG_DeviceError"))
             Else
