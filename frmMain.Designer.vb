@@ -26,7 +26,6 @@ Partial Class frmMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.EsciDaDriverBackupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuLang = New System.Windows.Forms.ToolStripMenuItem()
         Me.UtilitàToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuilderRigaDiComandoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -37,6 +36,7 @@ Partial Class frmMain
         Me.GuidaAlRipristinoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GuidaAllaRigaDiComandoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InfoSuDriverBackupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EsciDaDriverBackupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.lblBarInfo = New System.Windows.Forms.ToolStripStatusLabel()
         Me.devScanBar = New System.Windows.Forms.ToolStripProgressBar()
@@ -154,80 +154,80 @@ Partial Class frmMain
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EsciDaDriverBackupToolStripMenuItem, Me.menuLang, Me.UtilitàToolStripMenuItem, Me.ToolStripMenuItem1})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuLang, Me.UtilitàToolStripMenuItem, Me.ToolStripMenuItem1, Me.EsciDaDriverBackupToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1308, 24)
         Me.MenuStrip1.TabIndex = 6
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'EsciDaDriverBackupToolStripMenuItem
-        '
-        Me.EsciDaDriverBackupToolStripMenuItem.Name = "EsciDaDriverBackupToolStripMenuItem"
-        Me.EsciDaDriverBackupToolStripMenuItem.Size = New System.Drawing.Size(131, 20)
-        Me.EsciDaDriverBackupToolStripMenuItem.Text = "Esci da DriverBackup!"
-        '
         'menuLang
         '
         Me.menuLang.Name = "menuLang"
-        Me.menuLang.Size = New System.Drawing.Size(55, 20)
-        Me.menuLang.Text = "Lingua"
+        Me.menuLang.Size = New System.Drawing.Size(71, 20)
+        Me.menuLang.Text = "&Language"
         '
         'UtilitàToolStripMenuItem
         '
         Me.UtilitàToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuilderRigaDiComandoToolStripMenuItem, Me.MostraDispositiviPCIToolStripMenuItem})
         Me.UtilitàToolStripMenuItem.Name = "UtilitàToolStripMenuItem"
-        Me.UtilitàToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
-        Me.UtilitàToolStripMenuItem.Text = "Utilità"
+        Me.UtilitàToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.UtilitàToolStripMenuItem.Text = "&Settings"
         '
         'BuilderRigaDiComandoToolStripMenuItem
         '
         Me.BuilderRigaDiComandoToolStripMenuItem.Name = "BuilderRigaDiComandoToolStripMenuItem"
-        Me.BuilderRigaDiComandoToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
-        Me.BuilderRigaDiComandoToolStripMenuItem.Text = "Builder riga di comando"
+        Me.BuilderRigaDiComandoToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.BuilderRigaDiComandoToolStripMenuItem.Text = "Command line builder"
         '
         'MostraDispositiviPCIToolStripMenuItem
         '
         Me.MostraDispositiviPCIToolStripMenuItem.Name = "MostraDispositiviPCIToolStripMenuItem"
-        Me.MostraDispositiviPCIToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
-        Me.MostraDispositiviPCIToolStripMenuItem.Text = "Mostra dispositivi PCI"
+        Me.MostraDispositiviPCIToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.MostraDispositiviPCIToolStripMenuItem.Text = "Show connected PCI devices"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem4, Me.GuidaAlBackupToolStripMenuItem, Me.GuidaAlRipristinoToolStripMenuItem, Me.GuidaAllaRigaDiComandoToolStripMenuItem, Me.InfoSuDriverBackupToolStripMenuItem})
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(24, 20)
-        Me.ToolStripMenuItem1.Text = "&?"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(44, 20)
+        Me.ToolStripMenuItem1.Text = "&Help"
         '
         'ToolStripMenuItem4
         '
         Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(216, 22)
-        Me.ToolStripMenuItem4.Text = "Guida"
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(196, 22)
+        Me.ToolStripMenuItem4.Text = "Help guide"
         '
         'GuidaAlBackupToolStripMenuItem
         '
         Me.GuidaAlBackupToolStripMenuItem.Name = "GuidaAlBackupToolStripMenuItem"
-        Me.GuidaAlBackupToolStripMenuItem.Size = New System.Drawing.Size(216, 22)
-        Me.GuidaAlBackupToolStripMenuItem.Text = "Guida al backup"
+        Me.GuidaAlBackupToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.GuidaAlBackupToolStripMenuItem.Text = "Backup help guide"
         '
         'GuidaAlRipristinoToolStripMenuItem
         '
         Me.GuidaAlRipristinoToolStripMenuItem.Name = "GuidaAlRipristinoToolStripMenuItem"
-        Me.GuidaAlRipristinoToolStripMenuItem.Size = New System.Drawing.Size(216, 22)
-        Me.GuidaAlRipristinoToolStripMenuItem.Text = "Guida al ripristino"
+        Me.GuidaAlRipristinoToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.GuidaAlRipristinoToolStripMenuItem.Text = "Restore help guide"
         '
         'GuidaAllaRigaDiComandoToolStripMenuItem
         '
         Me.GuidaAllaRigaDiComandoToolStripMenuItem.Name = "GuidaAllaRigaDiComandoToolStripMenuItem"
-        Me.GuidaAllaRigaDiComandoToolStripMenuItem.Size = New System.Drawing.Size(216, 22)
-        Me.GuidaAllaRigaDiComandoToolStripMenuItem.Text = "Guida alla riga di comando"
+        Me.GuidaAllaRigaDiComandoToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.GuidaAllaRigaDiComandoToolStripMenuItem.Text = "Command line options"
         '
         'InfoSuDriverBackupToolStripMenuItem
         '
         Me.InfoSuDriverBackupToolStripMenuItem.Name = "InfoSuDriverBackupToolStripMenuItem"
-        Me.InfoSuDriverBackupToolStripMenuItem.Size = New System.Drawing.Size(216, 22)
-        Me.InfoSuDriverBackupToolStripMenuItem.Text = "Info su DriverBackup!"
+        Me.InfoSuDriverBackupToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.InfoSuDriverBackupToolStripMenuItem.Text = "About DriverBackup!"
+        '
+        'EsciDaDriverBackupToolStripMenuItem
+        '
+        Me.EsciDaDriverBackupToolStripMenuItem.Name = "EsciDaDriverBackupToolStripMenuItem"
+        Me.EsciDaDriverBackupToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.EsciDaDriverBackupToolStripMenuItem.Text = "E&xit"
         '
         'StatusStrip1
         '
@@ -278,7 +278,7 @@ Partial Class frmMain
         Me.devInfoBox.Size = New System.Drawing.Size(561, 162)
         Me.devInfoBox.TabIndex = 22
         Me.devInfoBox.TabStop = False
-        Me.devInfoBox.Text = "Informazioni sul device selezionato"
+        Me.devInfoBox.Text = "More information about selected device"
         Me.devInfoBox.Visible = False
         '
         'pictDev
@@ -402,9 +402,9 @@ Partial Class frmMain
         Me.lblPortRest.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPortRest.Location = New System.Drawing.Point(268, 90)
         Me.lblPortRest.Name = "lblPortRest"
-        Me.lblPortRest.Size = New System.Drawing.Size(64, 13)
+        Me.lblPortRest.Size = New System.Drawing.Size(63, 13)
         Me.lblPortRest.TabIndex = 7
-        Me.lblPortRest.Text = "Portabilità"
+        Me.lblPortRest.Text = "Portability"
         '
         'Label7
         '
@@ -412,9 +412,9 @@ Partial Class frmMain
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(22, 90)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(82, 13)
+        Me.Label7.Size = New System.Drawing.Size(99, 13)
         Me.Label7.TabIndex = 6
-        Me.Label7.Text = "Firma digitale"
+        Me.Label7.Text = "Digital signature"
         '
         'Label6
         '
@@ -422,9 +422,9 @@ Partial Class frmMain
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(268, 70)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(32, 13)
+        Me.Label6.Size = New System.Drawing.Size(35, 13)
         Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Tipo"
+        Me.Label6.Text = "Type"
         '
         'Label5
         '
@@ -432,9 +432,9 @@ Partial Class frmMain
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(266, 50)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(82, 13)
+        Me.Label5.Size = New System.Drawing.Size(57, 13)
         Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Identificatore"
+        Me.Label5.Text = "Identifire"
         '
         'Label4
         '
@@ -442,9 +442,9 @@ Partial Class frmMain
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(266, 27)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(92, 13)
+        Me.Label4.Size = New System.Drawing.Size(82, 13)
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Data di rilascio"
+        Me.Label4.Text = "Release date"
         '
         'Label3
         '
@@ -452,9 +452,9 @@ Partial Class frmMain
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(22, 70)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(101, 13)
+        Me.Label3.Size = New System.Drawing.Size(90, 13)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "File installazione"
+        Me.Label3.Text = "Installation file"
         '
         'Label2
         '
@@ -462,9 +462,9 @@ Partial Class frmMain
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(22, 50)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 13)
+        Me.Label2.Size = New System.Drawing.Size(54, 13)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Produttore"
+        Me.Label2.Text = "Provider"
         '
         'Label1
         '
@@ -472,9 +472,9 @@ Partial Class frmMain
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(22, 30)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(56, 13)
+        Me.Label1.Size = New System.Drawing.Size(49, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Versione"
+        Me.Label1.Text = "Version"
         '
         'treeDevices
         '
@@ -499,8 +499,8 @@ Partial Class frmMain
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(190, 22)
-        Me.ToolStripLabel1.Text = "Selezionare l'operazione desiderata"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(92, 22)
+        Me.ToolStripLabel1.Text = "Select the mode"
         '
         'cmdBackupMode
         '
@@ -515,16 +515,16 @@ Partial Class frmMain
         '
         Me.cmdRestoreMode.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.cmdRestoreMode.Name = "cmdRestoreMode"
-        Me.cmdRestoreMode.Size = New System.Drawing.Size(61, 22)
-        Me.cmdRestoreMode.Text = "Ripristino"
+        Me.cmdRestoreMode.Size = New System.Drawing.Size(50, 22)
+        Me.cmdRestoreMode.Text = "Restore"
         '
         'lblDispTrovati
         '
         Me.lblDispTrovati.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.lblDispTrovati.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDispTrovati.Name = "lblDispTrovati"
-        Me.lblDispTrovati.Size = New System.Drawing.Size(105, 22)
-        Me.lblDispTrovati.Text = "Dispositivi trovati"
+        Me.lblDispTrovati.Size = New System.Drawing.Size(87, 22)
+        Me.lblDispTrovati.Text = "Devices found"
         Me.lblDispTrovati.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'cmdOfflineMode
@@ -533,8 +533,8 @@ Partial Class frmMain
         Me.cmdOfflineMode.Image = CType(resources.GetObject("cmdOfflineMode.Image"), System.Drawing.Image)
         Me.cmdOfflineMode.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.cmdOfflineMode.Name = "cmdOfflineMode"
-        Me.cmdOfflineMode.Size = New System.Drawing.Size(146, 22)
-        Me.cmdOfflineMode.Text = "Backup da sistema offline"
+        Me.cmdOfflineMode.Size = New System.Drawing.Size(156, 22)
+        Me.cmdOfflineMode.Text = "Backup from offline system"
         '
         'panelBackup
         '
@@ -552,7 +552,7 @@ Partial Class frmMain
         Me.cmdUpdate.Name = "cmdUpdate"
         Me.cmdUpdate.Size = New System.Drawing.Size(127, 35)
         Me.cmdUpdate.TabIndex = 1
-        Me.cmdUpdate.Text = "Aggiorna"
+        Me.cmdUpdate.Text = "Refresh"
         Me.cmdUpdate.UseVisualStyleBackColor = True
         '
         'cmdBackup
@@ -562,7 +562,7 @@ Partial Class frmMain
         Me.cmdBackup.Name = "cmdBackup"
         Me.cmdBackup.Size = New System.Drawing.Size(129, 35)
         Me.cmdBackup.TabIndex = 0
-        Me.cmdBackup.Text = "Avvia backup"
+        Me.cmdBackup.Text = "Start Backup"
         Me.cmdBackup.UseVisualStyleBackColor = True
         '
         'panelRestore
@@ -582,7 +582,7 @@ Partial Class frmMain
         Me.cmdBkExtInfo.Name = "cmdBkExtInfo"
         Me.cmdBkExtInfo.Size = New System.Drawing.Size(129, 33)
         Me.cmdBkExtInfo.TabIndex = 2
-        Me.cmdBkExtInfo.Text = "Informazioni backup"
+        Me.cmdBkExtInfo.Text = "Backup information"
         Me.cmdBkExtInfo.UseVisualStyleBackColor = True
         '
         'cmdOpenBkFile
@@ -592,7 +592,7 @@ Partial Class frmMain
         Me.cmdOpenBkFile.Name = "cmdOpenBkFile"
         Me.cmdOpenBkFile.Size = New System.Drawing.Size(131, 36)
         Me.cmdOpenBkFile.TabIndex = 1
-        Me.cmdOpenBkFile.Text = "Apri file backup"
+        Me.cmdOpenBkFile.Text = "Open backup file"
         Me.cmdOpenBkFile.UseVisualStyleBackColor = True
         '
         'cmdRestore
@@ -602,7 +602,7 @@ Partial Class frmMain
         Me.cmdRestore.Name = "cmdRestore"
         Me.cmdRestore.Size = New System.Drawing.Size(130, 35)
         Me.cmdRestore.TabIndex = 0
-        Me.cmdRestore.Text = "Ripristina"
+        Me.cmdRestore.Text = "Restore"
         Me.cmdRestore.UseVisualStyleBackColor = True
         '
         'Label9
@@ -644,7 +644,7 @@ Partial Class frmMain
         Me.cmdOthers.Name = "cmdOthers"
         Me.cmdOthers.Size = New System.Drawing.Size(113, 23)
         Me.cmdOthers.TabIndex = 21
-        Me.cmdOthers.Text = "Terze parti"
+        Me.cmdOthers.Text = "Third party"
         Me.cmdOthers.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.cmdOthers.UseVisualStyleBackColor = True
         '
@@ -656,7 +656,7 @@ Partial Class frmMain
         Me.cmdOem.Name = "cmdOem"
         Me.cmdOem.Size = New System.Drawing.Size(113, 23)
         Me.cmdOem.TabIndex = 20
-        Me.cmdOem.Text = "Oem"
+        Me.cmdOem.Text = "OEM"
         Me.cmdOem.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.cmdOem.UseVisualStyleBackColor = True
         '
@@ -670,7 +670,7 @@ Partial Class frmMain
         Me.cmdAll.Name = "cmdAll"
         Me.cmdAll.Size = New System.Drawing.Size(109, 23)
         Me.cmdAll.TabIndex = 19
-        Me.cmdAll.Text = "Tutti"
+        Me.cmdAll.Text = "All"
         Me.cmdAll.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.cmdAll.UseVisualStyleBackColor = True
         '
@@ -695,7 +695,7 @@ Partial Class frmMain
         Me.pckInfoBox.Size = New System.Drawing.Size(561, 161)
         Me.pckInfoBox.TabIndex = 31
         Me.pckInfoBox.TabStop = False
-        Me.pckInfoBox.Text = "Informazioni estese backup"
+        Me.pckInfoBox.Text = "Backup extended information"
         '
         'lblPckInfo
         '
@@ -774,9 +774,9 @@ Partial Class frmMain
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.Location = New System.Drawing.Point(20, 30)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(73, 13)
+        Me.Label16.Size = New System.Drawing.Size(71, 13)
         Me.Label16.TabIndex = 5
-        Me.Label16.Text = "Descrizione"
+        Me.Label16.Text = "Description"
         '
         'Label15
         '
@@ -784,9 +784,9 @@ Partial Class frmMain
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.Location = New System.Drawing.Point(301, 30)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(141, 13)
+        Me.Label15.Size = New System.Drawing.Size(133, 13)
         Me.Label15.TabIndex = 4
-        Me.Label15.Text = "Versione DriverBackup!"
+        Me.Label15.Text = "DriverBackup! version"
         '
         'Label14
         '
@@ -794,9 +794,9 @@ Partial Class frmMain
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(301, 50)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(102, 13)
+        Me.Label14.Size = New System.Drawing.Size(92, 13)
         Me.Label14.TabIndex = 3
-        Me.Label14.Text = "Versione sistema"
+        Me.Label14.Text = "System version"
         '
         'Label13
         '
@@ -804,9 +804,9 @@ Partial Class frmMain
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(20, 90)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(107, 13)
+        Me.Label13.Size = New System.Drawing.Size(83, 13)
         Me.Label13.TabIndex = 2
-        Me.Label13.Text = "Data di creazione"
+        Me.Label13.Text = "Creation date"
         '
         'Label12
         '
@@ -814,9 +814,9 @@ Partial Class frmMain
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.Location = New System.Drawing.Point(20, 50)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(95, 13)
+        Me.Label12.Size = New System.Drawing.Size(94, 13)
         Me.Label12.TabIndex = 1
-        Me.Label12.Text = "Nome computer"
+        Me.Label12.Text = "Computer name"
         '
         'Label8
         '
@@ -824,9 +824,9 @@ Partial Class frmMain
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(20, 70)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(107, 13)
+        Me.Label8.Size = New System.Drawing.Size(89, 13)
         Me.Label8.TabIndex = 0
-        Me.Label8.Text = "Sistema di origine"
+        Me.Label8.Text = "Source system"
         '
         'cmdFullPort
         '
@@ -837,7 +837,7 @@ Partial Class frmMain
         Me.cmdFullPort.Name = "cmdFullPort"
         Me.cmdFullPort.Size = New System.Drawing.Size(122, 23)
         Me.cmdFullPort.TabIndex = 24
-        Me.cmdFullPort.Text = "Piena portabilità"
+        Me.cmdFullPort.Text = "Full portability"
         Me.cmdFullPort.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.cmdFullPort.UseVisualStyleBackColor = False
         '
@@ -849,7 +849,7 @@ Partial Class frmMain
         Me.cmdSignature.Name = "cmdSignature"
         Me.cmdSignature.Size = New System.Drawing.Size(122, 23)
         Me.cmdSignature.TabIndex = 23
-        Me.cmdSignature.Text = "Firma digitale"
+        Me.cmdSignature.Text = "Digital signature"
         Me.cmdSignature.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.cmdSignature.UseVisualStyleBackColor = True
         '

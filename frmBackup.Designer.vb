@@ -22,38 +22,38 @@ Partial Class frmBackup
     'Non modificarla nell'editor del codice.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.devTree = New System.Windows.Forms.TreeView
-        Me.lblDevFound = New System.Windows.Forms.Label
-        Me.optBox = New System.Windows.Forms.GroupBox
-        Me.txtDateFormat = New System.Windows.Forms.TextBox
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.txtBackupFile = New System.Windows.Forms.TextBox
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.txtDesc = New System.Windows.Forms.TextBox
-        Me.txtDevFormat = New System.Windows.Forms.TextBox
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.chkAutoRestore = New System.Windows.Forms.CheckBox
-        Me.chkOverwrite = New System.Windows.Forms.CheckBox
-        Me.txtFormat = New System.Windows.Forms.TextBox
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.cmdBrowse = New System.Windows.Forms.Button
-        Me.txtPath = New System.Windows.Forms.TextBox
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.cmdBackup = New System.Windows.Forms.Button
-        Me.cmdOk = New System.Windows.Forms.Button
-        Me.cmdCancel = New System.Windows.Forms.Button
-        Me.cmdContinue = New System.Windows.Forms.Button
-        Me.cmdLog = New System.Windows.Forms.Button
-        Me.infoBox = New System.Windows.Forms.GroupBox
-        Me.lblFilename = New System.Windows.Forms.Label
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.backupBar = New System.Windows.Forms.ProgressBar
-        Me.deviceBar = New System.Windows.Forms.ProgressBar
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.lblOutputPath = New System.Windows.Forms.Label
+        Me.devTree = New System.Windows.Forms.TreeView()
+        Me.lblDevFound = New System.Windows.Forms.Label()
+        Me.optBox = New System.Windows.Forms.GroupBox()
+        Me.txtDateFormat = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtBackupFile = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtDesc = New System.Windows.Forms.TextBox()
+        Me.txtDevFormat = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.chkAutoRestore = New System.Windows.Forms.CheckBox()
+        Me.chkOverwrite = New System.Windows.Forms.CheckBox()
+        Me.txtFormat = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cmdBrowse = New System.Windows.Forms.Button()
+        Me.txtPath = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmdBackup = New System.Windows.Forms.Button()
+        Me.cmdOk = New System.Windows.Forms.Button()
+        Me.cmdCancel = New System.Windows.Forms.Button()
+        Me.cmdContinue = New System.Windows.Forms.Button()
+        Me.cmdLog = New System.Windows.Forms.Button()
+        Me.infoBox = New System.Windows.Forms.GroupBox()
+        Me.lblFilename = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.backupBar = New System.Windows.Forms.ProgressBar()
+        Me.deviceBar = New System.Windows.Forms.ProgressBar()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.lblOutputPath = New System.Windows.Forms.Label()
         Me.optBox.SuspendLayout()
         Me.infoBox.SuspendLayout()
         Me.SuspendLayout()
@@ -111,9 +111,9 @@ Partial Class frmBackup
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(16, 150)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(69, 13)
+        Me.Label10.Size = New System.Drawing.Size(62, 13)
         Me.Label10.TabIndex = 24
-        Me.Label10.Text = "Formato data"
+        Me.Label10.Text = "Date format"
         '
         'txtBackupFile
         '
@@ -127,18 +127,18 @@ Partial Class frmBackup
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(16, 70)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(63, 13)
+        Me.Label7.Size = New System.Drawing.Size(89, 13)
         Me.Label7.TabIndex = 22
-        Me.Label7.Text = "File Backup"
+        Me.Label7.Text = "Backup file name"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(16, 45)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(62, 13)
+        Me.Label6.Size = New System.Drawing.Size(60, 13)
         Me.Label6.TabIndex = 21
-        Me.Label6.Text = "Descrizione"
+        Me.Label6.Text = "Description"
         '
         'txtDesc
         '
@@ -146,7 +146,7 @@ Partial Class frmBackup
         Me.txtDesc.Name = "txtDesc"
         Me.txtDesc.Size = New System.Drawing.Size(335, 20)
         Me.txtDesc.TabIndex = 20
-        Me.txtDesc.Text = "[Inserire qui una descrizione]"
+        Me.txtDesc.Text = "[Insert a description here]"
         '
         'txtDevFormat
         '
@@ -160,9 +160,9 @@ Partial Class frmBackup
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(16, 121)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(141, 13)
+        Me.Label5.Size = New System.Drawing.Size(97, 13)
         Me.Label5.TabIndex = 18
-        Me.Label5.Text = "Formato percorso dispositivo"
+        Me.Label5.Text = "Device path format"
         '
         'chkAutoRestore
         '
@@ -181,8 +181,8 @@ Partial Class frmBackup
         Me.chkOverwrite.Name = "chkOverwrite"
         Me.chkOverwrite.Size = New System.Drawing.Size(450, 17)
         Me.chkOverwrite.TabIndex = 15
-        Me.chkOverwrite.Text = "Attiva sovrascrittura, se necessario, dei files presenti sul percorso di backup, " & _
-            "(Sconsigliato)"
+        Me.chkOverwrite.Text = "Attiva sovrascrittura, se necessario, dei files presenti sul percorso di backup, " &
+    "(Sconsigliato)"
         Me.chkOverwrite.UseVisualStyleBackColor = True
         '
         'txtFormat
@@ -197,9 +197,9 @@ Partial Class frmBackup
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(16, 95)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(89, 13)
+        Me.Label2.Size = New System.Drawing.Size(61, 13)
         Me.Label2.TabIndex = 13
-        Me.Label2.Text = "Formato percorso"
+        Me.Label2.Text = "Path format"
         '
         'cmdBrowse
         '
@@ -207,7 +207,7 @@ Partial Class frmBackup
         Me.cmdBrowse.Name = "cmdBrowse"
         Me.cmdBrowse.Size = New System.Drawing.Size(69, 27)
         Me.cmdBrowse.TabIndex = 12
-        Me.cmdBrowse.Text = "Sfoglia.."
+        Me.cmdBrowse.Text = "Browse.."
         Me.cmdBrowse.UseVisualStyleBackColor = True
         '
         'txtPath
@@ -216,16 +216,16 @@ Partial Class frmBackup
         Me.txtPath.Name = "txtPath"
         Me.txtPath.Size = New System.Drawing.Size(335, 20)
         Me.txtPath.TabIndex = 11
-        Me.txtPath.Text = "[Fare clc su Sfoglia per selezionare un percorso]"
+        Me.txtPath.Text = "[Click browse to select a path]"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(16, 19)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(49, 13)
+        Me.Label1.Size = New System.Drawing.Size(29, 13)
         Me.Label1.TabIndex = 10
-        Me.Label1.Text = "Percorso"
+        Me.Label1.Text = "Path"
         '
         'cmdBackup
         '
@@ -233,7 +233,7 @@ Partial Class frmBackup
         Me.cmdBackup.Name = "cmdBackup"
         Me.cmdBackup.Size = New System.Drawing.Size(104, 29)
         Me.cmdBackup.TabIndex = 3
-        Me.cmdBackup.Text = "Avvia backup"
+        Me.cmdBackup.Text = "Start backup"
         Me.cmdBackup.UseVisualStyleBackColor = True
         '
         'cmdOk
@@ -251,7 +251,7 @@ Partial Class frmBackup
         Me.cmdCancel.Name = "cmdCancel"
         Me.cmdCancel.Size = New System.Drawing.Size(105, 28)
         Me.cmdCancel.TabIndex = 5
-        Me.cmdCancel.Text = "Annulla"
+        Me.cmdCancel.Text = "Cancel"
         Me.cmdCancel.UseVisualStyleBackColor = True
         '
         'cmdContinue
@@ -260,7 +260,7 @@ Partial Class frmBackup
         Me.cmdContinue.Name = "cmdContinue"
         Me.cmdContinue.Size = New System.Drawing.Size(105, 28)
         Me.cmdContinue.TabIndex = 6
-        Me.cmdContinue.Text = "Continua.."
+        Me.cmdContinue.Text = "Continue.."
         Me.cmdContinue.UseVisualStyleBackColor = True
         '
         'cmdLog
@@ -269,7 +269,7 @@ Partial Class frmBackup
         Me.cmdLog.Name = "cmdLog"
         Me.cmdLog.Size = New System.Drawing.Size(105, 30)
         Me.cmdLog.TabIndex = 7
-        Me.cmdLog.Text = "Salva file log"
+        Me.cmdLog.Text = "Save log file"
         Me.cmdLog.UseVisualStyleBackColor = True
         Me.cmdLog.Visible = False
         '
@@ -344,9 +344,9 @@ Partial Class frmBackup
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(12, 341)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(95, 13)
+        Me.Label9.Size = New System.Drawing.Size(47, 13)
         Me.Label9.TabIndex = 9
-        Me.Label9.Text = "Percorso completo"
+        Me.Label9.Text = "Full path"
         '
         'lblOutputPath
         '
@@ -377,7 +377,7 @@ Partial Class frmBackup
         Me.MaximizeBox = False
         Me.Name = "frmBackup"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Backup dei devices selezionati"
+        Me.Text = "Backup selected devices"
         Me.optBox.ResumeLayout(False)
         Me.optBox.PerformLayout()
         Me.infoBox.ResumeLayout(False)

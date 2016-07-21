@@ -46,7 +46,7 @@ Partial Class frmOffline
         Me.cmdBrowse.Name = "cmdBrowse"
         Me.cmdBrowse.Size = New System.Drawing.Size(87, 27)
         Me.cmdBrowse.TabIndex = 1
-        Me.cmdBrowse.Text = "Sfoglia"
+        Me.cmdBrowse.Text = "Browse"
         Me.cmdBrowse.UseVisualStyleBackColor = True
         '
         'Label1
@@ -54,9 +54,9 @@ Partial Class frmOffline
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(9, 108)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(130, 13)
+        Me.Label1.Size = New System.Drawing.Size(113, 13)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Nome del computer offline"
+        Me.Label1.Text = "Offline computer name"
         '
         'lblPcName
         '
@@ -74,9 +74,9 @@ Partial Class frmOffline
         Me.chkUseOfflineName.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chkUseOfflineName.Location = New System.Drawing.Point(12, 147)
         Me.chkUseOfflineName.Name = "chkUseOfflineName"
-        Me.chkUseOfflineName.Size = New System.Drawing.Size(380, 17)
+        Me.chkUseOfflineName.Size = New System.Drawing.Size(346, 17)
         Me.chkUseOfflineName.TabIndex = 4
-        Me.chkUseOfflineName.Text = "Usa nome del computer remoto per espandere il tag %COMPUTERNAME%"
+        Me.chkUseOfflineName.Text = "Use an offline computer name to expand %COMPUTERNAME% tag"
         Me.chkUseOfflineName.UseVisualStyleBackColor = True
         '
         'cmdLoad
@@ -85,7 +85,7 @@ Partial Class frmOffline
         Me.cmdLoad.Name = "cmdLoad"
         Me.cmdLoad.Size = New System.Drawing.Size(85, 26)
         Me.cmdLoad.TabIndex = 5
-        Me.cmdLoad.Text = "Carica"
+        Me.cmdLoad.Text = "Load"
         Me.cmdLoad.UseVisualStyleBackColor = True
         '
         'cmdOk
@@ -104,8 +104,7 @@ Partial Class frmOffline
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(553, 35)
         Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Connettere al computer il disco rigido o un'altro supporto di memorizzazione dove" & _
-    " è contenuta l'installazione del sistema di cui si vuole effettuare il backup."
+        Me.Label2.Text = "Connect to this computer a memory device with a valid Windows installation"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
@@ -115,7 +114,7 @@ Partial Class frmOffline
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(544, 20)
         Me.Label3.TabIndex = 8
-        Me.Label3.Text = "NB: Le versioni di Windows supportate sono Xp/Vista/7/8/8.1."
+        Me.Label3.Text = "Note: Supports versions of Windows  Xp/Vista/7/8/8.1/10"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmOffline
@@ -137,7 +136,7 @@ Partial Class frmOffline
         Me.MinimizeBox = False
         Me.Name = "frmOffline"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Backup offline"
+        Me.Text = "Offline backup"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
