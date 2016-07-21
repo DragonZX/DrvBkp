@@ -8,3 +8,8 @@ E:\1 Документы\Documents\GitHub\DrvBkp\obj\Debug\DriverBackup__2.frmRes
 E:\1 Документы\Documents\GitHub\DrvBkp\obj\Debug\DriverBackup__2.Resources.resources
 E:\1 Документы\Documents\GitHub\DrvBkp\obj\Debug\DriverBackup! 2.vbproj.GenerateResource.Cache
 E:\1 Документы\Documents\GitHub\DrvBkp\obj\Debug\DriverBackup! 2.xml
+E:\1 Документы\Documents\GitHub\DrvBkp\bin\Debug\DriverBackup! 2.exe
+E:\1 Документы\Documents\GitHub\DrvBkp\bin\Debug\DriverBackup! 2.pdb
+E:\1 Документы\Documents\GitHub\DrvBkp\bin\Debug\DriverBackup! 2.xml
+E:\1 Документы\Documents\GitHub\DrvBkp\obj\Debug\DriverBackup! 2.exe
+E:\1 Документы\Documents\GitHub\DrvBkp\obj\Debug\DriverBackup! 2.pdb

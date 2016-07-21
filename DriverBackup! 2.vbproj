@@ -248,11 +248,12 @@
     <None Include="Resources\Icon_47.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="My Project\app.manifest" />
+    <None Include="My Project\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Resources\Icon_278.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="box open.ico" />
     <Content Include="DrvBkp.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
