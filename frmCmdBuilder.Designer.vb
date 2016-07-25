@@ -22,51 +22,51 @@ Partial Class frmCmdBuilder
     'Non modificarla nell'editor del codice.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.txtOutput = New System.Windows.Forms.TextBox
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.Button3 = New System.Windows.Forms.Button
-        Me.groupBackup = New System.Windows.Forms.GroupBox
-        Me.chkUseOfflineName = New System.Windows.Forms.CheckBox
-        Me.chkOffline = New System.Windows.Forms.CheckBox
-        Me.txtSysPath = New System.Windows.Forms.TextBox
-        Me.lblSysPath = New System.Windows.Forms.Label
-        Me.txtDateFormat = New System.Windows.Forms.TextBox
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.chkAutoRestore = New System.Windows.Forms.CheckBox
-        Me.chkOverwrite = New System.Windows.Forms.CheckBox
-        Me.txtBackupFile = New System.Windows.Forms.TextBox
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.txtDesc = New System.Windows.Forms.TextBox
-        Me.txtDevFormat = New System.Windows.Forms.TextBox
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.txtFormat = New System.Windows.Forms.TextBox
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Button5 = New System.Windows.Forms.Button
-        Me.txtPath = New System.Windows.Forms.TextBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.groupRestore = New System.Windows.Forms.GroupBox
-        Me.Button4 = New System.Windows.Forms.Button
-        Me.chkForceUpdate = New System.Windows.Forms.CheckBox
-        Me.chkPnPUpdate = New System.Windows.Forms.CheckBox
-        Me.txtRestoreFile = New System.Windows.Forms.TextBox
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.optRestore = New System.Windows.Forms.RadioButton
-        Me.optBackup = New System.Windows.Forms.RadioButton
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.chkVerbose = New System.Windows.Forms.CheckBox
-        Me.optRecommended = New System.Windows.Forms.RadioButton
-        Me.chkLog = New System.Windows.Forms.CheckBox
-        Me.chkPort = New System.Windows.Forms.CheckBox
-        Me.chkSignature = New System.Windows.Forms.CheckBox
-        Me.optThird = New System.Windows.Forms.RadioButton
-        Me.optOEM = New System.Windows.Forms.RadioButton
-        Me.optAll = New System.Windows.Forms.RadioButton
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtOutput = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.groupBackup = New System.Windows.Forms.GroupBox()
+        Me.chkUseOfflineName = New System.Windows.Forms.CheckBox()
+        Me.chkOffline = New System.Windows.Forms.CheckBox()
+        Me.txtSysPath = New System.Windows.Forms.TextBox()
+        Me.lblSysPath = New System.Windows.Forms.Label()
+        Me.txtDateFormat = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.chkAutoRestore = New System.Windows.Forms.CheckBox()
+        Me.chkOverwrite = New System.Windows.Forms.CheckBox()
+        Me.txtBackupFile = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtDesc = New System.Windows.Forms.TextBox()
+        Me.txtDevFormat = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtFormat = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.txtPath = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.groupRestore = New System.Windows.Forms.GroupBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.chkForceUpdate = New System.Windows.Forms.CheckBox()
+        Me.chkPnPUpdate = New System.Windows.Forms.CheckBox()
+        Me.txtRestoreFile = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.optRestore = New System.Windows.Forms.RadioButton()
+        Me.optBackup = New System.Windows.Forms.RadioButton()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.chkVerbose = New System.Windows.Forms.CheckBox()
+        Me.optRecommended = New System.Windows.Forms.RadioButton()
+        Me.chkLog = New System.Windows.Forms.CheckBox()
+        Me.chkPort = New System.Windows.Forms.CheckBox()
+        Me.chkSignature = New System.Windows.Forms.CheckBox()
+        Me.optThird = New System.Windows.Forms.RadioButton()
+        Me.optOEM = New System.Windows.Forms.RadioButton()
+        Me.optAll = New System.Windows.Forms.RadioButton()
         Me.groupBackup.SuspendLayout()
         Me.groupRestore.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -80,8 +80,8 @@ Partial Class frmCmdBuilder
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(590, 32)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Questa finestra permette di generare rapidamente una serie di comandi inseribili " & _
-            "tramite riga di comando per automatizzare le funzionalità di DriverBackup!"
+        Me.Label1.Text = "This window allows you to quickly generate a series of commands can be inserted v" &
+    "ia the command line to automate the functions of DriverBackup!"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label8
@@ -115,7 +115,7 @@ Partial Class frmCmdBuilder
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(101, 29)
         Me.Button2.TabIndex = 7
-        Me.Button2.Text = "Copia"
+        Me.Button2.Text = "Copy"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
@@ -124,7 +124,7 @@ Partial Class frmCmdBuilder
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(106, 29)
         Me.Button3.TabIndex = 8
-        Me.Button3.Text = "Genera"
+        Me.Button3.Text = "Generate"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'groupBackup
@@ -159,9 +159,9 @@ Partial Class frmCmdBuilder
         Me.chkUseOfflineName.AutoSize = True
         Me.chkUseOfflineName.Location = New System.Drawing.Point(14, 273)
         Me.chkUseOfflineName.Name = "chkUseOfflineName"
-        Me.chkUseOfflineName.Size = New System.Drawing.Size(365, 17)
+        Me.chkUseOfflineName.Size = New System.Drawing.Size(331, 17)
         Me.chkUseOfflineName.TabIndex = 57
-        Me.chkUseOfflineName.Text = "Utilizza nome del computer offline per espandere %COMPUTERNAME%"
+        Me.chkUseOfflineName.Text = "Use the computer name to expand offline %COMPUTERNAME%"
         Me.chkUseOfflineName.UseVisualStyleBackColor = True
         Me.chkUseOfflineName.Visible = False
         '
@@ -170,14 +170,14 @@ Partial Class frmCmdBuilder
         Me.chkOffline.AutoSize = True
         Me.chkOffline.Location = New System.Drawing.Point(305, 244)
         Me.chkOffline.Name = "chkOffline"
-        Me.chkOffline.Size = New System.Drawing.Size(189, 17)
+        Me.chkOffline.Size = New System.Drawing.Size(152, 17)
         Me.chkOffline.TabIndex = 56
-        Me.chkOffline.Text = "Modalità backup da sistema offline"
+        Me.chkOffline.Text = "Backup from offline system"
         Me.chkOffline.UseVisualStyleBackColor = True
         '
         'txtSysPath
         '
-        Me.txtSysPath.Location = New System.Drawing.Point(160, 172)
+        Me.txtSysPath.Location = New System.Drawing.Point(158, 172)
         Me.txtSysPath.Name = "txtSysPath"
         Me.txtSysPath.Size = New System.Drawing.Size(333, 20)
         Me.txtSysPath.TabIndex = 55
@@ -185,11 +185,11 @@ Partial Class frmCmdBuilder
         'lblSysPath
         '
         Me.lblSysPath.AutoSize = True
-        Me.lblSysPath.Location = New System.Drawing.Point(15, 178)
+        Me.lblSysPath.Location = New System.Drawing.Point(11, 178)
         Me.lblSysPath.Name = "lblSysPath"
-        Me.lblSysPath.Size = New System.Drawing.Size(87, 13)
+        Me.lblSysPath.Size = New System.Drawing.Size(65, 13)
         Me.lblSysPath.TabIndex = 54
-        Me.lblSysPath.Text = "Percorso sistema"
+        Me.lblSysPath.Text = "System path"
         '
         'txtDateFormat
         '
@@ -201,20 +201,20 @@ Partial Class frmCmdBuilder
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(13, 150)
+        Me.Label10.Location = New System.Drawing.Point(11, 150)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(69, 13)
+        Me.Label10.Size = New System.Drawing.Size(62, 13)
         Me.Label10.TabIndex = 52
-        Me.Label10.Text = "Formato data"
+        Me.Label10.Text = "Date format"
         '
         'chkAutoRestore
         '
         Me.chkAutoRestore.AutoSize = True
         Me.chkAutoRestore.Location = New System.Drawing.Point(14, 244)
         Me.chkAutoRestore.Name = "chkAutoRestore"
-        Me.chkAutoRestore.Size = New System.Drawing.Size(241, 17)
+        Me.chkAutoRestore.Size = New System.Drawing.Size(240, 17)
         Me.chkAutoRestore.TabIndex = 51
-        Me.chkAutoRestore.Text = "Crea files per il ripristino automatico dei drivers"
+        Me.chkAutoRestore.Text = "Create files for automatic restoration of drivers"
         Me.chkAutoRestore.UseVisualStyleBackColor = True
         '
         'chkOverwrite
@@ -222,15 +222,14 @@ Partial Class frmCmdBuilder
         Me.chkOverwrite.AutoSize = True
         Me.chkOverwrite.Location = New System.Drawing.Point(14, 208)
         Me.chkOverwrite.Name = "chkOverwrite"
-        Me.chkOverwrite.Size = New System.Drawing.Size(450, 17)
+        Me.chkOverwrite.Size = New System.Drawing.Size(384, 17)
         Me.chkOverwrite.TabIndex = 50
-        Me.chkOverwrite.Text = "Attiva sovrascrittura, se necessario, dei files presenti sul percorso di backup, " & _
-            "(Sconsigliato)"
+        Me.chkOverwrite.Text = "Enable overwrite, if necessary, of the files on the backup path (discouraged)"
         Me.chkOverwrite.UseVisualStyleBackColor = True
         '
         'txtBackupFile
         '
-        Me.txtBackupFile.Location = New System.Drawing.Point(159, 66)
+        Me.txtBackupFile.Location = New System.Drawing.Point(158, 66)
         Me.txtBackupFile.Name = "txtBackupFile"
         Me.txtBackupFile.Size = New System.Drawing.Size(334, 20)
         Me.txtBackupFile.TabIndex = 48
@@ -240,18 +239,18 @@ Partial Class frmCmdBuilder
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(11, 69)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(63, 13)
+        Me.Label7.Size = New System.Drawing.Size(89, 13)
         Me.Label7.TabIndex = 47
-        Me.Label7.Text = "File Backup"
+        Me.Label7.Text = "Backup file name"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(11, 44)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(62, 13)
+        Me.Label6.Size = New System.Drawing.Size(60, 13)
         Me.Label6.TabIndex = 46
-        Me.Label6.Text = "Descrizione"
+        Me.Label6.Text = "Description"
         '
         'txtDesc
         '
@@ -259,11 +258,11 @@ Partial Class frmCmdBuilder
         Me.txtDesc.Name = "txtDesc"
         Me.txtDesc.Size = New System.Drawing.Size(335, 20)
         Me.txtDesc.TabIndex = 45
-        Me.txtDesc.Text = "[Inserire qui una descrizione]"
+        Me.txtDesc.Text = "[Insert a description here]"
         '
         'txtDevFormat
         '
-        Me.txtDevFormat.Location = New System.Drawing.Point(159, 117)
+        Me.txtDevFormat.Location = New System.Drawing.Point(158, 117)
         Me.txtDevFormat.Name = "txtDevFormat"
         Me.txtDevFormat.Size = New System.Drawing.Size(335, 20)
         Me.txtDevFormat.TabIndex = 44
@@ -273,13 +272,13 @@ Partial Class frmCmdBuilder
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(11, 120)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(141, 13)
+        Me.Label5.Size = New System.Drawing.Size(97, 13)
         Me.Label5.TabIndex = 43
-        Me.Label5.Text = "Formato percorso dispositivo"
+        Me.Label5.Text = "Device path format"
         '
         'txtFormat
         '
-        Me.txtFormat.Location = New System.Drawing.Point(159, 91)
+        Me.txtFormat.Location = New System.Drawing.Point(158, 91)
         Me.txtFormat.Name = "txtFormat"
         Me.txtFormat.Size = New System.Drawing.Size(335, 20)
         Me.txtFormat.TabIndex = 42
@@ -289,9 +288,9 @@ Partial Class frmCmdBuilder
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(11, 94)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(89, 13)
+        Me.Label2.Size = New System.Drawing.Size(61, 13)
         Me.Label2.TabIndex = 41
-        Me.Label2.Text = "Formato percorso"
+        Me.Label2.Text = "Path format"
         '
         'Button5
         '
@@ -299,7 +298,7 @@ Partial Class frmCmdBuilder
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(69, 27)
         Me.Button5.TabIndex = 40
-        Me.Button5.Text = "Sfoglia.."
+        Me.Button5.Text = "Browse..."
         Me.Button5.UseVisualStyleBackColor = True
         '
         'txtPath
@@ -308,16 +307,16 @@ Partial Class frmCmdBuilder
         Me.txtPath.Name = "txtPath"
         Me.txtPath.Size = New System.Drawing.Size(335, 20)
         Me.txtPath.TabIndex = 39
-        Me.txtPath.Text = "[Fare clc su Sfoglia per selezionare un percorso]"
+        Me.txtPath.Text = "[Click browse to select a path]"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(11, 18)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(49, 13)
+        Me.Label3.Size = New System.Drawing.Size(29, 13)
         Me.Label3.TabIndex = 38
-        Me.Label3.Text = "Percorso"
+        Me.Label3.Text = "Path"
         '
         'groupRestore
         '
@@ -338,7 +337,7 @@ Partial Class frmCmdBuilder
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(52, 22)
         Me.Button4.TabIndex = 20
-        Me.Button4.Text = "Sfoglia"
+        Me.Button4.Text = "Browse"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'chkForceUpdate
@@ -346,9 +345,9 @@ Partial Class frmCmdBuilder
         Me.chkForceUpdate.AutoSize = True
         Me.chkForceUpdate.Location = New System.Drawing.Point(14, 124)
         Me.chkForceUpdate.Name = "chkForceUpdate"
-        Me.chkForceUpdate.Size = New System.Drawing.Size(340, 17)
+        Me.chkForceUpdate.Size = New System.Drawing.Size(283, 17)
         Me.chkForceUpdate.TabIndex = 19
-        Me.chkForceUpdate.Text = "Modifica informazioni sul percorso qualora il drivers sia già installato"
+        Me.chkForceUpdate.Text = "Edit the path information if the driver is already installed"
         Me.chkForceUpdate.UseVisualStyleBackColor = True
         '
         'chkPnPUpdate
@@ -356,9 +355,9 @@ Partial Class frmCmdBuilder
         Me.chkPnPUpdate.AutoSize = True
         Me.chkPnPUpdate.Location = New System.Drawing.Point(14, 90)
         Me.chkPnPUpdate.Name = "chkPnPUpdate"
-        Me.chkPnPUpdate.Size = New System.Drawing.Size(369, 17)
+        Me.chkPnPUpdate.Size = New System.Drawing.Size(311, 17)
         Me.chkPnPUpdate.TabIndex = 18
-        Me.chkPnPUpdate.Text = "Avvia aggiornamento periferiche Plug && Play dopo il ripristino (Consigliato)"
+        Me.chkPnPUpdate.Text = "Start update Plug n Play devices after reset (Recommended)"
         Me.chkPnPUpdate.UseVisualStyleBackColor = True
         '
         'txtRestoreFile
@@ -373,9 +372,9 @@ Partial Class frmCmdBuilder
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(11, 24)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(73, 13)
+        Me.Label9.Size = New System.Drawing.Size(60, 13)
         Me.Label9.TabIndex = 0
-        Me.Label9.Text = "File di backup"
+        Me.Label9.Text = "Backup file"
         '
         'Label4
         '
@@ -384,8 +383,8 @@ Partial Class frmCmdBuilder
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(579, 32)
         Me.Label4.TabIndex = 50
-        Me.Label4.Text = "Le variabili di sistema inserite fra coppie di % nei nomi di file o directory sar" & _
-            "anno automaticamente espanse (Esempio: %windir%)"
+        Me.Label4.Text = "The system variables inserted between pairs of % in file or directory names will " &
+    "be automatically expanded (Example: %windir%)"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'GroupBox1
@@ -401,12 +400,12 @@ Partial Class frmCmdBuilder
         'optRestore
         '
         Me.optRestore.AutoSize = True
-        Me.optRestore.Location = New System.Drawing.Point(14, 50)
+        Me.optRestore.Location = New System.Drawing.Point(16, 50)
         Me.optRestore.Name = "optRestore"
-        Me.optRestore.Size = New System.Drawing.Size(68, 17)
+        Me.optRestore.Size = New System.Drawing.Size(62, 17)
         Me.optRestore.TabIndex = 4
         Me.optRestore.TabStop = True
-        Me.optRestore.Text = "Ripristino"
+        Me.optRestore.Text = "Restore"
         Me.optRestore.UseVisualStyleBackColor = True
         '
         'optBackup
@@ -452,10 +451,10 @@ Partial Class frmCmdBuilder
         Me.optRecommended.AutoSize = True
         Me.optRecommended.Location = New System.Drawing.Point(301, 19)
         Me.optRecommended.Name = "optRecommended"
-        Me.optRecommended.Size = New System.Drawing.Size(72, 17)
+        Me.optRecommended.Size = New System.Drawing.Size(97, 17)
         Me.optRecommended.TabIndex = 6
         Me.optRecommended.TabStop = True
-        Me.optRecommended.Text = "Consigliati"
+        Me.optRecommended.Text = "Recommended"
         Me.optRecommended.UseVisualStyleBackColor = True
         '
         'chkLog
@@ -475,9 +474,9 @@ Partial Class frmCmdBuilder
         Me.chkPort.AutoSize = True
         Me.chkPort.Location = New System.Drawing.Point(125, 50)
         Me.chkPort.Name = "chkPort"
-        Me.chkPort.Size = New System.Drawing.Size(101, 17)
+        Me.chkPort.Size = New System.Drawing.Size(89, 17)
         Me.chkPort.TabIndex = 4
-        Me.chkPort.Text = "Piena portabilità"
+        Me.chkPort.Text = "Full portability"
         Me.chkPort.UseVisualStyleBackColor = True
         '
         'chkSignature
@@ -485,9 +484,9 @@ Partial Class frmCmdBuilder
         Me.chkSignature.AutoSize = True
         Me.chkSignature.Location = New System.Drawing.Point(20, 50)
         Me.chkSignature.Name = "chkSignature"
-        Me.chkSignature.Size = New System.Drawing.Size(87, 17)
+        Me.chkSignature.Size = New System.Drawing.Size(101, 17)
         Me.chkSignature.TabIndex = 3
-        Me.chkSignature.Text = "Firma digitale"
+        Me.chkSignature.Text = "Digital signature"
         Me.chkSignature.UseVisualStyleBackColor = True
         '
         'optThird
@@ -497,7 +496,7 @@ Partial Class frmCmdBuilder
         Me.optThird.Name = "optThird"
         Me.optThird.Size = New System.Drawing.Size(75, 17)
         Me.optThird.TabIndex = 2
-        Me.optThird.Text = "Terze parti"
+        Me.optThird.Text = "Third party"
         Me.optThird.UseVisualStyleBackColor = True
         '
         'optOEM
@@ -516,10 +515,10 @@ Partial Class frmCmdBuilder
         Me.optAll.Checked = True
         Me.optAll.Location = New System.Drawing.Point(20, 19)
         Me.optAll.Name = "optAll"
-        Me.optAll.Size = New System.Drawing.Size(46, 17)
+        Me.optAll.Size = New System.Drawing.Size(36, 17)
         Me.optAll.TabIndex = 0
         Me.optAll.TabStop = True
-        Me.optAll.Text = "Tutti"
+        Me.optAll.Text = "All"
         Me.optAll.UseVisualStyleBackColor = True
         '
         'frmCmdBuilder
@@ -541,7 +540,6 @@ Partial Class frmCmdBuilder
         Me.Controls.Add(Me.Label1)
         Me.MaximizeBox = False
         Me.Name = "frmCmdBuilder"
-        Me.Text = "Builder della riga di comando"
         Me.groupBackup.ResumeLayout(False)
         Me.groupBackup.PerformLayout()
         Me.groupRestore.ResumeLayout(False)

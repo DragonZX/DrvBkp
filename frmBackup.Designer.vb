@@ -169,9 +169,9 @@ Partial Class frmBackup
         Me.chkAutoRestore.AutoSize = True
         Me.chkAutoRestore.Location = New System.Drawing.Point(19, 211)
         Me.chkAutoRestore.Name = "chkAutoRestore"
-        Me.chkAutoRestore.Size = New System.Drawing.Size(241, 17)
+        Me.chkAutoRestore.Size = New System.Drawing.Size(240, 17)
         Me.chkAutoRestore.TabIndex = 16
-        Me.chkAutoRestore.Text = "Crea files per il ripristino automatico dei drivers"
+        Me.chkAutoRestore.Text = "Create files for automatic restoration of drivers"
         Me.chkAutoRestore.UseVisualStyleBackColor = True
         '
         'chkOverwrite
@@ -179,10 +179,9 @@ Partial Class frmBackup
         Me.chkOverwrite.AutoSize = True
         Me.chkOverwrite.Location = New System.Drawing.Point(19, 188)
         Me.chkOverwrite.Name = "chkOverwrite"
-        Me.chkOverwrite.Size = New System.Drawing.Size(450, 17)
+        Me.chkOverwrite.Size = New System.Drawing.Size(387, 17)
         Me.chkOverwrite.TabIndex = 15
-        Me.chkOverwrite.Text = "Attiva sovrascrittura, se necessario, dei files presenti sul percorso di backup, " &
-    "(Sconsigliato)"
+        Me.chkOverwrite.Text = "Enable overwrite, if necessary, of the files on the backup path, (discouraged)"
         Me.chkOverwrite.UseVisualStyleBackColor = True
         '
         'txtFormat
@@ -260,7 +259,7 @@ Partial Class frmBackup
         Me.cmdContinue.Name = "cmdContinue"
         Me.cmdContinue.Size = New System.Drawing.Size(105, 28)
         Me.cmdContinue.TabIndex = 6
-        Me.cmdContinue.Text = "Continue.."
+        Me.cmdContinue.Text = "Continuе"
         Me.cmdContinue.UseVisualStyleBackColor = True
         '
         'cmdLog
@@ -286,7 +285,7 @@ Partial Class frmBackup
         Me.infoBox.Size = New System.Drawing.Size(590, 195)
         Me.infoBox.TabIndex = 8
         Me.infoBox.TabStop = False
-        Me.infoBox.Text = "Stato delle operazioni"
+        Me.infoBox.Text = "Operations state"
         Me.infoBox.Visible = False
         '
         'lblFilename
@@ -301,9 +300,9 @@ Partial Class frmBackup
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(18, 110)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(67, 13)
+        Me.Label8.Size = New System.Drawing.Size(47, 13)
         Me.Label8.TabIndex = 4
-        Me.Label8.Text = "Copia del file"
+        Me.Label8.Text = "Copy file"
         '
         'backupBar
         '
@@ -326,18 +325,18 @@ Partial Class frmBackup
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(16, 68)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(37, 13)
+        Me.Label4.Size = New System.Drawing.Size(31, 13)
         Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Totale"
+        Me.Label4.Text = "Total"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(18, 29)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(83, 13)
+        Me.Label3.Size = New System.Drawing.Size(72, 13)
         Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Device corrente"
+        Me.Label3.Text = "Actual device"
         '
         'Label9
         '

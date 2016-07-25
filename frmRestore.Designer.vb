@@ -22,15 +22,15 @@ Partial Class frmRestore
     'Non modificarla nell'editor del codice.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.devTree = New System.Windows.Forms.TreeView
-        Me.chkPnPUpdate = New System.Windows.Forms.CheckBox
-        Me.cmdLog = New System.Windows.Forms.Button
-        Me.cmdContinue = New System.Windows.Forms.Button
-        Me.cmdCancel = New System.Windows.Forms.Button
-        Me.cmdOk = New System.Windows.Forms.Button
-        Me.cmdRestore = New System.Windows.Forms.Button
-        Me.lblDevFound = New System.Windows.Forms.Label
-        Me.chkForceUpdate = New System.Windows.Forms.CheckBox
+        Me.devTree = New System.Windows.Forms.TreeView()
+        Me.chkPnPUpdate = New System.Windows.Forms.CheckBox()
+        Me.cmdLog = New System.Windows.Forms.Button()
+        Me.cmdContinue = New System.Windows.Forms.Button()
+        Me.cmdCancel = New System.Windows.Forms.Button()
+        Me.cmdOk = New System.Windows.Forms.Button()
+        Me.cmdRestore = New System.Windows.Forms.Button()
+        Me.lblDevFound = New System.Windows.Forms.Label()
+        Me.chkForceUpdate = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'devTree
@@ -45,9 +45,9 @@ Partial Class frmRestore
         Me.chkPnPUpdate.AutoSize = True
         Me.chkPnPUpdate.Location = New System.Drawing.Point(18, 326)
         Me.chkPnPUpdate.Name = "chkPnPUpdate"
-        Me.chkPnPUpdate.Size = New System.Drawing.Size(369, 17)
+        Me.chkPnPUpdate.Size = New System.Drawing.Size(311, 17)
         Me.chkPnPUpdate.TabIndex = 1
-        Me.chkPnPUpdate.Text = "Avvia aggiornamento periferiche Plug && Play dopo il ripristino (Consigliato)"
+        Me.chkPnPUpdate.Text = "Start update Plug n Play devices after reset (Recommended)"
         Me.chkPnPUpdate.UseVisualStyleBackColor = True
         '
         'cmdLog
@@ -56,7 +56,7 @@ Partial Class frmRestore
         Me.cmdLog.Name = "cmdLog"
         Me.cmdLog.Size = New System.Drawing.Size(105, 30)
         Me.cmdLog.TabIndex = 12
-        Me.cmdLog.Text = "Salva file log"
+        Me.cmdLog.Text = "Save log file"
         Me.cmdLog.UseVisualStyleBackColor = True
         Me.cmdLog.Visible = False
         '
@@ -66,7 +66,7 @@ Partial Class frmRestore
         Me.cmdContinue.Name = "cmdContinue"
         Me.cmdContinue.Size = New System.Drawing.Size(105, 28)
         Me.cmdContinue.TabIndex = 11
-        Me.cmdContinue.Text = "Continua.."
+        Me.cmdContinue.Text = "Continue"
         Me.cmdContinue.UseVisualStyleBackColor = True
         '
         'cmdCancel
@@ -75,7 +75,7 @@ Partial Class frmRestore
         Me.cmdCancel.Name = "cmdCancel"
         Me.cmdCancel.Size = New System.Drawing.Size(105, 28)
         Me.cmdCancel.TabIndex = 10
-        Me.cmdCancel.Text = "Annulla"
+        Me.cmdCancel.Text = "Cancel"
         Me.cmdCancel.UseVisualStyleBackColor = True
         '
         'cmdOk
@@ -93,7 +93,7 @@ Partial Class frmRestore
         Me.cmdRestore.Name = "cmdRestore"
         Me.cmdRestore.Size = New System.Drawing.Size(104, 29)
         Me.cmdRestore.TabIndex = 8
-        Me.cmdRestore.Text = "Ripristina"
+        Me.cmdRestore.Text = "Restore"
         Me.cmdRestore.UseVisualStyleBackColor = True
         '
         'lblDevFound
@@ -102,18 +102,18 @@ Partial Class frmRestore
         Me.lblDevFound.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDevFound.Location = New System.Drawing.Point(15, 9)
         Me.lblDevFound.Name = "lblDevFound"
-        Me.lblDevFound.Size = New System.Drawing.Size(126, 13)
+        Me.lblDevFound.Size = New System.Drawing.Size(114, 13)
         Me.lblDevFound.TabIndex = 13
-        Me.lblDevFound.Text = "Drivers selezionati: 0"
+        Me.lblDevFound.Text = "Drivers selected: 0"
         '
         'chkForceUpdate
         '
         Me.chkForceUpdate.AutoSize = True
         Me.chkForceUpdate.Location = New System.Drawing.Point(18, 355)
         Me.chkForceUpdate.Name = "chkForceUpdate"
-        Me.chkForceUpdate.Size = New System.Drawing.Size(133, 17)
+        Me.chkForceUpdate.Size = New System.Drawing.Size(97, 17)
         Me.chkForceUpdate.TabIndex = 14
-        Me.chkForceUpdate.Text = "Aggiornamento file INF"
+        Me.chkForceUpdate.Text = "Update INF file"
         Me.chkForceUpdate.UseVisualStyleBackColor = True
         '
         'frmRestore
@@ -132,7 +132,7 @@ Partial Class frmRestore
         Me.Controls.Add(Me.devTree)
         Me.MaximizeBox = False
         Me.Name = "frmRestore"
-        Me.Text = "Ripristina drivers selezionati"
+        Me.Text = "Restore selected drivers"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
