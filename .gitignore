@@ -51,4 +51,6 @@ Temporary Items
 bin
 obj
 .vs
+*.suo
+*.user
 build
