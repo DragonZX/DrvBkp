@@ -1,0 +1,719 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECTSCOLLECTION>
+  <IDENTIFIER>
+    <IDDRVBK>ملف لغة النسخ الاحتياطي للسائق</IDDRVBK>
+    <AUTHOR>تعريب ثامرموسى</AUTHOR>
+    <LANGUAGE>عربي</LANGUAGE>
+  </IDENTIFIER>
+  <frmBackup>
+    <PROPERTIES>
+      <Text>النسخ الاحتياطي الأجهزة المختارة</Text>
+    </PROPERTIES>
+    <CONTROLS>
+      <_devTree>
+        <Text></Text>
+      </_devTree>
+      <_lblDevFound>
+        <Text>Label1</Text>
+      </_lblDevFound>
+      <_optBox>
+        <Text>الخيارات</Text>
+      </_optBox>
+      <_cmdBackup>
+        <Text>بدء النسخ الاحتياطي !</Text>
+      </_cmdBackup>
+      <_cmdOk>
+        <Text>نعم</Text>
+      </_cmdOk>
+      <_cmdCancel>
+        <Text>لا</Text>
+      </_cmdCancel>
+      <_cmdContinue>
+        <Text>استمرار ...</Text>
+      </_cmdContinue>
+      <_txtDevFormat>
+        <Text></Text>
+      </_txtDevFormat>
+      <_Label5>
+        <Text>تنسيق مسار الجهاز</Text>
+      </_Label5>
+      <_chkAutoRestore>
+        <Text>توليد الملفات لاستعادة برامج التشغيل التلقائية</Text>
+      </_chkAutoRestore>
+      <_chkOverwrite>
+        <Text>اسمح للنسخ الاحتياطي للسائق بالكتابة فوق الملفات في المسار الوجهة، إذا لزم الأمر. (غير مسمى)</Text>
+      </_chkOverwrite>
+      <_txtFormat>
+        <Text></Text>
+      </_txtFormat>
+      <_Label2>
+        <Text>تنسيق المسار</Text>
+      </_Label2>
+      <_cmdBrowse>
+        <Text>تصفح ...</Text>
+      </_cmdBrowse>
+      <_txtPath>
+        <Text>[انقر فوق "استعراض" لتحديد المسار]</Text>
+      </_txtPath>
+      <_Label1>
+        <Text>المسار</Text>
+      </_Label1>
+      <_cmdLog>
+        <Text>حفظ ملف السجل</Text>
+      </_cmdLog>
+      <_deviceBar>
+        <Text></Text>
+      </_deviceBar>
+      <_infoBox>
+        <Text>Status</Text>
+      </_infoBox>
+      <_backupBar>
+        <Text></Text>
+      </_backupBar>
+      <_Label4>
+        <Text>المجموع</Text>
+      </_Label4>
+      <_Label3>
+        <Text>الجهاز الحالي</Text>
+      </_Label3>
+      <_Label6>
+        <Text>الوصف</Text>
+      </_Label6>
+      <_txtDesc>
+        <Text>[ أدخل الوصف هنا ]</Text>
+      </_txtDesc>
+      <_txtBackupFile>
+        <Text></Text>
+      </_txtBackupFile>
+      <_Label7>
+        <Text>اسم ملف النسخ الاحتياطي</Text>
+      </_Label7>
+      <_Label8>
+        <Text>نسخ الملف</Text>
+      </_Label8>
+      <_lblFilename>
+        <Text></Text>
+      </_lblFilename>
+      <_txtDateFormat>
+        <Text></Text>
+      </_txtDateFormat>
+      <_Label10>
+        <Text>صيغة التاريخ</Text>
+      </_Label10>
+      <_Label9>
+        <Text>المسار الكامل</Text>
+      </_Label9>
+      <_lblOutputPath>
+        <Text>[ انقر فوق "استعراض" لتحديد المسار ]</Text>
+      </_lblOutputPath>
+    </CONTROLS>
+    <CUSTOMARRS></CUSTOMARRS>
+  </frmBackup>
+  <frmCmdBuilder>
+    <PROPERTIES>
+      <Text>بناء سطر الأوامر</Text>
+    </PROPERTIES>
+    <CONTROLS>
+      <_Label1>
+        <Text>توفر هذه النافذة طريقة بسيطة لإنشاء سطر أوامر صالح. الآن يمكنك استدعاء نسخة احتياطية سائق! من موجه الأوامر أو البرنامج النصي</Text>
+      </_Label1>
+      <_Label8>
+        <Text>Output</Text>
+      </_Label8>
+      <_txtOutput>
+        <Text></Text>
+      </_txtOutput>
+      <_Button1>
+        <Text>نعم</Text>
+      </_Button1>
+      <_Button2>
+        <Text>نسخ</Text>
+      </_Button2>
+      <_Button3>
+        <Text>يولد</Text>
+      </_Button3>
+      <_groupBackup>
+        <Text></Text>
+      </_groupBackup>
+      <_chkAutoRestore>
+        <Text>توليد الملفات لاستعادة برامج التشغيل التلقائية</Text>
+      </_chkAutoRestore>
+      <_chkOverwrite>
+        <Text>اسمح للنسخ الاحتياطي للسائق بالكتابة فوق الملفات في المسار الوجهة، إذا لزم الأمر. (غير مسمى)</Text>
+      </_chkOverwrite>
+      <_txtBackupFile>
+        <Text></Text>
+      </_txtBackupFile>
+      <_Label7>
+        <Text>اسم ملف النسخ الاحتياطي</Text>
+      </_Label7>
+      <_Label6>
+        <Text>الوصف</Text>
+      </_Label6>
+      <_txtDesc>
+        <Text>[ أدخل وصف هنا ]</Text>
+      </_txtDesc>
+      <_txtDevFormat>
+        <Text></Text>
+      </_txtDevFormat>
+      <_Label5>
+        <Text>تنسيق مسار الجهاز</Text>
+      </_Label5>
+      <_txtFormat>
+        <Text></Text>
+      </_txtFormat>
+      <_Label2>
+        <Text>تنسيق المسار</Text>
+      </_Label2>
+      <_Button5>
+        <Text>استعراض ...</Text>
+      </_Button5>
+      <_txtPath>
+        <Text>[ انقر فوق "استعراض" لتحديد المسار ]</Text>
+      </_txtPath>
+      <_Label3>
+        <Text>المسار</Text>
+      </_Label3>
+      <_groupRestore>
+        <Text></Text>
+      </_groupRestore>
+      <_txtRestoreFile>
+        <Text></Text>
+      </_txtRestoreFile>
+      <_Label9>
+        <Text>ملف النسخ الاحتياطي</Text>
+      </_Label9>
+      <_chkForceUpdate>
+        <Text>تحديث تكوين برنامج التشغيل إذا تم تثبيته بالفعل</Text>
+      </_chkForceUpdate>
+      <_chkPnPUpdate>
+        <Text>المسح الضوئي لأجهزة Play N Play جديدة بعد الاستعادة (مستحسن)</Text>
+      </_chkPnPUpdate>
+      <_Button4>
+        <Text>استعراض</Text>
+      </_Button4>
+      <_Label4>
+        <Text>سائق النسخ الاحتياطي! قم بتوسيع متغيرات النظام تلقائيا (على سبيل المثال%windir%) في المسارات وأسماء الملفات ولكن ليس في أوصاف التنسيق .</Text>
+      </_Label4>
+      <_GroupBox1>
+        <Text></Text>
+      </_GroupBox1>
+      <_optRestore>
+        <Text>استعادة</Text>
+      </_optRestore>
+      <_optBackup>
+        <Text>النسخ الاحتياطي</Text>
+      </_optBackup>
+      <_GroupBox2>
+        <Text></Text>
+      </_GroupBox2>
+      <_chkPort>
+        <Text>قابلية كاملة</Text>
+      </_chkPort>
+      <_chkSignature>
+        <Text>توقيع إلكتروني</Text>
+      </_chkSignature>
+      <_optThird>
+        <Text>الجزء الثالث</Text>
+      </_optThird>
+      <_optOEM>
+        <Text>OEM معدات اصلية</Text>
+      </_optOEM>
+      <_optAll>
+        <Text>الكل</Text>
+      </_optAll>
+      <_chkLog>
+        <Text>تسجيل</Text>
+      </_chkLog>
+      <_txtDateFormat>
+        <Text></Text>
+      </_txtDateFormat>
+      <_Label10>
+        <Text>المسار</Text>
+      </_Label10>
+      <_optRecommended>
+        <Text>تحديد آلي</Text>
+      </_optRecommended>
+      <_chkVerbose>
+        <Text>وضع مفصل</Text>
+      </_chkVerbose>
+      <_chkOffline>
+        <Text>برامج تشغيل النسخ الاحتياطي من نظام غير متصل</Text>
+      </_chkOffline>
+      <_txtSysPath>
+        <Text></Text>
+      </_txtSysPath>
+      <_lblSysPath>
+        <Text>مسار النظام دون اتصال</Text>
+      </_lblSysPath>
+      <_chkUseOfflineName>
+        <Text>استخدم اسم الكمبيوتر دون اتصال للتوسع %COMPUTERNAME%</Text>
+      </_chkUseOfflineName>
+    </CONTROLS>
+    <CUSTOMARRS></CUSTOMARRS>
+  </frmCmdBuilder>
+  <frmMain>
+    <PROPERTIES>
+      <Text>سائق النسخ الاحتياطي ! 2.0.0</Text>
+    </PROPERTIES>
+    <CONTROLS>
+      <_MenuStrip1>
+        <Text>MenuStrip1</Text>
+      </_MenuStrip1>
+      <_StatusStrip1>
+        <Text>StatusStrip1</Text>
+      </_StatusStrip1>
+      <_devInfoBox>
+        <Text>مزيد من المعلومات حول الجهاز المحدد</Text>
+      </_devInfoBox>
+      <_lblDevPort>
+        <Text>Label16</Text>
+      </_lblDevPort>
+      <_lblDevTipo>
+        <Text>Label15</Text>
+      </_lblDevTipo>
+      <_lblID>
+        <Text>Label14</Text>
+      </_lblID>
+      <_lblData>
+        <Text>Label13</Text>
+      </_lblData>
+      <_lblFirma>
+        <Text>Label12</Text>
+      </_lblFirma>
+      <_lblFileINF>
+        <Text>Label11</Text>
+      </_lblFileINF>
+      <_lblProduttore>
+        <Text>Label10</Text>
+      </_lblProduttore>
+      <_lblVersione>
+        <Text>Label9</Text>
+      </_lblVersione>
+      <_lblPortRest>
+        <Text>قابلية التنقل</Text>
+      </_lblPortRest>
+      <_Label7>
+        <Text>توقيع إلكتروني</Text>
+      </_Label7>
+      <_Label6>
+        <Text>النوع</Text>
+      </_Label6>
+      <_Label5>
+        <Text>المعرف</Text>
+      </_Label5>
+      <_Label4>
+        <Text>تاريخ النشر</Text>
+      </_Label4>
+      <_Label3>
+        <Text>ملف التثبيت</Text>
+      </_Label3>
+      <_Label2>
+        <Text>المزود</Text>
+      </_Label2>
+      <_Label1>
+        <Text>النسخة</Text>
+      </_Label1>
+      <_cmdOthers>
+        <Text>الأجزاء الثالثة</Text>
+      </_cmdOthers>
+      <_cmdOem>
+        <Text>Oem معدات اصلية</Text>
+      </_cmdOem>
+      <_cmdAll>
+        <Text>الكل</Text>
+      </_cmdAll>
+      <_treeDevices>
+        <Text></Text>
+      </_treeDevices>
+      <_cmdSignature>
+        <Text>توقيع إلكتروني</Text>
+      </_cmdSignature>
+      <_cmdFullPort>
+        <Text>قابلية كاملة</Text>
+      </_cmdFullPort>
+      <_ToolStrip1>
+        <Text>ToolStrip1</Text>
+      </_ToolStrip1>
+      <_ToolStripLabel1>
+        <Text>تحديد النمط</Text>
+      </_ToolStripLabel1>
+      <_cmdBackupMode>
+        <Text>النسخ احتياطي</Text>
+      </_cmdBackupMode>
+      <_cmdRestoreMode>
+        <Text>استعادة</Text>
+      </_cmdRestoreMode>
+      <_lblDispTrovati>
+        <Text>الأجهزة المدرجة : 0 من 0</Text>
+      </_lblDispTrovati>
+      <_panelBackup>
+        <Text></Text>
+      </_panelBackup>
+      <_panelRestore>
+        <Text></Text>
+      </_panelRestore>
+      <_cmdOpenBkFile>
+        <Text>فتح ملف النسخ الاحتياطي</Text>
+      </_cmdOpenBkFile>
+      <_cmdRestore>
+        <Text>استعادة</Text>
+      </_cmdRestore>
+      <_cmdBackup>
+        <Text>بدء النسخ الاحتياطي</Text>
+      </_cmdBackup>
+      <_cmdUpdate>
+        <Text>تحديث</Text>
+      </_cmdUpdate>
+      <_lblBarInfo>
+        <Text></Text>
+      </_lblBarInfo>
+      <_devScanBar>
+        <Text></Text>
+      </_devScanBar>
+      <_Label9>
+        <Text>أنقر على الأجهزة لإظهار مزيد من المعلومات</Text>
+      </_Label9>
+      <_Label10>
+        <Text>سائق النسخ الاحتياطي 2!</Text>
+      </_Label10>
+      <_Label11>
+        <Text>بواسطة جوزيبي غريكو - تعريب ثامرموسى</Text>
+      </_Label11>
+      <_lblOpSystem>
+        <Text>Label8</Text>
+      </_lblOpSystem>
+      <_lblFiles>
+        <Text>Label12</Text>
+      </_lblFiles>
+      <_pictDev>
+        <Text></Text>
+      </_pictDev>
+      <_ToolStripMenuItem1>
+        <Text>&amp;?</Text>
+      </_ToolStripMenuItem1>
+      <_EsciDaDriverBackupToolStripMenuItem>
+        <Text>خروج</Text>
+      </_EsciDaDriverBackupToolStripMenuItem>
+      <_GuidaAlBackupToolStripMenuItem>
+        <Text>دليل المساعدة النسخ الاحتياطي</Text>
+      </_GuidaAlBackupToolStripMenuItem>
+      <_GuidaAlRipristinoToolStripMenuItem>
+        <Text>استعادة دليل المساعدة</Text>
+      </_GuidaAlRipristinoToolStripMenuItem>
+      <_GuidaAllaRigaDiComandoToolStripMenuItem>
+        <Text>خيارات سطر الأوامر</Text>
+      </_GuidaAllaRigaDiComandoToolStripMenuItem>
+      <_InfoSuDriverBackupToolStripMenuItem>
+        <Text>حول برنامج التشغيل النسخ الاحتياطي!</Text>
+      </_InfoSuDriverBackupToolStripMenuItem>
+      <_UtilitàToolStripMenuItem>
+        <Text>الادوات</Text>
+      </_UtilitàToolStripMenuItem>
+      <_BuilderRigaDiComandoToolStripMenuItem>
+        <Text>بناء سطر الأوامر</Text>
+      </_BuilderRigaDiComandoToolStripMenuItem>
+      <_cmdBkExtInfo>
+        <Text>معلومات النسخ الاحتياطي</Text>
+      </_cmdBkExtInfo>
+      <_pckInfoBox>
+        <Text>معلومات النسخ الاحتياطي الممتد</Text>
+      </_pckInfoBox>
+      <_Label13>
+        <Text>تاريخ الإنشاء</Text>
+      </_Label13>
+      <_Label12>
+        <Text>اسم الكمبيوتر</Text>
+      </_Label12>
+      <_Label8>
+        <Text>نظام الكمبيوتر</Text>
+      </_Label8>
+      <_lblPckSysVersion>
+        <Text>Label22</Text>
+      </_lblPckSysVersion>
+      <_lblPckDrvVersion>
+        <Text>Label21</Text>
+      </_lblPckDrvVersion>
+      <_lblPckDate>
+        <Text>Label20</Text>
+      </_lblPckDate>
+      <_lblPckSystem>
+        <Text>Label19</Text>
+      </_lblPckSystem>
+      <_lblPckComputerName>
+        <Text>Label18</Text>
+      </_lblPckComputerName>
+      <_lblPckDesc>
+        <Text>Label17</Text>
+      </_lblPckDesc>
+      <_Label16>
+        <Text>الوصف</Text>
+      </_Label16>
+      <_Label15>
+        <Text>سائق النسخ الاحتياطي! إصدار</Text>
+      </_Label15>
+      <_Label14>
+        <Text>اصدار النظام</Text>
+      </_Label14>
+      <_lblPckInfo>
+        <Text>Label17</Text>
+      </_lblPckInfo>
+      <_pictPck>
+        <Text></Text>
+      </_pictPck>
+      <_popupMenu>
+        <Text></Text>
+      </_popupMenu>
+      <_popupSelectAll>
+        <Text>تحديد الكل</Text>
+      </_popupSelectAll>
+      <_popupCancelSelect>
+        <Text>الغاء التحديد</Text>
+      </_popupCancelSelect>
+      <_ToolStripSeparator3>
+        <Text></Text>
+      </_ToolStripSeparator3>
+      <_popupAll>
+        <Text>الكل</Text>
+      </_popupAll>
+      <_popupOem>
+        <Text>Oem المعدات الأصلية</Text>
+      </_popupOem>
+      <_popupThird>
+        <Text>الأجزاء الثالثة</Text>
+      </_popupThird>
+      <_ToolStripSeparator4>
+        <Text></Text>
+      </_ToolStripSeparator4>
+      <_popupSignature>
+        <Text>توقيع إلكتروني</Text>
+      </_popupSignature>
+      <_popupPortability>
+        <Text>قابلية كاملة</Text>
+      </_popupPortability>
+      <_ToolStripMenuItem2>
+        <Text>طي الشجرة</Text>
+      </_ToolStripMenuItem2>
+      <_ToolStripMenuItem3>
+        <Text>توسيع شجرة</Text>
+      </_ToolStripMenuItem3>
+      <_menuLang>
+        <Text>اللغة</Text>
+      </_menuLang>
+      <_ToolStripMenuItem4>
+        <Text>دليل المساعدة</Text>
+      </_ToolStripMenuItem4>
+      <_MostraDispositiviPCIToolStripMenuItem>
+        <Text>إظهار أجهزة PCI المتصلة</Text>
+      </_MostraDispositiviPCIToolStripMenuItem>
+      <_cmdOfflineMode>
+        <Text>النسخ الاحتياطي من النظام دون اتصال</Text>
+      </_cmdOfflineMode>
+    </CONTROLS>
+    <CUSTOMARRS></CUSTOMARRS>
+  </frmMain>
+  <frmRestore>
+    <PROPERTIES>
+      <Text>استعادة الأجهزة المحددة</Text>
+    </PROPERTIES>
+    <CONTROLS>
+      <_devTree>
+        <Text></Text>
+      </_devTree>
+      <_chkPnPUpdate>
+        <Text>المسح الضوئي لأجهزة Play N Play جديدة بعد الاستعادة (مستحسن)</Text>
+      </_chkPnPUpdate>
+      <_cmdLog>
+        <Text>حفظ ملف السجل</Text>
+      </_cmdLog>
+      <_cmdContinue>
+        <Text>استمرار..</Text>
+      </_cmdContinue>
+      <_cmdCancel>
+        <Text>الغاء الامر</Text>
+      </_cmdCancel>
+      <_cmdOk>
+        <Text>موافق</Text>
+      </_cmdOk>
+      <_cmdRestore>
+        <Text>استعادة</Text>
+      </_cmdRestore>
+      <_lblDevFound>
+        <Text>الأجهزة المختارة : 0</Text>
+      </_lblDevFound>
+      <_chkForceUpdate>
+        <Text>تحديث تكوين برنامج التشغيل إذا تم تثبيته بالفعل</Text>
+      </_chkForceUpdate>
+    </CONTROLS>
+    <CUSTOMARRS></CUSTOMARRS>
+  </frmRestore>
+  <frmDonate>
+    <PROPERTIES>
+      <Text>تبرع</Text>
+    </PROPERTIES>
+    <CONTROLS>
+      <_Label1>
+        <Text>قليل من الدولارات لا يمكن أن تضر ميزانيتك ولكنها مهمة جدا بالنسبة لي. أنا طالب ويجب أن أقضي الكثير من الوقت في الكتابة والاختبار وتحديث هذا البرنامج. لكن السائق الاحتياطي! هو برنامج مجاني وجزء من المال يصل إلى مبادرة مفتوحة المصدر. إذا كنت راضيا عن هذا البرنامج، ففكر في تبرع. شكرا لك.</Text>
+      </_Label1>
+      <_LinkLabel1>
+        <Text>http://sourceforge.net/project/project_donations.php?group_id=176359</Text>
+      </_LinkLabel1>
+      <_chkShowAgain>
+        <Text>لا تظهر مربع الحوار هذا مرة أخرى .</Text>
+      </_chkShowAgain>
+      <_Button1>
+        <Text>موافق</Text>
+      </_Button1>
+    </CONTROLS>
+    <CUSTOMARRS></CUSTOMARRS>
+  </frmDonate>
+  <frmOffline>
+    <PROPERTIES>
+      <Text>غير متصل النسخ الاحتياطي</Text>
+    </PROPERTIES>
+    <CONTROLS>
+      <_txtsysPath>
+        <Text></Text>
+      </_txtsysPath>
+      <_cmdBrowse>
+        <Text>استعراض</Text>
+      </_cmdBrowse>
+      <_Label1>
+        <Text>اسم الكمبيوتر دون اتصال</Text>
+      </_Label1>
+      <_lblPcName>
+        <Text></Text>
+      </_lblPcName>
+      <_chkUseOfflineName>
+        <Text>استخدام اسم الكمبيوتر دون اتصال للتوسع %COMPUTERNAME% علامة .</Text>
+      </_chkUseOfflineName>
+      <_cmdLoad>
+        <Text>تحميل</Text>
+      </_cmdLoad>
+      <_cmdOk>
+        <Text>موافق</Text>
+      </_cmdOk>
+      <_Label2>
+        <Text>الاتصال بهذا الكمبيوتر جهاز ذاكرة مع تثبيت ويندوز صالح .</Text>
+      </_Label2>
+      <_Label3>
+        <Text>WARN:Systems supported NT/2000/Xp/Vista/7.</Text>
+      </_Label3>
+    </CONTROLS>
+    <CUSTOMARRS></CUSTOMARRS>
+  </frmOffline>
+  <frmHelpDevelop>
+    <PROPERTIES>
+      <Text>مساعدة النسخ الاحتياطي للسائق! تطوير</Text>
+    </PROPERTIES>
+    <CONTROLS>
+      <_Label1>
+        <Text>تطوير وتصحيح هذا البرنامج يأخذني الكثير من الوقت. ساعدني في مواصلة هذا العمل موضع تقدير كبير من المستخدمين في العالم. يرجى تنزيل هذا الملف (أرشيف 2 ميغابايت) النقر على الرابط الأزرق والانتظار بضع ثوان. الموقع آمن بنسبة 100٪ ولا يهاجم أي فيروس نظامك. بعد التنزيل، يمكنك حذف هذا الملف غير الضريح. شكرا لك على التعاون وتذكر، إن أمكن، لتنزيل الملف عند استخدام البرنامج .</Text>
+      </_Label1>
+      <_LinkLabel1>
+        <Text>http://www.megaupload.com/?d=HD1W9A01</Text>
+      </_LinkLabel1>
+      <_Button1>
+        <Text>موافق</Text>
+      </_Button1>
+      <_Label2>
+        <Text>مساعدة النسخ الاحتياطي للسائق ! تنزيل هذا الملف !</Text>
+      </_Label2>
+    </CONTROLS>
+    <CUSTOMARRS></CUSTOMARRS>
+  </frmHelpDevelop>
+  <CommonVariables>
+    <PROPERTIES></PROPERTIES>
+    <CONTROLS></CONTROLS>
+    <CUSTOMARRS>
+      <langStrs>
+        <GENERIC>خطأ غير معروف</GENERIC>
+        <YES>نعم</YES>
+        <NO>لا</NO>
+        <ERROR_FLD>الدليل المحدد غير موجود. حدد دليل صالح</ERROR_FLD>
+        <ERROR_BERR>حدث خطأ أثناء تنفيذ البرنامج. إعادة تشغيل برنامج التشغيل النسخ الاحتياطي !</ERROR_BERR>
+        <ERROR_FileWrite>لا يمكن حفظ الملف .</ERROR_FileWrite>
+        <ERROR_FileOpen>لا يمكن فتح الملف . يمكن تلف الملف .</ERROR_FileOpen>
+        <ERROR_RegistryAccess>سائق النسخ الاحتياطي! لا يمكن فتح سجل النظام. تحقق من امتيازات الإدارة.</ERROR_RegistryAccess>
+        <ERROR_Admin>سائق النسخ الاحتياطي! يتطلب الامتيازات الإدارية. إعادة تشغيل البرنامج مع الامتيازات المطلوبة أو مسؤول النظام الاتصال.</ERROR_Admin>
+        <ERROR_BadSystem>سائق النسخ الاحتياطي! لا يمكن تشغيلها تحت نظام التشغيل هذا. سيتم إغلاق البرنامج.</ERROR_BadSystem>
+        <BRE_Generic>حدث خطأ غير معروف أثناء التشغيل .</BRE_Generic>
+        <BRE_InvalidDevice>المعلومات حول الأجهزة تالفة أو غير صحيحة .</BRE_InvalidDevice>
+        <BRE_UnformattablePath>تنسيق المسار غير صالح .</BRE_UnformattablePath>
+        <BRE_NoDevices>لا توجد أجهزة محددة .</BRE_NoDevices>
+        <BRE_FileOverwiting>لا يمكن الكتابة فوق الملف</BRE_FileOverwiting>
+        <BRE_LackOfSpace>قرص الوجهة ممتلئ .</BRE_LackOfSpace>
+        <BRE_CantReadWriteBkInfo>لا يمكن قراءة \ كتابة ملف النسخ الاحتياطي .</BRE_CantReadWriteBkInfo>
+        <BRE_FileIOError>فتح الملف مرفوض. تحقق من امتيازات الإدارة  ..</BRE_FileIOError>
+        <BRE_OpCanceled>تم إلغاء العملية من المستخدم .</BRE_OpCanceled>
+        <BRE_OemInfExist>يتم تثبيت برنامج التشغيل بالفعل على هذا الكمبيوتر .</BRE_OemInfExist>
+        <BRE_OemInfAlreadyUsed>يستخدم برنامج التشغيل بالفعل بواسطة جهاز واحد أو أكثر وهو غير قابل للاسترداد .</BRE_OemInfAlreadyUsed>
+        <BRE_MissingInfFile>لا يمكن تحديد موقع ملف التثبيت.</BRE_MissingInfFile>
+        <BRE_CantCopyDriver>لا يمكن نسخ ملفات السائق في مسار الاستعادة.</BRE_CantCopyDriver>
+        <DCmp_None>بلا</DCmp_None>
+        <DCmp_Partial>جزئي</DCmp_Partial>
+        <DCmp_Full>كامل</DCmp_Full>
+        <LOG_Framework>مايكروسوفت برنامج .NET Framework الإصدار :</LOG_Framework>
+        <LOG_Memory>الذاكرة المتاحة: {0} of {1}كيلوبايت .</LOG_Memory>
+        <LOG_Device>\n{0}\n\tالطراز : {1}\n\tالمزود :  {2}\n\tالنسخة : {3}\n\tتاريخ النشر : {4}\n\tInf ملف :  {5}\n\tإجمالي الملفات :  {6}\n\n</LOG_Device>
+        <LOG_DeviceOK>الجهاز معالجته بنجاح !</LOG_DeviceOK>
+        <LOG_DeviceError>حدث خطأ أثناء معالجة الجهاز. </LOG_DeviceError>
+        <FRMMAIN_NOPCIDTB>ملف قاعدة البيانات PCI.ids غير موجود. لا يمكن استرداد معلومات أجهزة PCI.</FRMMAIN_NOPCIDTB>
+        <FRMMAIN_NODEVICES>لم تجد الأجهزة. تحقق من امتيازات إدارية أو تغيير خيارات الإدراج.</FRMMAIN_NODEVICES>
+        <FRMMAIN_COMPFULL>برنامج التشغيل متوافق للنسخ الاحتياطي واستعادة.</FRMMAIN_COMPFULL>
+        <FRMMAIN_COMPPARTIAL>يجب استخدام برنامج التشغيل على إصدار ويندوز الحالي فقط.</FRMMAIN_COMPPARTIAL>
+        <FRMMAIN_RCOMPPARTIAL>يجب ألا يكون برنامج التشغيل متوافقا مع نظام التشغيل هذا.</FRMMAIN_RCOMPPARTIAL>
+        <FRMMAIN_COMPNONE>سائق لن يكون مرتاحا.</FRMMAIN_COMPNONE>
+        <FRMMAIN_RCOMPNONE>السائق غير قابل للاستراد.</FRMMAIN_RCOMPNONE>
+        <FRMMAIN_FILES>تم العثور على جميع الملفات.</FRMMAIN_FILES>
+        <FRMMAIN_NOFILES>بعض الملفات مفقودة.</FRMMAIN_NOFILES>
+        <FRMMAIN_NORESTDEVICES>افتح ملف النسخ الاحتياطي أو تغيير خيارات الإدراج.</FRMMAIN_NORESTDEVICES>
+        <FRMMAIN_DEVFOUND>الأجهزة المدرجة: {0} من {1}</FRMMAIN_DEVFOUND>
+        <FRMMAIN_DIFFERENTSYSTEMS>يختلف نظام السائقين الأصلي عن واحد الحالي. يجب أن تكون غير متوافقة مع هذا النظام.</FRMMAIN_DIFFERENTSYSTEMS>
+        <FRMMAIN_TREENODEDEV>{0}   ({1} الأجهزة)</FRMMAIN_TREENODEDEV>
+        <FRMMAIN_DRIVERREQUIRED>مطلوب برنامج التشغيل المحدد بواسطة جهاز أجهزة متصل بالكمبيوتر ولكن غير مثبت.</FRMMAIN_DRIVERREQUIRED>
+        <FRMMAIN_DRIVERUPDATE>يتم تثبيت برنامج التشغيل بالفعل مع إصدار أقدم .يتابع مع استعادة لتحديث برنامج التشغيل.</FRMMAIN_DRIVERUPDATE>
+        <FRMMAIN_DRIVERNOTREQUIRED>مطلوب برنامج التشغيل من خلال أي جهاز في الأجهزة ولكن يمكن استعادته.</FRMMAIN_DRIVERNOTREQUIRED>
+        <FRMBACK_DEVFOUND>الأجهزة المختارة: {0}   الحجم: {1} ميجابايت</FRMBACK_DEVFOUND>
+        <FRMBACK_BEGINBACKUP>بدأ النسخ الاحتياطي. {0} الأجهزة المختارة .</FRMBACK_BEGINBACKUP>
+        <FRMBACK_ENDBACKUP>الانتهاء من النسخ الاحتياطي. أجهزة احتياطية: {0} من {1}.</FRMBACK_ENDBACKUP>
+        <FRMBACK_ENDBACKUPERR>تم إلغاء النسخ الاحتياطي لأنه حدث خطأ غير معروف.</FRMBACK_ENDBACKUPERR>
+        <FRMBACK_ENDDEVICE>الانتهاء الجهاز. الملفات المنسوخة : {0} من {1}</FRMBACK_ENDDEVICE>
+        <FRMBACK_FILECOPIED>نسخ الملف: {0}</FRMBACK_FILECOPIED>
+        <FRMBACK_LOGSAVED>سجل الملف المحفوظ !</FRMBACK_LOGSAVED>
+        <FRMBACK_BACKUPTIME>الوقت المنقضي : {0} ث.</FRMBACK_BACKUPTIME>
+        <FRMRESTORE_BEGINRESTORE>بدأت الاستعادة. {0} الأجهزة المختارة .</FRMRESTORE_BEGINRESTORE>
+        <FRMRESTORE_ENDRESTORE>الانتهاء من الاستعادة .</FRMRESTORE_ENDRESTORE>
+        <FRMRESTORE_PNPRESCAN>Plug n Play الفحص اكتمل بنجاح.</FRMRESTORE_PNPRESCAN>
+        <FRMRESTORE_PNPRESCANFAILED>لا يمكن أن تبدأ المسح للجيل الجديد للاجهزة Plug n Play .</FRMRESTORE_PNPRESCANFAILED>
+        <FRMRESTORE_ENDDEVICE>الانتهاء الجهاز.</FRMRESTORE_ENDDEVICE>
+        <FRMRESTORE_OEMINF>ملف تثبيت الاصلية OEM.: {0}</FRMRESTORE_OEMINF>
+        <FRMREMOVE_USERFORCE>يتم استخدام برنامج التشغيل بالفعل بواسطة جهاز واحد أو أكثر . هل أزلها ؟</FRMREMOVE_USERFORCE>
+        <FRMREMOVE_REMOVED>{0} السائقين إزالتها من {1}</FRMREMOVE_REMOVED>
+        <FRMBUILDER_BADSETTINGS>بعض الخيارات أو المعلومات غير صحيحة. لا يمكن توليد سطر أوامر صالح .</FRMBUILDER_BADSETTINGS>
+        <FRMREMOVE_BETAVERSION>تحذير: إزالة الوظيفة غير اختبارها بالكامل وهي نسخة تجريبية. استخدمه فيك المخاطرة.</FRMREMOVE_BETAVERSION>
+        <CONSOLE_BADCOMMAND>خطأ بناء جملة سطر الأوامر. تحقق من جميع المعلمات.</CONSOLE_BADCOMMAND>
+        <CONSOLE_BADPARAMETER>خطأ في بناء الجملة في : {0}</CONSOLE_BADPARAMETER>
+        <CONSOLE_USAGE>قراءة دليل مساعدة سطر الأوامر للحصول على مزيد من المعلومات</CONSOLE_USAGE>
+        <CONSOLE_DIRECTORY>دليل محدد غير متوفر .</CONSOLE_DIRECTORY>
+        <CONSOLE_FILE>لا يمكن فتح ملف النسخ الاحتياطي .</CONSOLE_FILE>
+        <CONSOLE_INFOCOLLECT>جمع المعلومات....</CONSOLE_INFOCOLLECT>
+        <CONSOLE_WELCOME>DriverBackup برنامج تشغيل النسخ الاحتياطي! 2.0 جوزيبي غريكو  2007-2008\n\nصدر مع ترخيص GPL\n\nوضع سطر الأوامر\n\nتعريب ثامرموسى \n\n</CONSOLE_WELCOME>
+        <CONSOLE_OPEND>منجز .</CONSOLE_OPEND>
+        <CONSOLE_REGISTRYUPDATE>تكوين سجل النظام بنجاح .</CONSOLE_REGISTRYUPDATE>
+        <CONSOLE_MISSINGINFO>بعض الخيارات أو المعلومات مفقودة.</CONSOLE_MISSINGINFO>
+        <ERROR_LANGUAGE>لا يمكن قراءة ملف اللغة.\nImpossibile caricare le risorse di linguaggio كاريكير لو كريسس دي.</ERROR_LANGUAGE>
+        <BRE_ForceUpdate>لسائق {0} مثبت مسبقا. تركيب القوة للسائق النسخ الاحتياطي ?</BRE_ForceUpdate>
+        <BRE_CantForceUpdating>برنامج التشغيل الحالي مناسب أكثر للجهاز من النسخ الاحتياطي يتم إحباطه.</BRE_CantForceUpdating>
+        <LOG_OperationStarted>بدأت العملية : {0}</LOG_OperationStarted>
+        <LOG_OperationEnded>انتهت العملية : {0}</LOG_OperationEnded>
+        <FRMRESTORE_FORCEUPDATE>سائق للجهاز {0} مثبت بالفعل على النظام. حاول إجبار تثبيت برنامج التشغيل النسخ الاحتياطي ?. تحذير: سيتم تثبيت برنامج التشغيل النسخ الاحتياطي على الرغم من أن إصداره أكبر سنا .</FRMRESTORE_FORCEUPDATE>
+        <FRMOFFLINE_GENERIC>لا يمكن تهيئة النسخ الاحتياطي دون اتصال .</FRMOFFLINE_GENERIC>
+        <FRMOFFLINE_PRIVILEGE>البرنامج لا يمكن تحميل إعدادات تسجيل النظام دون اتصال. الامتيازات المطلوبة .</FRMOFFLINE_PRIVILEGE>
+        <FRMOFFLINE_PATH>لا يحتوي المسار المحدد على تثبيت ويندوز صالح .</FRMOFFLINE_PATH>
+        <CONSOLE_CANTCREATEDIR>لا يمكن إنشاء دليل محدد .</CONSOLE_CANTCREATEDIR>
+        <CONSOLE_RESTORECONFIRM>استعادة السائق (y/n)?</CONSOLE_RESTORECONFIRM>
+      </langStrs>
+    </CUSTOMARRS>
+  </CommonVariables>
+</OBJECTSCOLLECTION>
