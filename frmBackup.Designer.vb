@@ -22,6 +22,7 @@ Partial Class frmBackup
     'Non modificarla nell'editor del codice.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBackup))
         Me.devTree = New System.Windows.Forms.TreeView()
         Me.lblDevFound = New System.Windows.Forms.Label()
         Me.optBox = New System.Windows.Forms.GroupBox()
@@ -373,6 +374,7 @@ Partial Class frmBackup
         Me.Controls.Add(Me.optBox)
         Me.Controls.Add(Me.lblDevFound)
         Me.Controls.Add(Me.devTree)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "frmBackup"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -22,6 +22,7 @@ Partial Class frmCmdBuilder
     'Non modificarla nell'editor del codice.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCmdBuilder))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtOutput = New System.Windows.Forms.TextBox()
@@ -538,6 +539,7 @@ Partial Class frmCmdBuilder
         Me.Controls.Add(Me.txtOutput)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "frmCmdBuilder"
         Me.groupBackup.ResumeLayout(False)

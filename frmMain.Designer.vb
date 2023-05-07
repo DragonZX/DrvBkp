@@ -226,7 +226,7 @@ Partial Class frmMain
         'EsciDaDriverBackupToolStripMenuItem
         '
         Me.EsciDaDriverBackupToolStripMenuItem.Name = "EsciDaDriverBackupToolStripMenuItem"
-        Me.EsciDaDriverBackupToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.EsciDaDriverBackupToolStripMenuItem.Size = New System.Drawing.Size(38, 20)
         Me.EsciDaDriverBackupToolStripMenuItem.Text = "E&xit"
         '
         'StatusStrip1

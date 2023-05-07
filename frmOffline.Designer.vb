@@ -22,6 +22,7 @@ Partial Class frmOffline
     'Non modificarla nell'editor del codice.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmOffline))
         Me.txtsysPath = New System.Windows.Forms.TextBox()
         Me.cmdBrowse = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -132,6 +133,7 @@ Partial Class frmOffline
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmdBrowse)
         Me.Controls.Add(Me.txtsysPath)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmOffline"
