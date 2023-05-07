@@ -50,3 +50,5 @@ Temporary Items
 #Compiled VS2015 Directory
 bin
 obj
+.vs
+build
