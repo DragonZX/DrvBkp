@@ -389,24 +389,9 @@
       <_pictDev>
         <Text></Text>
       </_pictDev>
-      <_ToolStripMenuItem1>
+      <_HelpMenu>
         <Text>&amp;?</Text>
-      </_ToolStripMenuItem1>
-      <_EsciDaDriverBackupToolStripMenuItem>
-        <Text>خروج</Text>
-      </_EsciDaDriverBackupToolStripMenuItem>
-      <_GuidaAlBackupToolStripMenuItem>
-        <Text>دليل المساعدة النسخ الاحتياطي</Text>
-      </_GuidaAlBackupToolStripMenuItem>
-      <_GuidaAlRipristinoToolStripMenuItem>
-        <Text>استعادة دليل المساعدة</Text>
-      </_GuidaAlRipristinoToolStripMenuItem>
-      <_GuidaAllaRigaDiComandoToolStripMenuItem>
-        <Text>خيارات سطر الأوامر</Text>
-      </_GuidaAllaRigaDiComandoToolStripMenuItem>
-      <_InfoSuDriverBackupToolStripMenuItem>
-        <Text>حول برنامج التشغيل النسخ الاحتياطي!</Text>
-      </_InfoSuDriverBackupToolStripMenuItem>
+      </_HelpMenu>
       <_UtilitàToolStripMenuItem>
         <Text>الادوات</Text>
       </_UtilitàToolStripMenuItem>

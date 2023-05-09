@@ -30,13 +30,7 @@ Partial Class frmMain
         Me.UtilitàToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuilderRigaDiComandoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MostraDispositiviPCIToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GuidaAlBackupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GuidaAlRipristinoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GuidaAllaRigaDiComandoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.InfoSuDriverBackupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EsciDaDriverBackupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.lblBarInfo = New System.Windows.Forms.ToolStripStatusLabel()
         Me.devScanBar = New System.Windows.Forms.ToolStripProgressBar()
@@ -154,7 +148,7 @@ Partial Class frmMain
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuLang, Me.UtilitàToolStripMenuItem, Me.ToolStripMenuItem1, Me.EsciDaDriverBackupToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuLang, Me.UtilitàToolStripMenuItem, Me.HelpMenu})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1308, 24)
@@ -186,53 +180,16 @@ Partial Class frmMain
         Me.MostraDispositiviPCIToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
         Me.MostraDispositiviPCIToolStripMenuItem.Text = "Show connected PCI devices"
         '
-        'ToolStripMenuItem1
+        'HelpMenu
         '
-        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem4, Me.GuidaAlBackupToolStripMenuItem, Me.GuidaAlRipristinoToolStripMenuItem, Me.GuidaAllaRigaDiComandoToolStripMenuItem, Me.InfoSuDriverBackupToolStripMenuItem})
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(44, 20)
-        Me.ToolStripMenuItem1.Text = "&Help"
-        '
-        'ToolStripMenuItem4
-        '
-        Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(196, 22)
-        Me.ToolStripMenuItem4.Text = "Help guide"
-        '
-        'GuidaAlBackupToolStripMenuItem
-        '
-        Me.GuidaAlBackupToolStripMenuItem.Name = "GuidaAlBackupToolStripMenuItem"
-        Me.GuidaAlBackupToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
-        Me.GuidaAlBackupToolStripMenuItem.Text = "Backup help guide"
-        '
-        'GuidaAlRipristinoToolStripMenuItem
-        '
-        Me.GuidaAlRipristinoToolStripMenuItem.Name = "GuidaAlRipristinoToolStripMenuItem"
-        Me.GuidaAlRipristinoToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
-        Me.GuidaAlRipristinoToolStripMenuItem.Text = "Restore help guide"
-        '
-        'GuidaAllaRigaDiComandoToolStripMenuItem
-        '
-        Me.GuidaAllaRigaDiComandoToolStripMenuItem.Name = "GuidaAllaRigaDiComandoToolStripMenuItem"
-        Me.GuidaAllaRigaDiComandoToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
-        Me.GuidaAllaRigaDiComandoToolStripMenuItem.Text = "Command line options"
-        '
-        'InfoSuDriverBackupToolStripMenuItem
-        '
-        Me.InfoSuDriverBackupToolStripMenuItem.Name = "InfoSuDriverBackupToolStripMenuItem"
-        Me.InfoSuDriverBackupToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
-        Me.InfoSuDriverBackupToolStripMenuItem.Text = "About DriverBackup!"
-        '
-        'EsciDaDriverBackupToolStripMenuItem
-        '
-        Me.EsciDaDriverBackupToolStripMenuItem.Name = "EsciDaDriverBackupToolStripMenuItem"
-        Me.EsciDaDriverBackupToolStripMenuItem.Size = New System.Drawing.Size(38, 20)
-        Me.EsciDaDriverBackupToolStripMenuItem.Text = "E&xit"
+        Me.HelpMenu.Name = "HelpMenu"
+        Me.HelpMenu.Size = New System.Drawing.Size(44, 20)
+        Me.HelpMenu.Text = "&Help"
         '
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblBarInfo, Me.devScanBar})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 602)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 606)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(1308, 22)
         Me.StatusStrip1.TabIndex = 7
@@ -1025,12 +982,7 @@ Partial Class frmMain
     Friend WithEvents lblOpSystem As System.Windows.Forms.Label
     Friend WithEvents lblFiles As System.Windows.Forms.Label
     Friend WithEvents pictDev As System.Windows.Forms.PictureBox
-    Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents EsciDaDriverBackupToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents GuidaAlBackupToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents GuidaAlRipristinoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents GuidaAllaRigaDiComandoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents InfoSuDriverBackupToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents HelpMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UtilitàToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BuilderRigaDiComandoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents cmdBkExtInfo As System.Windows.Forms.Button
@@ -1062,7 +1014,6 @@ Partial Class frmMain
     Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents menuLang As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MostraDispositiviPCIToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents cmdOfflineMode As System.Windows.Forms.ToolStripButton
 

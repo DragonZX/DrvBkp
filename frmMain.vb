@@ -716,21 +716,12 @@ Public Class frmMain
     End Sub
 
     Private Sub cmdRestore_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdRestore.Click
-
         If devRestorer Is Nothing Then Return
         frmRestore.RestorerObj = devRestorer
         frmRestore.InitializeControls(Me.ImageList1)
         frmRestore.Show()
         frmRestore.ShowDevices()
-
     End Sub
-
-
-
-    Private Sub EsciDaDriverBackupToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EsciDaDriverBackupToolStripMenuItem.Click
-        Me.Close()
-    End Sub
-
 
     Private Sub treeDevices_MouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles treeDevices.MouseClick
         If e.Button = Windows.Forms.MouseButtons.Right Then
@@ -768,27 +759,6 @@ Public Class frmMain
     Private Sub BuilderRigaDiComandoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuilderRigaDiComandoToolStripMenuItem.Click
         frmCmdBuilder.Show()
     End Sub
-
-    Private Sub ToolStripMenuItem4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem4.Click
-        CommonVariables.OpenHelpGuide(HelpGuideSection.index)
-    End Sub
-
-    Private Sub GuidaAlBackupToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GuidaAlBackupToolStripMenuItem.Click
-        CommonVariables.OpenHelpGuide(HelpGuideSection.Backup)
-    End Sub
-
-    Private Sub GuidaAlRipristinoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GuidaAlRipristinoToolStripMenuItem.Click
-        CommonVariables.OpenHelpGuide(HelpGuideSection.Restore)
-    End Sub
-
-    Private Sub GuidaAllaRigaDiComandoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GuidaAllaRigaDiComandoToolStripMenuItem.Click
-        CommonVariables.OpenHelpGuide(HelpGuideSection.CommandLine)
-    End Sub
-
-    Private Sub InfoSuDriverBackupToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InfoSuDriverBackupToolStripMenuItem.Click
-        CommonVariables.OpenHelpGuide(HelpGuideSection.Info)
-    End Sub
-
     Private Sub MostraDispositiviPCIToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MostraDispositiviPCIToolStripMenuItem.Click
         ShowUnknownDevices()
     End Sub
@@ -803,6 +773,10 @@ Public Class frmMain
         lblBarInfo.Visible = False
 
         frmOffline.ShowDialog()
+    End Sub
+
+    Private Sub HelpMenu_Click(sender As Object, e As EventArgs) Handles HelpMenu.Click
+        CommonVariables.OpenHelpGuide(HelpGuideSection.index)
     End Sub
 End Class
 

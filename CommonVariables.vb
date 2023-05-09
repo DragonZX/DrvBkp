@@ -2,6 +2,7 @@
 Imports DriverBackup__2.LanguageManager
 
 Module CommonVariables
+    Private Const V As Boolean = False
 
     'Contiene variabili condivise dall'applicazione
 
@@ -15,26 +16,24 @@ Module CommonVariables
         CommandLine
         PathFormat
         Builder
-        Remove
+        Remote
         Info
     End Enum
-
-    Public Function OpenHelpGuide(ByVal section As HelpGuideSection) As Boolean
+    Public Function OpenHelpGuide(ByVal section As HelpGuideSection) As Process
         Try
             'Tenta di aprire la sezione guida specificata
             'Carica il percorso principale
-            Dim pt As String = Path.Combine(My.Application.Info.DirectoryPath, lang)
+            Dim pt As String = My.Application.Info.DirectoryPath & "\help\"
 
-            If section <> HelpGuideSection.index Then
-                pt = Path.Combine(pt, "index_file")
-            End If
             'Il nome del file in particolare
-            pt = Path.Combine(pt, section.ToString & ".htm")
-
-            Return Utils.OpenShellFile(frmMain.Handle, pt)
+            pt = Path.Combine(pt, "Help_" & lang & ".htm")
+            Return Process.Start(pt)
 
         Catch ex As Exception
-            Return False
+            'Dim pt As String = My.Application.Info.DirectoryPath & "\help\"
+            'MsgBox("Unable to load the file " & "Help_" & lang & ".htm#" & section.ToString & " Maybe it was deleted?" )
+            Return Process.GetCurrentProcess 'Fake exit
+
         End Try
     End Function
 

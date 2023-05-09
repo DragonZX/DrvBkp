@@ -389,24 +389,9 @@
             <_pictDev>
                 <Text />
             </_pictDev>
-            <_ToolStripMenuItem1>
+            <_HelpMenu>
                 <Text>&amp;?</Text>
-            </_ToolStripMenuItem1>
-            <_EsciDaDriverBackupToolStripMenuItem>
-                <Text>DriverBackup! beenden</Text>
-            </_EsciDaDriverBackupToolStripMenuItem>
-            <_GuidaAlBackupToolStripMenuItem>
-                <Text>Backup Hilfe</Text>
-            </_GuidaAlBackupToolStripMenuItem>
-            <_GuidaAlRipristinoToolStripMenuItem>
-                <Text>Wiederherstellen Hilfe</Text>
-            </_GuidaAlRipristinoToolStripMenuItem>
-            <_GuidaAllaRigaDiComandoToolStripMenuItem>
-                <Text>Befehlszeilen-Optionen</Text>
-            </_GuidaAllaRigaDiComandoToolStripMenuItem>
-            <_InfoSuDriverBackupToolStripMenuItem>
-                <Text>Über DriverBackup!</Text>
-            </_InfoSuDriverBackupToolStripMenuItem>
+            </_HelpMenu>
             <_UtilitàToolStripMenuItem>
                 <Text>Tools</Text>
             </_UtilitàToolStripMenuItem>

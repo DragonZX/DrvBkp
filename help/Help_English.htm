@@ -1,0 +1,163 @@
+<html>
+<head>
+<title>Driver Backup! help guide</title>
+<link rel="stylesheet" href="help.css">
+</head>
+<body>
+	<div id="index" class="wrapper">
+<h1>What is DriverBackup!</h1><p class="author">by Giuseppe Greco</p>
+<p>DriverBackup! is a free device drivers backup and restore tool with command line options and path formatting. It can install device drivers automatically without using CD-Rom or Floppies.</p>
+<p>Help Contents</p>
+<ul>
+    <li><a href="Help_English.htm#Backup">How to make a drivers backup</a></li>
+    <li><a href="Help_English.htm#Restore">How to restore backuped drivers</a></li>
+    <li><a href="Help_English.htm#CommandLine">How to use command line switches</a></li>
+    <li><a href="Help_English.htm#Info">Information about program and author</a></li>
+    <li><a href="Help_English.htm#PathFormat">Path formatting</a></li>
+    <li><a href="Help_English.htm#Builder">Graphical command line builder</a></li>
+    <li><a href="Help_English.htm#Remote">How to get drivers from an offline system</a></li>
+    <li><a href="Help_English.htm#PCI">PCI devices listing</a></li>
+</ul>
+<p>This guide may contain some grammar mistakes. Help me to make it better!!!<br>
+The list at center of screen shows all devices found on local computer, sorted by ownership class.<br>
+Usually all devices are listed, but you can select a specify provider class or setting "Full portability" or "Digital signature".</p>
+
+<h1>Backup of Drivers</h1>
+<p>To select a provider class click on one of buttons upon the list:</p>
+<ul>
+<li>All: Shows all devices</li>
+<li>OEM: Shows devices with a Microsoft driver.</li>
+<li>Third party: Shows devices with a third party driver.</li>
+</ul>
+<p>"Digital signature" button select devices with a digital signature ("WHQL") only.<br>
+"Full portability" button select devices that are totally compatible with backup and restore.<br>
+When you have selected desired devices, click on "Backup" button to open backup window.<br>
+Click on "Browse" button and select a directory where backup's files will be copied. It's recommended to select an empty directory. At the end of process program generates a Backup Info File (.BKI), that contains information about backup and backuped devices.<br>
+Every directory name,from backup main directory to single device one, can be formatted using special format specifiers.<br>
+For a detailed description of format specifiers click here.<br>
+"Allow DriverBackup! to ovewrite files" checkbox enable DriverBackup! to ovewrite files in backup path, if required. Otherwise program raises an error.<br>
+"Generate file for auto-restoration" checkbox forces DriverBackup! to generate executable files for automatic drivers' restoration. These files include a batch file "Restore.bat" and "Autorun.inf" that enables autorun in removable devices (USB Flash,CD-DVD-ROM).</p>
+
+<p>PS: In order to enable autorun, backup files (Backup Info file ".BKI" and directory tree) must be copied in root path of device.</p>
+
+<p class="notice">Notice:</p>
+<p class="noticeb">Some devices are marked as "incompatible" or "partially incompatibile". It means that DriverBackup! hasn't found some files or device's configuration suggests that it could be compatible with current system only.</p>
+
+
+<h1>Restoration of Drivers</h1>
+<p>In the main window, select restore mode with "Restore" button at top of screen.<br>
+First step of restoration is selection of a .BKI file containing information about backuped drivers.<br>
+When a package file is selected DriverBackup! Scans hardware connected to computer and checks all backup files.<br>
+For default DriverBackup! selects only drivers that could be useful for hardware devices connected to computer but other drivers can be selected also.</p>
+
+<p>There are two restoration modes:</p>
+<ul>
+<li>Install mode: A particular device connected to computer needs a driver, so driver is installed for first time.</li>
+<li>Update mode: A particular device is correctly installed, but driver is older than backuped one. In this case DriverBackup! performs updating of files.</li>
+</ul>
+<p>Select desired devices and press "Restore" button.<br>
+Click on  "Restore" button and  DriverBackup! will restore selected devices.<br>
+If "Scan for new Plug n Play devices.." checkbox is selected program forces system to update its hardware configuration after restoration process is completed. Probably some drivers require system reboot to work properly.<br>
+Selecting "Update driver configuration."checkbox, program never ask to forcing driver's update. If update operation fails an error is reported in logging list.</p>
+
+<p class="notice">Notice:</p>
+<p class="noticeb">If a device has some files missing it is marked as "incompatible" and it can't be restored.</p>
+
+<h1>Command line mode</h1>
+<p>It is possible to automatize DriverBackup! using particular  parameters in command line.<br>
+Commands with their arguments can be inserted in a casual order.<br>
+Standard command syntax is  COMMANDNAME="ARGUMENT"</p>
+<p>A list of available commands:
+MODE="RESTORE" or MODE="BACKUP"<br>
+Required, select "Backup" or "Restore" mode.<br>
+LOG="LOGFILENAME"<br>
+Optional, select a file for operation's logging. If not inserted standard log filename is used.<br>
+OPT="######"</p>
+
+<p>Optional, sets options for Backup and Restore.</p>
+<p>Each letter enables a particular feature. If not present standard configuration OPT="AL" is used.</p>
+<p>Options avilable for all modes:</p>
+<p>Device filtering:<br>
+
+A: Select all devices<br>
+M: Select OEM devices<br>
+H: Select Third Part devices<br>
+D: Select devices automatically (Only Restore mode)<br>
+S: Select device with digital signature<br>
+P: Select device with full compatibility for backup and restore.</p>
+
+<p>Logging<br>
+L: Enable log file writing.<br>
+V: Enable verbose mode.<br>
+Example: OPT="HSP" Configures DriverBackup! to select Third Party devices with digital signature and full compatibility.</p>
+<p>Restore mode<br>
+Available command for restoration mode are:<br>
+
+BKFILE="FILENAME"<br>
+Required. Select backup info file to open. If filename doesn't contain a directory name DriverBackup! search it in its directory.<br>
+Options for restore mode available with "OPT" command are:<br>
+U: Update driver configration if already installed.<br>
+N: Scans for new Plug &amp; Play devices after restoration.</p>
+
+<h2>Backup mode</h2>
+
+<p>Available command for backup mode are:<br>
+BKPATH="PATHNAME"<br>
+Required, select backup path.<br>
+BKFILE="FILENAME"<br>
+Optional, can contain a complete filename or a string with format specifiers.<br>
+BKPATHFMT and BKDEVFMT ="FORMAT"<br>
+Optional, set respectively backup's main path format and single device's path format.<br>
+SYSPATH="SYSTEMPATH"<br>
+Optional, used for offline backup mode. Set path of offline system.<br>
+BKDATEFMT="mm\dd\yy"<br>
+Optional, set date format.<br>
+BKDESC="DESCRIPTION"<br>
+Optional, set a description for backup.</p>
+
+<p>Options for backup mode available with "OPT" command are:<br>
+
+R: Generate files for automatic drivers' restoration.<br>
+W: Enable file overwriting.<br>
+O: For offline backup only, replace %COMPUTERNAME% tag with offline computer name.</p>
+
+<h1>Offline backup</h1>
+<p>It is possible to get drivers from a damaged or offline system with few steps.</p>
+<ol>
+<li>Connect to computer a storage device (hard disk or other memory device) where target system is stored. For example, you can extract hard disk from a computer with damaged system and connect it to another computer where DriverBackup! runs.</li>
+<li>Click on "Backup from offline system" button.</li>
+<li>Specify path of target system. (Example: Z:\Windows)</li>
+</ol>
+<p>If program detects a valid operating system , name of target computer should be displayed near "Offline computer name" label.<br>
+In this case click to "Load" button to retrieve drivers information and "Ok" button to proceed.<br>
+Device listing is same as normal backup mode.</p>
+<p>Notice:</p>
+<p>To run offline backup procedure ADMINISTRATIVE PRIVILEGES are required.<br>
+For system administrators:<br>
+Program try to set SE_BACKUP_PRIVILEGE and SE_RESTORE_PRIVILEGE in order to read registry files stored in target path.</p>
+
+<h1>PCI devices listing</h1>
+<p>PCI devices listing feature provides a simple system to get name, provider and model of unknown hardware connected to pc. Driverbackup! checks with a warning icon only not installed device</p>
+
+<h1>Grafical Command Line builder</h1>
+<p>If you have difficulties to write a valid command line you can use graphical command line builder. Click on "Tools" -> "Command line builder" to open builder.<br>
+
+<p>In two panels at top of window you can set options about mode, device filtering and logging.<br>
+Panel at center of screen depends on selected mode (Backup or Restore) and it is similar to backup or restore window.<br>
+To generate command line click on "Generate" button.</p>
+
+<h1>Information about program and author</h1>
+<p>DriverBackup! is a free software so it can be diffused with every mean. Author declines every liability for computer damage or data loss. Read instructions before use.<br>
+Wrote and built using Microsoft Visual Studio 2022.<br>
+Please report me every bug or errors occurred during program usage. I'm happy to receive suggestions for DriverBackup! improvments.<br>
+Now DriverBackup! is available in few languages. If you want to help me in translation please contact me.<br>
+Suggests &amp; Bug Reporting</p>
+
+<h2>Installation &amp; compatibility</h2>
+
+<p>DriverBackup! 2.0 is compatible with Windows XP or later only.<br>
+If you are using it under Windows Vista, a simple "copy &amp; paste" action is required. Otherwise, if you are using it in Windows XP or any similar system .NET Framework 3.5 must be installed.<br>
+If you don't want to install .NET Framework you can use previous version of DriverBackup!.</p>
+	</div>
+</body>
+</html>
