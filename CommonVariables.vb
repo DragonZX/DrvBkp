@@ -48,7 +48,7 @@ Module CommonVariables
             value = regKey.GetValue("Donate")
 
             If value Is Nothing Then
-                'Il messaggio non è stato ancora visualizzato
+                'Il messaggio non ï¿½ stato ancora visualizzato
                 regKey.SetValue("Donate", True)
                 Return True
             Else
@@ -227,118 +227,9 @@ Module CommonVariables
 
     End Function
 
-
-    Private Function GetDebugLangStrsIta() As Dictionary(Of String, String)
-        'Lista DEBUG di messaggi testo
-        Dim lst As New Dictionary(Of String, String)
-
-        With lst
-            .Add("GENERIC", "Unknown error")
-            .Add("YES", "Yes")
-            .Add("NO", "No")
-            .Add("ERROR_FLD", "Selected directory does not exist. Select a valid directory.")
-            .Add("ERROR_BERR", "An error occurred during program's execution. Restart DriverBackup!")
-            .Add("ERROR_FileWrite", "Cannot save file.")
-            .Add("ERROR_FileOpen", "Can't open file. File could be damaged.")
-            .Add("ERROR_RegistryAccess", "Il programma non può accedere al registro di sistema. Controllare di avere i privilegi di amministratore.")
-            .Add("ERROR_LANGUAGE", "Can't read language file.\nImpossibile caricare le risorse di linguaggio.")
-            .Add("ERROR_Admin", "DriverBackup! non può funzionare senza i privilegi di amministratore. Riavviare il programma con i privilegi richiesti o contattare l'amministratore di sistema.")
-            .Add("ERROR_BadSystem", "DriverBackup! non supporta questo sistema operativo.Il programma sarà chiuso.")
-
-            .Add("BRE_Generic", "Errore sconosciuto durante l'esecuzione dell'operazione.")
-            .Add("BRE_InvalidDevice", "Le informazioni sul dispositivo corrente risultano mancanti o danneggiate.")
-            .Add("BRE_UnformattablePath", "Il formato del percorso non è valido.")
-            .Add("BRE_NoDevices", "Nessun device è stato selezionato.")
-            .Add("BRE_FileOverwiting", "Impossibile sovrascrivere il file")
-            .Add("BRE_LackOfSpace", "Il disco di destinazione non ha memoria sufficiente.")
-            .Add("BRE_CantReadWriteBkInfo", "Impossibile elaborare le informazioni del backup.")
-            .Add("BRE_FileIOError", "Errore generico di accesso al file. Assicurarsi di avere i privilegi di amministratore.")
-            .Add("BRE_OpCanceled", "Operazione annullata dall'utente.")
-            .Add("BRE_OemInfExist", "Il drivers risulta già installato sul computer.") 'Il drivers è già installato sul computer
-            .Add("BRE_OemInfAlreadyUsed", "Impossibile eliminare il drivers poichè è attualmente in uso da uno o più dispositivi.") 'Il drivers è correntemente in uso e non può essere disinstallato.
-            .Add("BRE_MissingInfFile", "Impossibile trovare il file di installazione.") 'Il file di installazione è mancante
-            .Add("BRE_ForceUpdate", "Il driver per {0} è già installato. Forzare l'installazione del driver di backup?")
-            .Add("BRE_CantForceUpdating", "Il driver della periferica è più appropriato di quello di backup.Impossibile aggiornare.")
-            .Add("DCmp_None", "NESSUNA")
-            .Add("DCmp_Partial", "PARZIALE")
-            .Add("DCmp_Full", "COMPLETA")
-
-            .Add("LOG_Framework", "Versione Microsoft Framework .NET: ")
-            .Add("LOG_Memory", "Memoria disponibile: {0} su {1} Kbytes.")
-            .Add("LOG_Device", "\n{0}\n\tClasse: {1}\n\tProduttore:  {2}\n\tVersione: {3}\n\tData rilascio: {4}\n\tFile installazione:  {5}\n\tFile totali:  {6}\n\n")
-            .Add("LOG_DeviceOK", "Device processato con successo!")
-            .Add("LOG_DeviceError", "Si sono verificati errori nell'elaborazione del device.")
-            .Add("LOG_OperationStarted", "Processo iniziato: {0}")
-            .Add("LOG_OperationEnded", "Processo terminato: {0}")
-
-            .Add("FRMMAIN_NODEVICES", "Nessun device trovato. Assicurarsi di avere i privilegi di amministratore o cambiare i criteri di visualizzazione.")
-            .Add("FRMMAIN_COMPFULL", "Il driver è compatibile con il backup e il ripristino.")
-            .Add("FRMMAIN_COMPPARTIAL", "Il driver potrebbe essere utilizzabile solamente in questa versione del sistema operativo.")
-            .Add("FRMMAIN_RCOMPPARTIAL", "Il driver potrebbe non essere compatibile con questo sistema operativo.")
-            .Add("FRMMAIN_COMPNONE", "Il driver non potrà essere ripristinato.")
-            .Add("FRMMAIN_RCOMPNONE", "Il driver non può essere installato.")
-            .Add("FRMMAIN_NOPCIDTB", "Impossibile aprire il file database pci.ids. Controllare che il file sia presente nel percorso dell'applicazione.")
-            .Add("FRMMAIN_FILES", "Tutti i files sono presenti.")
-            .Add("FRMMAIN_NOFILES", "Alcuni files sono mancanti.")
-            .Add("FRMMAIN_NORESTDEVICES", "Aprire un file di backup per visualizzare i devices salvati o cambiare i criteri di visualizzazione.")
-            .Add("FRMMAIN_DEVFOUND", "Dispositivi visualizzati: {0} su {1}")
-            .Add("FRMMAIN_DIFFERENTSYSTEMS", "Il sistema operativo in cui è stato creato il backup non corrisponde con quello locale. I drivers potrebbero essere inutilizzabili.")
-            .Add("FRMMAIN_TREENODEDEV", "{0}   ({1} Dispositivi)")
-            'Nuovo set di stringhe testo
-            .Add("FRMMAIN_DRIVERREQUIRED", "Il driver è richiesto da una periferica collegata al computer e non ancora installata.")
-            .Add("FRMMAIN_DRIVERUPDATE", "Il driver è già installato nel computer ma la versione è meno recente. Proseguire con il ripristino per aggiornare il driver.")
-            .Add("FRMMAIN_DRIVERNOTREQUIRED", "Il driver non è al momento richiesto da nessuna periferica collegata. Il ripristino è però sempre possibile.")
-            '###############################
-            .Add("FRMBACK_DEVFOUND", "Dispositivi selezionati: {0}   Dimensioni: {1} Mbytes")
-            .Add("FRMBACK_BEGINBACKUP", "Backup iniziato. {0} devices selezionati.")
-            .Add("FRMBACK_BACKUPTIME", "Tempo impiegato: {0} sec.")
-            .Add("FRMBACK_ENDBACKUP", "Backup terminato con successo. {0} devices processati su {1}.")
-            .Add("FRMBACK_ENDBACKUPERR", "Backup terminato a causa di un errore grave.")
-            .Add("FRMBACK_ENDDEVICE", "Device processato. Files copiati {0} su {1}")
-            .Add("FRMBACK_FILECOPIED", "Copia del file: {0}")
-            .Add("FRMBACK_LOGSAVED", "File log salvato con successo.")
-
-            .Add("FRMRESTORE_BEGINRESTORE", "Ripristino dei drivers iniziato. {0} devices selezionati.")
-            .Add("FRMRESTORE_ENDRESTORE", "Ripristino completato.")
-            .Add("FRMRESTORE_PNPRESCAN", "Aggiornamento configurazione dispositivi Plug & Play effettuato con successo.")
-            .Add("FRMRESTORE_PNPRESCANFAILED", "Impossibile aggiornare automaticamente i dispositivi PnP, procedere manualmente.")
-            .Add("FRMRESTORE_ENDDEVICE", "Device processato.")
-            .Add("FRMRESTORE_OEMINF", "Nuovo file di installazione: {0}")
-            .Add("FRMRESTORE_FORCEUPDATE", "Il driver per il dispositivo {0} è già installato sul sistema. Provare a forzare l'installazione del driver di backup ?. NB: Il driver di backup verrà installato anche se la sua versione è MENO RECENTE.")
-
-            '.Add("FRMREMOVE_USERFORCE", "Il driver è attualmente utilizzato da uno o più dispositivi. Provare a forzare la rimozione?")
-            '.Add("FRMREMOVE_REMOVED", "Drivers rimossi {0} su {1}")
-            '.Add("FRMREMOVE_BETAVERSION", "Attenzione: La funzionalità di rimozione è ancora in fase BETA e potrebbe non produrre gli effetti desiderati. L'autore declina ogni responsabilità per eventuali danni arrecati al pc.")
-
-            .Add("FRMBUILDER_BADSETTINGS", "Alcune impostazioni non sono corrette. Impossibile generare una riga di comando valida.")
-
-            .Add("FRMOFFLINE_GENERIC", "Impossibile inizializzare il backup offline.")
-            .Add("FRMOFFLINE_PRIVILEGE", "Il programma non può caricare le informazioni di configurazione del sistema offline sul registro locale.Sono richiesti i privilegi di amministratore.")
-            .Add("FRMOFFLINE_PATH", "Il percorso selezionato non contiene un'installazione Windows valida.")
-
-            .Add("CONSOLE_BADCOMMAND", "Errore di sintassi nella riga di comando. Assicurarsi di aver inserito tutti i parametri.")
-            .Add("CONSOLE_BADPARAMETER", "Errore di sintassi nel parametro: {0}")
-            .Add("CONSOLE_USAGE", "Non disponibile")
-            .Add("CONSOLE_DIRECTORY", "La directory specificata non è disponibile o non esiste.")
-            .Add("CONSOLE_FILE", "Impossibile aprire il file di backup specificato.")
-            .Add("CONSOLE_INFOCOLLECT", "Raccolta delle informazioni necessarie in corso....")
-            .Add("CONSOLE_WELCOME", "DriverBackup! 2.0 by Giuseppe Greco  2007-2008\n\nDistribuito con licenza GPL\n\nModalità riga di comando\n\n")
-            .Add("CONSOLE_OPEND", "Operazione conclusa.")
-            .Add("CONSOLE_REGISTRYUPDATE", "Configurazione del registro di sistema effettuata.")
-            .Add("CONSOLE_MISSINGINFO", "Alcune informazioni necessarie non sono state inserite o non sono valide.")
-            .Add("CONSOLE_CANTCREATEDIR", "Impossibile creare la directory specificata.")
-            .Add("CONSOLE_RESTORECONFIRM", "Continuare con il ripristino del driver (y/n)?")
-            '.Add("CONSOLE_OFFLINEPC", "Nome computer offline trovato: {0}")
-
-        End With
-
-        Return lst
-    End Function
-
     Private Sub DebugInitializeLanguage()
-        'Carica la lingua DEBUG (Italiano)
         langStrs.Clear()
-        lang = "Italiano"
+        lang = "English"
         langStrs = GetDebugLangStrs()
     End Sub
 
@@ -478,11 +369,5 @@ Module CommonVariables
             frmMain.Text = "DriverBackup! " & My.Application.Info.Version.ToString
             If regKey IsNot Nothing Then regKey.Close()
         End Try
-
     End Sub
-
-
-
-
-
 End Module

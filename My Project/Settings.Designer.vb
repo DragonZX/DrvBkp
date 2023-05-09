@@ -92,7 +92,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("MM-dd-yyyy")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("mm-dd-yyyy")>  _
         Public ReadOnly Property DateTimePattern() As String
             Get
                 Return CType(Me("DateTimePattern"),String)
@@ -148,7 +148,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("it-IT.xml")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("en-US.xml")>  _
         Public ReadOnly Property DefaultLanguage() As String
             Get
                 Return CType(Me("DefaultLanguage"),String)
@@ -239,7 +239,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute(" MODE=""BACKUP""  BKPATH=""R:\"" BKDESC=""Questo è un back"" BKFILE=""Backup %DATE% su %"& _ 
+         Global.System.Configuration.DefaultSettingValueAttribute(" MODE=""BACKUP""  BKPATH=""R:\"" BKDESC=""This is a backup"" BKFILE=""Backup %DATE% su %"& _ 
             "COMPUTERNAME%.bki"" BKPATHFTM=""Drivers %COMPUTERNAME%_%DATE%"" BKDEVFMT=""Device %D"& _ 
             "EVNAME%"" OPT=""HL""")>  _
         Public ReadOnly Property TempCmd() As String
