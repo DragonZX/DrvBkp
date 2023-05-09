@@ -10,10 +10,10 @@ Imports System.Runtime.InteropServices
 ' Rivedere i valori degli attributi dell'assembly
 
 <Assembly: AssemblyTitle("DriverBackup! 2")>
-<Assembly: AssemblyDescription("Drivers' backup & restore tool")>
+<Assembly: AssemblyDescription("Driver backup & restoration tool")>
 <Assembly: AssemblyCompany("Giuseppe Greco")>
 <Assembly: AssemblyProduct("DriverBackup! 2")>
-<Assembly: AssemblyCopyright("GPL License 2009-2016")>
+<Assembly: AssemblyCopyright("GPL License 2009-2023")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
