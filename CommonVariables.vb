@@ -73,7 +73,7 @@ Module CommonVariables
 
             Dim d As New DirectoryInfo(My.Application.Info.DirectoryPath)
 
-            For Each f As FileInfo In d.GetFiles("*.xml")
+            For Each f As FileInfo In d.GetFiles("l10n/*.xml")
                 langMn = LanguageFileReader.LoadLanguageFile(f.FullName)
                 If langMn Is Nothing OrElse langMn.IsValid = False Then Continue For 'File non valido
                 If Not lst.ContainsKey(f.Name) Then lst.Add(f.Name, langMn.Author)
@@ -155,8 +155,8 @@ Module CommonVariables
             .Add("BRE_CantReadWriteBkInfo", "Cannot read\write backup file.")
             .Add("BRE_FileIOError", "File access denied. Check for administrative privileges..")
             .Add("BRE_OpCanceled", "Operation canceled from user.")
-            .Add("BRE_OemInfExist", "Driver is already installed on this computer.")
-            .Add("BRE_OemInfAlreadyUsed", "Driver is already used by one or more devices and it is unremoveable.")
+            .Add("BRE_OEMInfExist", "Driver is already installed on this computer.")
+            .Add("BRE_OEMInfAlreadyUsed", "Driver is already used by one or more devices and it is unremoveable.")
             .Add("BRE_MissingInfFile", "Cannot locate installation file.")
             .Add("BRE_CantCopyDriver", "Can't copy driver's files in restoration path.")
             .Add("DCmp_None", "None")
@@ -238,7 +238,7 @@ Module CommonVariables
             Dim langFile As String = ""
             Dim langReader As LanguageFileReader = Nothing
 
-            langFile = Path.Combine(My.Application.Info.DirectoryPath, "English.xml")
+            langFile = Path.Combine(My.Application.Info.DirectoryPath, "l10n/English.xml")
             'Carica il file
             langReader = LanguageFileReader.LoadLanguageFile(langFile)
 
@@ -342,11 +342,11 @@ Module CommonVariables
 
                 If [String].IsNullOrEmpty(regValue) Then
                     'Crea il valore di default
-                    regKey.SetValue("LanguageFile", "English.xml")
+                    regKey.SetValue("LanguageFile", "l10n/English.xml")
                     Return
                 End If
 
-                langFile = Path.Combine(My.Application.Info.DirectoryPath, regValue)
+                langFile = Path.Combine(My.Application.Info.DirectoryPath, "l10n/" & regValue)
                 'Carica i form
                 langReader = LanguageFileReader.LoadLanguageFile(langFile)
 

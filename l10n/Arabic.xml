@@ -317,9 +317,9 @@
       <_cmdOthers>
         <Text>الأجزاء الثالثة</Text>
       </_cmdOthers>
-      <_cmdOem>
-        <Text>Oem معدات اصلية</Text>
-      </_cmdOem>
+      <_cmdOEM>
+        <Text>OEM معدات اصلية</Text>
+      </_cmdOEM>
       <_cmdAll>
         <Text>الكل</Text>
       </_cmdAll>
@@ -476,9 +476,9 @@
       <_popupAll>
         <Text>الكل</Text>
       </_popupAll>
-      <_popupOem>
-        <Text>Oem المعدات الأصلية</Text>
-      </_popupOem>
+      <_popupOEM>
+        <Text>OEM المعدات الأصلية</Text>
+      </_popupOEM>
       <_popupThird>
         <Text>الأجزاء الثالثة</Text>
       </_popupThird>
@@ -646,8 +646,8 @@
         <BRE_CantReadWriteBkInfo>لا يمكن قراءة \ كتابة ملف النسخ الاحتياطي .</BRE_CantReadWriteBkInfo>
         <BRE_FileIOError>فتح الملف مرفوض. تحقق من امتيازات الإدارة  ..</BRE_FileIOError>
         <BRE_OpCanceled>تم إلغاء العملية من المستخدم .</BRE_OpCanceled>
-        <BRE_OemInfExist>يتم تثبيت برنامج التشغيل بالفعل على هذا الكمبيوتر .</BRE_OemInfExist>
-        <BRE_OemInfAlreadyUsed>يستخدم برنامج التشغيل بالفعل بواسطة جهاز واحد أو أكثر وهو غير قابل للاسترداد .</BRE_OemInfAlreadyUsed>
+        <BRE_OEMInfExist>يتم تثبيت برنامج التشغيل بالفعل على هذا الكمبيوتر .</BRE_OEMInfExist>
+        <BRE_OEMInfAlreadyUsed>يستخدم برنامج التشغيل بالفعل بواسطة جهاز واحد أو أكثر وهو غير قابل للاسترداد .</BRE_OEMInfAlreadyUsed>
         <BRE_MissingInfFile>لا يمكن تحديد موقع ملف التثبيت.</BRE_MissingInfFile>
         <BRE_CantCopyDriver>لا يمكن نسخ ملفات السائق في مسار الاستعادة.</BRE_CantCopyDriver>
         <DCmp_None>بلا</DCmp_None>

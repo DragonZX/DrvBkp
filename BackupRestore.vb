@@ -24,9 +24,9 @@ Namespace DeviceBackupRestore
         BRE_CantReadWriteBkInfo 'Unable to write to the backup information
         BRE_FileIOError 'creation failure \ copy \ directory files
         BRE_OpCanceled 'Operation canceled by user
-        BRE_OemInfExist 'The è drivers already installed on your computer
-        BRE_OemInfAlreadyUsed 'The drivers è currently in use and can not be uninstalled.
-        BRE_MissingInfFile 'The installation file è missing
+        BRE_OEMInfExist 'The ï¿½ drivers already installed on your computer
+        BRE_OEMInfAlreadyUsed 'The drivers ï¿½ currently in use and can not be uninstalled.
+        BRE_MissingInfFile 'The installation file ï¿½ missing
         BRE_CantUpdateInfo 'Can not update the path information
         BRE_ForceUpdate 'asks the user if the driver installation should be forced
         BRE_CantForceUpdating 'updating the driver may not be forced
@@ -600,7 +600,7 @@ Namespace DeviceBackupRestore
         End Sub
 
 #Region " IDisposable Support "
-        ' Questo codice è aggiunto da Visual Basic per implementare in modo corretto il modello Disposable.
+        ' Questo codice ï¿½ aggiunto da Visual Basic per implementare in modo corretto il modello Disposable.
         Public Sub Dispose() Implements IDisposable.Dispose
             ' Non modificare questo codice. Inserire il codice di pulitura in Dispose(ByVal disposing As Boolean).
             Dispose(True)
@@ -652,7 +652,7 @@ Namespace DeviceBackupRestore
             End Set
         End Property
 
-        'Proprietà privata thread-safe che regola l'accesso a cancelBackup
+        'Proprietï¿½ privata thread-safe che regola l'accesso a cancelBackup
         Public Property BackupCanceled() As Boolean
             Get
                 Try
@@ -716,7 +716,7 @@ Namespace DeviceBackupRestore
         End Property
 
         Public Property BackupPathFormat() As String
-            'Inserisce il formato con cui verrà costruito il nome della directory di ciascun device
+            'Inserisce il formato con cui verrï¿½ costruito il nome della directory di ciascun device
             Get
                 Return Me.bk_PathFormat
             End Get
@@ -839,7 +839,7 @@ Namespace DeviceBackupRestore
                 'Scatena l'evento di inizio backup
                 RaiseEvent BackupStarted(Me, New OperationEventArgs(Me.bk_devCollection.Count, False, BackupPath))
 
-                'Controlla se lo spazio su disco è sufficiente
+                'Controlla se lo spazio su disco ï¿½ sufficiente
 
                 If bk_fileMan.AvailableSpace < Me.bk_devCollection.TotalDeviceFilesSize Then
                     RaiseEvent BackupError(Me, New ExceptionEventArgs(BackupRestoreErrorCodes.BRE_LackOfSpace))
@@ -866,7 +866,7 @@ Namespace DeviceBackupRestore
                     Try
                         Dim localDevPath As String
                         Dim devBackupPath As String
-                        'Informazioni estese non corrette o il device non è selezionato
+                        'Informazioni estese non corrette o il device non ï¿½ selezionato
 
                         RaiseEvent BackupBeginDevice(Me, New DeviceEventArgs(dc, False, 0, False))
 
@@ -883,12 +883,12 @@ Namespace DeviceBackupRestore
 
                             If Not [String].IsNullOrEmpty(localDevPath) Then
 
-                                'Lancia un'eccezzione se la directory non può essere creata
+                                'Lancia un'eccezzione se la directory non puï¿½ essere creata
                                 If Not FileManager.DirectoryExists(localDevPath) Then FileManager.CreateDirectory(localDevPath)
-                                'Continua solo se la directory può essere creata
+                                'Continua solo se la directory puï¿½ essere creata
                                 'Processa singolarmente i files
                                 For Each fl As DeviceFile In dc.DriverFiles
-                                    'Lancia un'eccezzione se il file non può essere copiato
+                                    'Lancia un'eccezzione se il file non puï¿½ essere copiato
 
                                     If FileManager.FileExists(Path.Combine(localDevPath, fl.OriginalFileName)) = True And Not CanOverwrite Then
                                         'Sovrascrittura disabilitata
@@ -1169,7 +1169,7 @@ Namespace DeviceBackupRestore
             End Try
         End Function
 
-        'Proprietà privata thread-safe che regola l'accesso a cancelBackup
+        'Proprietï¿½ privata thread-safe che regola l'accesso a cancelBackup
         Public Property RestoreCanceled() As Boolean
             Get
                 Try
@@ -1290,7 +1290,7 @@ Namespace DeviceBackupRestore
                                 'Impossibile installare il file INF
                                 If Marshal.GetLastWin32Error = ERROR_FILE_EXISTS Then
                                     If UpdateDeviceInfo Then
-                                        'L'utente ha già scelto di forzare l'installazione del driver
+                                        'L'utente ha giï¿½ scelto di forzare l'installazione del driver
                                         RaiseEvent RestoreDeviceError(Me, New ExceptionEventArgs(BackupRestoreErrorCodes.BRE_CantForceUpdating))
                                         hasErrors = True
                                     Else
@@ -1313,8 +1313,8 @@ Namespace DeviceBackupRestore
                                             End If
                                         Else
                                             'L'utente ha annullato l'aggiornamento
-                                            'Invia un messaggio di errore OemExist
-                                            RaiseEvent RestoreDeviceError(Me, New ExceptionEventArgs(BackupRestoreErrorCodes.BRE_OemInfExist))
+                                            'Invia un messaggio di errore OEMExist
+                                            RaiseEvent RestoreDeviceError(Me, New ExceptionEventArgs(BackupRestoreErrorCodes.BRE_OEMInfExist))
                                             hasErrors = True
                                         End If
                                     End If
@@ -1328,7 +1328,7 @@ Namespace DeviceBackupRestore
                         Else
                             RaiseEvent RestoreDeviceError(Me, New ExceptionEventArgs(BackupRestoreErrorCodes.BRE_MissingInfFile))
                             hasErrors = True
-                            Continue For 'Il file di installazione non è stato trovato
+                            Continue For 'Il file di installazione non ï¿½ stato trovato
                         End If
 
                     Catch ex As Exception
@@ -1366,7 +1366,7 @@ Namespace DeviceBackupRestore
 
         ' For Each dv As Device In Me.devCollection
         '  If dv.ExtendedInfo.ContainsKey("Restored") AndAlso dv.ExtendedInfo.Item("Restored") = True AndAlso dv.ExtendedInfo.ContainsKey("OEMInf") AndAlso Not [String].IsNullOrEmpty(dv.ExtendedInfo.Item("OEMInf")) Then
-        'Il driver è stato effettivamente ripristinato da DriverBackup!
+        'Il driver ï¿½ stato effettivamente ripristinato da DriverBackup!
         '      rootKey.SetValue(dv.ExtendedInfo("OEMInf"), dv.UnivoqueDescription, RegistryValueKind.String)
         '  End If
         ' Next
@@ -1425,7 +1425,7 @@ Namespace DeviceBackupRestore
                         For Each pnpDev As Device In pnpDevsInstalled
                             If [String].Compare(pnpDev.MatchingID, dv.MatchingID) = 0 Then
                                 If DateTime.Compare(dv.ReleaseDate, pnpDev.ReleaseDate) > 0 Or dv.ReleaseVersion > pnpDev.ReleaseVersion Then
-                                    'Il driver installato sul computer è meno recente di quello contenuto nel package
+                                    'Il driver installato sul computer ï¿½ meno recente di quello contenuto nel package
                                     'di backup
                                     dv.ExtendedInfo.Item("Selected") = True
                                     dv.ExtendedInfo.Add("IsNewer", True)
@@ -1465,12 +1465,12 @@ Namespace DeviceBackupRestore
 
 
         Private Sub New(ByVal list As DeviceCollection, ByVal info As BRPackageInfo, ByVal path As String)
-            'Modalità standard
+            'Modalitï¿½ standard
             Me.pckPath = path
             Me.devCollection = list
             Me.pckInfo = info
             Me.devCollection.SetDevicesProperties(Nothing, "Selected", GetType(Boolean), False, False)
-            CheckDevices() 'Verifica l'utilizzabilità dei drivers salvati
+            CheckDevices() 'Verifica l'utilizzabilitï¿½ dei drivers salvati
         End Sub
 
         Public Shared Function Create(ByVal fileName As String) As DeviceRestore
@@ -1526,7 +1526,7 @@ Namespace DeviceBackupRestore
             Try
                 'Implementazione della funzione UninstallOEMInf
                 If SetupUninstallOEMInf(infName, 0, 0) = 1 Then
-                    'Il file è stato disinstallato
+                    'Il file ï¿½ stato disinstallato
                     rootKey.DeleteValue(infName, False) 'Aggiorna le informazioni nel registro
                 Else
                     'Invia una notifica di forzatura della disinstallazione
@@ -1536,7 +1536,7 @@ Namespace DeviceBackupRestore
                     If Not e.Cancel Then
                         'L'utente ha scelto di forzare la disinstallazione
                         If SetupUninstallOEMInf(infName, SUOI_FORCEDELETE, 0) = 1 Then
-                            'Il file è stato disinstallato
+                            'Il file ï¿½ stato disinstallato
                             rootKey.DeleteValue(infName, False) 'Aggiorna le informazioni nel registro
                         Else
                             Dim exc As New ExceptionEventArgs(BackupRestoreErrorCodes.BRE_Generic)
@@ -1597,7 +1597,7 @@ Namespace DeviceBackupRestore
         End Sub
 
 #Region " IDisposable Support "
-        ' Questo codice è aggiunto da Visual Basic per implementare in modo corretto il modello Disposable.
+        ' Questo codice ï¿½ aggiunto da Visual Basic per implementare in modo corretto il modello Disposable.
         Public Sub Dispose() Implements IDisposable.Dispose
             ' Non modificare questo codice. Inserire il codice di pulitura in Dispose(ByVal disposing As Boolean).
             Dispose(True)

@@ -227,7 +227,7 @@ Public Class frmMain
                     If modeBackup Then
                         Try
                             If ImageList1.Images.ContainsKey(currClass.ClassName) = False Then
-                                'Aggiunge l'immagine solo se non è già stata aggiunta
+                                'Aggiunge l'immagine solo se non ï¿½ giï¿½ stata aggiunta
                                 ImageList1.Images.Add(currClass.ClassName, currClass.ClassIcon)
                             End If
                             currClassNode.ImageKey = currClass.ClassName
@@ -334,7 +334,7 @@ Public Class frmMain
                 cmdOpenBkFile.Image = .Item("icoOpen")
                 cmdAll.Image = .Item("provAll")
                 cmdOthers.Image = .Item("provOthers")
-                cmdOem.Image = .Item("provOem")
+                cmdOEM.Image = .Item("provOEM")
                 cmdFullPort.Image = .Item("cmdPort")
                 cmdSignature.Image = .Item("cmdSignature")
                 'cmdRemoveOEM.Image = .Item("icoDelete")
@@ -343,13 +343,13 @@ Public Class frmMain
             End With
 
             popupAll.Checked = True
-            popupOem.Checked = False
+            popupOEM.Checked = False
             popupThird.Checked = False
             popupSignature.Checked = False
             popupPortability.Checked = False
             'Handler d'evento
             AddHandler popupAll.Click, AddressOf Me.cmdAll_Click
-            AddHandler popupOem.Click, AddressOf Me.cmdOem_Click
+            AddHandler popupOEM.Click, AddressOf Me.cmdOEM_Click
             AddHandler popupThird.Click, AddressOf Me.cmdTerzeParti_Click
             AddHandler popupSignature.Click, AddressOf Me.cmdFirma_Click
             AddHandler popupPortability.Click, AddressOf Me.cmdPienaP_Click
@@ -467,7 +467,6 @@ Public Class frmMain
 
     Private Sub cmdPienaP_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdFullPort.Click
         If devFilter.Portability = DevicePortability.DCmp_Full Then
-            'Proprietà già attivata
             cmdFullPort.FlatStyle = FlatStyle.Standard
             cmdFullPort.ForeColor = Color.Black
             devFilter.Portability = -1
@@ -483,7 +482,6 @@ Public Class frmMain
 
     Private Sub cmdFirma_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSignature.Click
         If devFilter.MustSigned Then
-            'Proprietà già attivata
             cmdSignature.FlatStyle = FlatStyle.Standard
             cmdSignature.ForeColor = Color.Black
             devFilter.MustSigned = False
@@ -500,46 +498,46 @@ Public Class frmMain
     Private Sub cmdTerzeParti_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdOthers.Click
 
         If devFilter.ProviderType <> DeviceFilter.DeviceFilterProviders.Prov_Others Then
-            cmdOem.ForeColor = Color.Black
+            cmdOEM.ForeColor = Color.Black
             cmdAll.ForeColor = Color.Black
             cmdOthers.ForeColor = Color.Blue
-            cmdOem.FlatStyle = FlatStyle.Standard
+            cmdOEM.FlatStyle = FlatStyle.Standard
             cmdAll.FlatStyle = FlatStyle.Standard
             cmdOthers.FlatStyle = FlatStyle.Popup
             popupAll.Checked = False
-            popupOem.Checked = False
+            popupOEM.Checked = False
             popupThird.Checked = True
             devFilter.ProviderType = DeviceFilter.DeviceFilterProviders.Prov_Others
         End If
         RefreshDevices()
     End Sub
 
-    Private Sub cmdOem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdOem.Click
-        If devFilter.ProviderType <> DeviceFilter.DeviceFilterProviders.Prov_Oem Then
-            cmdOem.ForeColor = Color.Blue
+    Private Sub cmdOEM_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdOEM.Click
+        If devFilter.ProviderType <> DeviceFilter.DeviceFilterProviders.Prov_OEM Then
+            cmdOEM.ForeColor = Color.Blue
             cmdAll.ForeColor = Color.Black
             cmdOthers.ForeColor = Color.Black
-            cmdOem.FlatStyle = FlatStyle.Popup
+            cmdOEM.FlatStyle = FlatStyle.Popup
             cmdAll.FlatStyle = FlatStyle.Standard
             cmdOthers.FlatStyle = FlatStyle.Standard
             popupAll.Checked = False
-            popupOem.Checked = True
+            popupOEM.Checked = True
             popupThird.Checked = False
-            devFilter.ProviderType = DeviceFilter.DeviceFilterProviders.Prov_Oem
+            devFilter.ProviderType = DeviceFilter.DeviceFilterProviders.Prov_OEM
         End If
         RefreshDevices()
     End Sub
 
     Private Sub cmdAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdAll.Click
         If devFilter.ProviderType <> DeviceFilter.DeviceFilterProviders.Prov_All Then
-            cmdOem.ForeColor = Color.Black
+            cmdOEM.ForeColor = Color.Black
             cmdAll.ForeColor = Color.Blue
             cmdOthers.ForeColor = Color.Black
-            cmdOem.FlatStyle = FlatStyle.Standard
+            cmdOEM.FlatStyle = FlatStyle.Standard
             cmdAll.FlatStyle = FlatStyle.Popup
             cmdOthers.FlatStyle = FlatStyle.Standard
             popupAll.Checked = True
-            popupOem.Checked = False
+            popupOEM.Checked = False
             popupThird.Checked = False
             devFilter.ProviderType = DeviceFilter.DeviceFilterProviders.Prov_All
         End If
@@ -603,7 +601,7 @@ Public Class frmMain
         'Dim inff As DeviceInfFile
         'Dim lst As New List(Of DeviceInfFile.SupportedDevice)
 
-        'inff = DeviceInfFile.OpenInfFile("D:\oem7.inf")
+        'inff = DeviceInfFile.OpenInfFile("D:\OEM7.inf")
 
         '       inff.GetFilesFromSection("dc3000.Install")
         '
@@ -667,7 +665,7 @@ Public Class frmMain
 
 
     Private Sub treeDevices_BeforeCheck(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewCancelEventArgs) Handles treeDevices.BeforeCheck
-        If e.Node.Level > 1 Then e.Cancel = True 'Non è possibile selezionare i files
+        If e.Node.Level > 1 Then e.Cancel = True 'Non ï¿½ possibile selezionare i files
 
     End Sub
 

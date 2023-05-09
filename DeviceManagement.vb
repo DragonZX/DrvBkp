@@ -33,7 +33,7 @@ Namespace DeviceManagement
                 For Each keyName As String In mainKey.GetSubKeyNames
                     'Processa singolarmente le chiavi che contengono le info sulle classi
 
-                    'Salta la classe se il guid non è in un formato valido
+                    'Salta la classe se il guid non ï¿½ in un formato valido
                     If Not rgx.IsMatch(keyName) Then Continue For
                    
                     Dim newclass As DeviceClass = DeviceClass.Create(New Guid(keyName))
@@ -68,7 +68,7 @@ Namespace DeviceManagement
         End Sub
 
 #Region " IDisposable Support "
-        ' Questo codice è aggiunto da Visual Basic per implementare in modo corretto il modello Disposable.
+        ' Questo codice ï¿½ aggiunto da Visual Basic per implementare in modo corretto il modello Disposable.
         Public Sub Dispose() Implements IDisposable.Dispose
             ' Non modificare questo codice. Inserire il codice di pulitura in Dispose(ByVal disposing As Boolean).
             Close()
@@ -89,7 +89,7 @@ Namespace DeviceManagement
 
         Dim flt_MustSigned As Boolean = False
         Dim flt_Provider As DeviceFilterProviders = DeviceFilterProviders.Prov_All
-        Dim flt_Compatibility As DevicePortability = -1 'Nessun filtro compatibilità
+        Dim flt_Compatibility As DevicePortability = -1 'Nessun filtro compatibilitï¿½
         Dim flt_DeviceClass As DeviceClass = Nothing
 
         Public Sub New()
@@ -145,17 +145,17 @@ Namespace DeviceManagement
 
         Public Enum DeviceFilterProviders
             Prov_All
-            Prov_Oem
+            Prov_OEM
             Prov_Others
         End Enum
 
         Public Function Match(ByVal dv As Device) As Boolean
             'Ritorna true se dv soddisfa i criteri impostati
             Select Case Me.flt_Provider
-                Case Is = DeviceFilterProviders.Prov_Oem
-                    If Not dv.IsOemDriver Then Return False
+                Case Is = DeviceFilterProviders.Prov_OEM
+                    If Not dv.IsOEMDriver Then Return False
                 Case Is = DeviceFilterProviders.Prov_Others
-                    If dv.IsOemDriver Then Return False
+                    If dv.IsOEMDriver Then Return False
             End Select
 
             If Me.flt_DeviceClass IsNot Nothing AndAlso dv.ClassInfo <> Me.flt_DeviceClass Then Return False
@@ -236,7 +236,7 @@ Namespace DeviceManagement
             Dim processedClass As Integer
 
             For Each cls As DeviceClass In dcl.Values
-                If cls.IsValidClass = True Then 'Processa la classe solo se è valida
+                If cls.IsValidClass = True Then 'Processa la classe solo se ï¿½ valida
                     If statusDlg IsNot Nothing Then statusDlg.Invoke(Me, cls, processedClass, dcl.Count)
                     For Each dv As Device In cls.Devices
                         If dv.IsValid = True Then
@@ -316,7 +316,7 @@ Namespace DeviceManagement
         End Sub
 
 #Region " IDisposable Support "
-        ' Questo codice è aggiunto da Visual Basic per implementare in modo corretto il modello Disposable.
+        ' Questo codice ï¿½ aggiunto da Visual Basic per implementare in modo corretto il modello Disposable.
         Public Sub Dispose() Implements IDisposable.Dispose
             ' Non modificare questo codice. Inserire il codice di pulitura in Dispose(ByVal disposing As Boolean).
             Dispose(True)
@@ -366,7 +366,7 @@ Namespace DeviceManagement
             End Function
         End Structure
 
-        'Variabili di istanza e proprietà principali della DeviceClass
+        'Variabili di istanza e proprietï¿½ principali della DeviceClass
         <NonSerialized()> Private cls_deviceCollection As DeviceCollection
         <NonSerialized()> Private cls_deviceCount As Integer
         Private cls_Name As String 'Nome della classe
@@ -531,7 +531,7 @@ Namespace DeviceManagement
         End Sub
 
 #Region " IDisposable Support "
-        ' Questo codice è aggiunto da Visual Basic per implementare in modo corretto il modello Disposable.
+        ' Questo codice ï¿½ aggiunto da Visual Basic per implementare in modo corretto il modello Disposable.
         Public Sub Dispose() Implements IDisposable.Dispose
             ' Non modificare questo codice. Inserire il codice di pulitura in Dispose(ByVal disposing As Boolean).
             Close()
@@ -576,7 +576,7 @@ Namespace DeviceManagement
         Implements IEquatable(Of Device)
         Implements IDeserializationCallback
 
-        'Proprietà del device
+        'Proprietï¿½ del device
         Dim dev_DeviceClass As DeviceClass
         Dim dev_Description As String = ""
         Dim dev_ReleaseDate As DateTime = DateTime.MinValue
@@ -588,10 +588,10 @@ Namespace DeviceManagement
         Dim dev_MatchingID As String = ""
         Dim dev_IsDigitallySigned As Boolean
         Dim dev_Platform As String = ""
-        Dim dev_IsOemDriver As Boolean = False
+        Dim dev_IsOEMDriver As Boolean = False
         Dim dev_IsValid As Boolean = False
         Dim dev_FilesSize As ULong = 0
-        Dim dev_ExtendedProps As New Dictionary(Of String, Object) 'Collezione di proprietà definite dal programma
+        Dim dev_ExtendedProps As New Dictionary(Of String, Object) 'Collezione di proprietï¿½ definite dal programma
 
         Dim dev_dupNumber As UInteger = 0
         'Collezione di files di installazione
@@ -600,7 +600,7 @@ Namespace DeviceManagement
         Dim dev_InfName As String
         <NonSerialized()> Dim dev_IsLocal As Boolean
 
-        'Collezione di proprietà standard
+        'Collezione di proprietï¿½ standard
 
 
         Public Shared ReadOnly Property StandardProperties() As Dictionary(Of String, Object)
@@ -647,10 +647,10 @@ Namespace DeviceManagement
                 If Not Me.CanSupportMultipleOS Then port = DevicePortability.DCmp_Partial
 
                 If Me.IsLocal Then
-                    'l'oggetto è mappato ad un device sul computer locale
+                    'l'oggetto ï¿½ mappato ad un device sul computer locale
                     If Not Me.CanSupportMultipleOS And Not Me.HasAllFiles Then port = DevicePortability.DCmp_None
                 Else
-                    'L'oggetto è mappato ad un device non locale (Serializzato)
+                    'L'oggetto ï¿½ mappato ad un device non locale (Serializzato)
                     If Not Me.HasAllFiles Then port = DevicePortability.DCmp_None
                 End If
 
@@ -816,19 +816,19 @@ Namespace DeviceManagement
             End Set
         End Property
 
-        Public Property IsOemDriver() As Boolean
+        Public Property IsOEMDriver() As Boolean
             Get
-                Return Me.dev_IsOemDriver
+                Return Me.dev_IsOEMDriver
             End Get
             Set(ByVal value As Boolean)
-                Me.dev_IsOemDriver = value
+                Me.dev_IsOEMDriver = value
             End Set
         End Property
 
 #End Region
 
         Public Sub LoadDriverFiles()
-            'Ritorna se la lista è già stata creata precedentemente
+            'Ritorna se la lista ï¿½ giï¿½ stata creata precedentemente
             Try
 
                 If Me.dev_Files IsNot Nothing Then Return
@@ -845,7 +845,7 @@ Namespace DeviceManagement
 
                 dvFile = DeviceFile.Create(Me.dev_InfFile.InfFile)
                 If dvFile IsNot Nothing AndAlso Me.dev_Files.Contains(dvFile) = False Then
-                    'Aggiunge il nuovo file solo se non è null e non è contenuto già
+                    'Aggiunge il nuovo file solo se non ï¿½ null e non ï¿½ contenuto giï¿½
                     'nella lista
                     If dvFile.Exist = False Then
                         Me.dev_HasAllFiles = False
@@ -858,7 +858,7 @@ Namespace DeviceManagement
                 For Each fInfo As FileInfo In Me.dev_InfFile.LayoutFiles
                     dvFile = DeviceFile.Create(fInfo)
                     If dvFile IsNot Nothing AndAlso Me.dev_Files.Contains(dvFile) = False Then
-                        'Aggiunge il nuovo file solo se non è null e non è contenuto già
+                        'Aggiunge il nuovo file solo se non ï¿½ null e non ï¿½ contenuto giï¿½
                         'nella lista
                         If dvFile.Exist = False Then
                             Me.dev_HasAllFiles = False
@@ -872,7 +872,7 @@ Namespace DeviceManagement
                 For Each fInfo As FileInfo In Me.dev_InfFile.CatalogFiles
                     dvFile = DeviceFile.Create(fInfo)
                     If dvFile IsNot Nothing AndAlso Me.dev_Files.Contains(dvFile) = False Then
-                        'Aggiunge il nuovo file solo se non è null e non è contenuto già
+                        'Aggiunge il nuovo file solo se non ï¿½ null e non ï¿½ contenuto giï¿½
                         'nella lista
                         If dvFile.Exist = False Then
                             'Me.dev_HasAllFiles = False
@@ -886,7 +886,7 @@ Namespace DeviceManagement
                 For Each finfo As DeviceFile In Me.dev_InfFile.GetFilesFromSection(Me.dev_InstallSection)
                     If finfo Is Nothing Then Continue For
                     If Me.dev_Files.Contains(finfo) = False Then
-                        'Aggiunge il nuovo file solo se non è null e non è contenuto già
+                        'Aggiunge il nuovo file solo se non ï¿½ null e non ï¿½ contenuto giï¿½
                         'nella lista
                         If finfo.Exist = False Then
                             Me.dev_HasAllFiles = False
@@ -901,7 +901,7 @@ Namespace DeviceManagement
                 For Each fInfo As DeviceFile In Me.dev_InfFile.GetFilesFromSection(Me.dev_InstallSection & ".CoInstallers")
                     If fInfo Is Nothing Then Continue For
                     If Me.dev_Files.Contains(fInfo) = False Then
-                        'Aggiunge il nuovo file solo se non è null e non è contenuto già
+                        'Aggiunge il nuovo file solo se non ï¿½ null e non ï¿½ contenuto giï¿½
                         'nella lista
                         If fInfo.Exist = True Then
                             'I file CoInstallers non sono molto importanti
@@ -975,7 +975,7 @@ Namespace DeviceManagement
 
                 Me.dev_Provider = CStr(devKey.GetValue("ProviderName", [String].Empty))
 
-                Me.dev_IsOemDriver = ([String].Compare(Me.dev_Provider, "Microsoft", True) = 0)
+                Me.dev_IsOEMDriver = ([String].Compare(Me.dev_Provider, "Microsoft", True) = 0)
 
                 Me.dev_InstallSection = CStr(devKey.GetValue("InfSection", [String].Empty) & devKey.GetValue("InfSectionExt", [String].Empty))
 
@@ -995,7 +995,7 @@ Namespace DeviceManagement
 
                 Me.dev_IsValid = True
                 Me.dev_IsLocal = True
-                'Imposta le proprietà predefinite
+                'Imposta le proprietï¿½ predefinite
                 Me.ExtendedInfo = StandardProperties
 
             Catch ex As Exception
@@ -1070,7 +1070,7 @@ Namespace DeviceManagement
         End Sub
 
 
-        ' Questo codice è aggiunto da Visual Basic per implementare in modo corretto il modello Disposable.
+        ' Questo codice ï¿½ aggiunto da Visual Basic per implementare in modo corretto il modello Disposable.
         Public Sub Dispose() Implements IDisposable.Dispose
             ' Non modificare questo codice. Inserire il codice di pulitura in Dispose(ByVal disposing As Boolean).
             Dispose(True)
@@ -1304,7 +1304,7 @@ Namespace DeviceManagement
 
 
         Dim m_FileHandle As IntPtr 'Handle del file aperto
-        Dim m_ErrorLine As Integer 'Numero della linea in cui si è verificato l'ultimo errore
+        Dim m_ErrorLine As Integer 'Numero della linea in cui si ï¿½ verificato l'ultimo errore
 
         'Informazioni principali del file
         Dim m_Signature As String
@@ -1396,7 +1396,7 @@ Namespace DeviceManagement
             Try
 
                 If SetupFindFirstLine(Me.m_FileHandle, "Version" & ControlChars.NullChar, "Signature" & ControlChars.NullChar, cont) <> 0 Then
-                    'Legge il valore della proprietà Signature
+                    'Legge il valore della proprietï¿½ Signature
                     strBuff = GetStrField(cont, 1, [String].Empty)
                     If [String].IsNullOrEmpty(strBuff) Then
                         'File inf senza firma. Non valido
@@ -1408,17 +1408,17 @@ Namespace DeviceManagement
                 End If
 
                 If SetupFindFirstLine(Me.m_FileHandle, "Version" & ControlChars.NullChar, "Class" & ControlChars.NullChar, cont) <> 0 Then
-                    'Legge il valore della proprietà Class
+                    'Legge il valore della proprietï¿½ Class
                     Me.m_Class = GetStrField(cont, 1, [String].Empty)
                 End If
 
                 If SetupFindFirstLine(Me.m_FileHandle, "Version" & ControlChars.NullChar, "ClassGuid" & ControlChars.NullChar, cont) <> 0 Then
-                    'Legge il valore della proprietà ClassGuid
+                    'Legge il valore della proprietï¿½ ClassGuid
                     Me.m_ClassGuid = GetStrField(cont, 1, [String].Empty)
                 End If
 
                 If SetupFindFirstLine(Me.m_FileHandle, "Version" & ControlChars.NullChar, "Provider" & ControlChars.NullChar, cont) <> 0 Then
-                    'Legge il valore della proprietà Provider
+                    'Legge il valore della proprietï¿½ Provider
                     Me.m_Provider = GetStrField(cont, 1, [String].Empty)
                 End If
 
@@ -1465,7 +1465,7 @@ Namespace DeviceManagement
                 For Each strSect As String In My.Settings.CatalogSections.Split(","c)
                     'Cicla sulle possibili sezioni di CatalogFile
                     If SetupFindFirstLine(Me.m_FileHandle, "Version" & ControlChars.NullChar, strSect & ControlChars.NullChar, cont) <> 0 Then
-                        'Se la sezione è stata correttamente aperta legge il file e cerca il percorso
+                        'Se la sezione ï¿½ stata correttamente aperta legge il file e cerca il percorso
                         Dim fNameBuff As String = GetStrField(cont, 1, [String].Empty)
 
                         fNameBuff = Utils.FindFileInMainPaths(fNameBuff) 'ricava il percorso del file
@@ -1779,7 +1779,7 @@ Namespace DeviceManagement
         End Function
 
 #Region " IDisposable Support "
-        ' Questo codice è aggiunto da Visual Basic per implementare in modo corretto il modello Disposable.
+        ' Questo codice ï¿½ aggiunto da Visual Basic per implementare in modo corretto il modello Disposable.
         Public Sub Dispose() Implements IDisposable.Dispose
             ' Non modificare questo codice. Inserire il codice di pulitura in Dispose(ByVal disposing As Boolean).
             Dispose(True)

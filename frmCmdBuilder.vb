@@ -159,7 +159,7 @@ Public Class frmCmdBuilder
 
     Private Sub optOEM_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles optOEM.CheckedChanged
         If optOEM.Checked = True Then
-            cmdBuilder.Filter.ProviderType = DeviceFilter.DeviceFilterProviders.Prov_Oem
+            cmdBuilder.Filter.ProviderType = DeviceFilter.DeviceFilterProviders.Prov_OEM
         End If
     End Sub
 
@@ -206,7 +206,7 @@ Public Class frmCmdBuilder
 
     Private Sub chkOffline_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkOffline.CheckedChanged
         If chkOffline.Checked Then
-            'Modalità backup offline
+            'Modalitï¿½ backup offline
             cmdBuilder.SystemDirectory = txtSysPath.Text
         Else
             cmdBuilder.SystemDirectory = ""

@@ -78,7 +78,7 @@ Partial Class frmMain
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.cmdOthers = New System.Windows.Forms.Button()
-        Me.cmdOem = New System.Windows.Forms.Button()
+        Me.cmdOEM = New System.Windows.Forms.Button()
         Me.cmdAll = New System.Windows.Forms.Button()
         Me.pckInfoBox = New System.Windows.Forms.GroupBox()
         Me.lblPckInfo = New System.Windows.Forms.Label()
@@ -104,7 +104,7 @@ Partial Class frmMain
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.popupAll = New System.Windows.Forms.ToolStripMenuItem()
-        Me.popupOem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.popupOEM = New System.Windows.Forms.ToolStripMenuItem()
         Me.popupThird = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.popupSignature = New System.Windows.Forms.ToolStripMenuItem()
@@ -232,7 +232,7 @@ Partial Class frmMain
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblBarInfo, Me.devScanBar})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 606)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 602)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(1308, 22)
         Me.StatusStrip1.TabIndex = 7
@@ -611,7 +611,7 @@ Partial Class frmMain
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(22, 441)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(359, 15)
+        Me.Label9.Size = New System.Drawing.Size(272, 15)
         Me.Label9.TabIndex = 28
         Me.Label9.Text = "Click on a device to see more information"
         '
@@ -648,17 +648,17 @@ Partial Class frmMain
         Me.cmdOthers.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.cmdOthers.UseVisualStyleBackColor = True
         '
-        'cmdOem
+        'cmdOEM
         '
-        Me.cmdOem.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdOem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmdOem.Location = New System.Drawing.Point(137, 62)
-        Me.cmdOem.Name = "cmdOem"
-        Me.cmdOem.Size = New System.Drawing.Size(113, 23)
-        Me.cmdOem.TabIndex = 20
-        Me.cmdOem.Text = "OEM"
-        Me.cmdOem.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.cmdOem.UseVisualStyleBackColor = True
+        Me.cmdOEM.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdOEM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdOEM.Location = New System.Drawing.Point(137, 62)
+        Me.cmdOEM.Name = "cmdOEM"
+        Me.cmdOEM.Size = New System.Drawing.Size(113, 23)
+        Me.cmdOEM.TabIndex = 20
+        Me.cmdOEM.Text = "OEM"
+        Me.cmdOEM.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.cmdOEM.UseVisualStyleBackColor = True
         '
         'cmdAll
         '
@@ -855,7 +855,7 @@ Partial Class frmMain
         '
         'popupMenu
         '
-        Me.popupMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.popupSelectAll, Me.popupCancelSelect, Me.ToolStripMenuItem2, Me.ToolStripMenuItem3, Me.ToolStripSeparator3, Me.popupAll, Me.popupOem, Me.popupThird, Me.ToolStripSeparator4, Me.popupSignature, Me.popupPortability})
+        Me.popupMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.popupSelectAll, Me.popupCancelSelect, Me.ToolStripMenuItem2, Me.ToolStripMenuItem3, Me.ToolStripSeparator3, Me.popupAll, Me.popupOEM, Me.popupThird, Me.ToolStripSeparator4, Me.popupSignature, Me.popupPortability})
         Me.popupMenu.Name = "popupMenu"
         Me.popupMenu.Size = New System.Drawing.Size(167, 214)
         '
@@ -896,13 +896,13 @@ Partial Class frmMain
         Me.popupAll.Size = New System.Drawing.Size(166, 22)
         Me.popupAll.Text = "Tutti"
         '
-        'popupOem
+        'popupOEM
         '
-        Me.popupOem.Checked = True
-        Me.popupOem.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.popupOem.Name = "popupOem"
-        Me.popupOem.Size = New System.Drawing.Size(166, 22)
-        Me.popupOem.Text = "Oem (Inclusi)"
+        Me.popupOEM.Checked = True
+        Me.popupOEM.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.popupOEM.Name = "popupOEM"
+        Me.popupOEM.Size = New System.Drawing.Size(166, 22)
+        Me.popupOEM.Text = "OEM (Inclusi)"
         '
         'popupThird
         '
@@ -950,7 +950,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.cmdFullPort)
         Me.Controls.Add(Me.cmdSignature)
         Me.Controls.Add(Me.cmdOthers)
-        Me.Controls.Add(Me.cmdOem)
+        Me.Controls.Add(Me.cmdOEM)
         Me.Controls.Add(Me.cmdAll)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label10)
@@ -1001,7 +1001,7 @@ Partial Class frmMain
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents cmdOthers As System.Windows.Forms.Button
-    Friend WithEvents cmdOem As System.Windows.Forms.Button
+    Friend WithEvents cmdOEM As System.Windows.Forms.Button
     Friend WithEvents cmdAll As System.Windows.Forms.Button
     Friend WithEvents treeDevices As System.Windows.Forms.TreeView
     Friend WithEvents cmdSignature As System.Windows.Forms.Button
@@ -1054,7 +1054,7 @@ Partial Class frmMain
     Friend WithEvents popupCancelSelect As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents popupAll As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents popupOem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents popupOEM As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents popupThird As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents popupSignature As System.Windows.Forms.ToolStripMenuItem

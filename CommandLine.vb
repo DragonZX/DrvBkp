@@ -44,7 +44,7 @@ Namespace CommandLineManager
 
                     Select Case arg.Groups("NAME").Value
                         Case Is = "MODE"
-                            'Imposta la modalità
+                            'Imposta la modalitï¿½
                             Select Case value
                                 Case Is = "BACKUP"
                                     Me.Mode = 0
@@ -76,7 +76,7 @@ Namespace CommandLineManager
                             End If
 
                             If value.Contains("M") Then
-                                Me.Filter.ProviderType = DeviceFilter.DeviceFilterProviders.Prov_Oem
+                                Me.Filter.ProviderType = DeviceFilter.DeviceFilterProviders.Prov_OEM
                             End If
 
                             If value.Contains("H") Then
@@ -86,13 +86,13 @@ Namespace CommandLineManager
                             If value.Contains("D") Then
                                 Me.Filter.ProviderType = -1
                             End If
-                            'Ñompany digital
+                            'ï¿½ompany digital
                             If value.Contains("S") Then
                                 Me.Filter.MustSigned = True
                             Else
                                 Me.Filter.MustSigned = False
                             End If
-                            'Portabilità
+                            'Portabilitï¿½
                             If value.Contains("P") Then
                                 Me.Filter.Portability = DevicePortability.DCmp_Full
                             Else
@@ -193,7 +193,7 @@ Namespace CommandLineManager
                 Select Case Me.Filter.ProviderType
                     Case Is = DeviceFilter.DeviceFilterProviders.Prov_All
                         sBuild.Append("A")
-                    Case Is = DeviceFilter.DeviceFilterProviders.Prov_Oem
+                    Case Is = DeviceFilter.DeviceFilterProviders.Prov_OEM
                         sBuild.Append("M")
                     Case Is = DeviceFilter.DeviceFilterProviders.Prov_Others
                         sBuild.Append("H")

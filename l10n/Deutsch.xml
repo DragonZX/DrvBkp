@@ -317,9 +317,9 @@
             <_cmdOthers>
                 <Text>Drittanbieter</Text>
             </_cmdOthers>
-            <_cmdOem>
+            <_cmdOEM>
                 <Text>OEM</Text>
-            </_cmdOem>
+            </_cmdOEM>
             <_cmdAll>
                 <Text>Alle</Text>
             </_cmdAll>
@@ -476,9 +476,9 @@
             <_popupAll>
                 <Text>Alles</Text>
             </_popupAll>
-            <_popupOem>
+            <_popupOEM>
                 <Text>OEM</Text>
-            </_popupOem>
+            </_popupOEM>
             <_popupThird>
                 <Text>Drittanbieter</Text>
             </_popupThird>
@@ -646,8 +646,8 @@
                 <BRE_CantReadWriteBkInfo>Backup-Datei kann nicht gelesen\geschrieben werden.</BRE_CantReadWriteBkInfo>
                 <BRE_FileIOError>Dateizugriff verweigert. Überprüfen Sie die Administratorrechte...</BRE_FileIOError>
                 <BRE_OpCanceled>Operation vom Benutzer abgebrochen.</BRE_OpCanceled>
-                <BRE_OemInfExist>Der Treiber ist bereits auf diesem Computer installiert.</BRE_OemInfExist>
-                <BRE_OemInfAlreadyUsed>Der Treiber wird bereits von einem oder mehreren Geräten verwendet, und er ist nicht entfernbar.</BRE_OemInfAlreadyUsed>
+                <BRE_OEMInfExist>Der Treiber ist bereits auf diesem Computer installiert.</BRE_OEMInfExist>
+                <BRE_OEMInfAlreadyUsed>Der Treiber wird bereits von einem oder mehreren Geräten verwendet, und er ist nicht entfernbar.</BRE_OEMInfAlreadyUsed>
                 <BRE_MissingInfFile>Installationsdatei kann nicht gefunden werden.</BRE_MissingInfFile>
                 <BRE_CantCopyDriver>Treiberdateien können nicht in den Wiederherstellungpfad kopiert werden.</BRE_CantCopyDriver>
                 <DCmp_None>Keine</DCmp_None>
