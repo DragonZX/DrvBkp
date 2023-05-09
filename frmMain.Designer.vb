@@ -613,7 +613,7 @@ Partial Class frmMain
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(359, 15)
         Me.Label9.TabIndex = 28
-        Me.Label9.Text = "Fare clic su un device per visualizzarne le informazioni"
+        Me.Label9.Text = "Click on a device to see more information"
         '
         'Label10
         '
